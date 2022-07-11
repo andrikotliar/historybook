@@ -1,0 +1,29 @@
+.tags {
+  margin-bottom: 30px;
+}
+
+.tags__title {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.tags__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.tags__link {
+  border: 2px solid #000;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 5px 20px;
+}
+
+.tags__link:hover,
+.tags__link--active {
+  color: #fff;
+  border-color: #ff5353;
+  background-color: #ff5353;
+}

@@ -1,0 +1,22 @@
+<div class="relative">
+	<div class="container">
+		<h6 class="relative__title">
+			{% if page.url != '/about/' %} Читайте також {% else %} Нові уроки {%endif%}
+		</h6>
+		<div class="relative__list">
+			{% set link = page.url | linkFilter %}
+			{% if page.url != '/about/' %}
+				{% set relativeList = collections[link] %}
+			{% else %}
+				{% set relativeList = collections.lessons %}
+			{% endif %}
+			{% for article in relativeList | relativeArticles(page.url) %}
+				<a href="{{ article.url | url }}" class="relative-card">
+					<h6 class="relative-card__title">{{ article.data.title }}</h6>
+					<div class="relative-card__description">{{ article.data.description }}</div>
+					<div class="relative-card__date">{{ article.data.date | articleDate }}</div>
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+</div>

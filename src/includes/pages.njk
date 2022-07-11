@@ -1,0 +1,15 @@
+{% if pagination.pages.length > 1 %}
+  <nav class="pages">
+    {% for item in pagination.pages %}
+      <a
+        href="{{ pagination.hrefs[loop.index0] }}"
+        class="pages__link"
+        {% if page.url == pagination.hrefs[loop.index0] %}
+            aria-current="page"
+        {% endif %}
+      >
+        {{ loop.index }}
+      </a>
+    {% endfor %}
+  </nav>
+{% endif %}

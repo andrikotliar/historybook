@@ -1,0 +1,17 @@
+<div class="cards lessons">
+  {% for article in articleslist %}
+	<a href="{{ article.url | url }}" class="lesson card card--fd card--link">
+		<h3 class="lesson__title card__title">
+			{{ article.data.title }}
+		</h3>
+		<p class="lesson__description card__description">
+     {% if loop.index == 1 %}
+       {{ article.data.description }}
+      {% else %}
+  			{{ article.data.description | truncate(150) }}
+      {% endif %}
+		</p>
+		<time class="lesson__date card__date" datetime="{{ article.data.date | isoDate }}"> {{ article.data.date | articleDate }} </time>
+	</a>
+  {% endfor %}
+</div>

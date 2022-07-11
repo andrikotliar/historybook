@@ -1,0 +1,24 @@
+---
+eleventyComputed:
+    title: "{% if pagination.pageNumber > 0 %}Історичні постаті на уроках історії: Сторінка {{ pagination.pageNumber + 1 }}{% else %}Історичні постаті на уроках історії{% endif %} – HistoryBook"
+description: Історичні постаті на уроках історії
+layout: page.njk
+permalink: "/figures/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+pagination:
+  data: collections.figures
+  size: 10
+  reverse: true
+---
+
+<div class="page-cover page-cover--figures">
+	<div class="container">
+		<h2 class="cover-title">Історичні постаті на уроках історії</h2>
+	</div>
+</div> 
+<main class="content">
+  <div class="container">
+  	{% set articleslist = pagination.items %}
+  	{% include "common-cards.njk" %}
+    {% include "pages.njk" %}
+  </div>
+</main>

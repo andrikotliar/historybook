@@ -1,0 +1,21 @@
+---
+pagination:
+    data: collections.tagList
+    size: 1
+    alias: category
+layout: page.njk
+permalink: /lessons/category/{{ category | slug }}/
+---
+
+<div class="page-cover page-cover--lessons">
+  <div class="container">
+    <h2 class="cover-title">Цікаві форми проведення<br> уроків історії в школі</h2>
+  </div>
+</div>
+<main class="content">
+  <div class="container">
+    {% include "tags.njk" %}
+    {% set articleslist = collections[category] | reverse %}
+    {% include "common-cards.njk" %}
+  </div>
+</main>

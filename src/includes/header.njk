@@ -1,0 +1,43 @@
+{%
+
+  set menu = [
+    {
+      title: 'Цікаві уроки історії',
+      link: '/lessons/'
+    },
+    {
+      title: 'Історичні постаті',
+      link: '/figures/'
+    },
+    {
+      title: 'Новини',
+      link: '/news/'
+    },
+    {
+      title: 'Розповіді',
+      link: '/stories/'
+    }
+  ]
+
+%}
+
+
+<header class="header">
+	<div class="header__container container">
+		<a href="/" class="header__logo">
+			<img src="/images/logo.svg" alt="HistoryBook" width="250" height="66">
+		</a>
+		<ul class="header__menu" id="menu">
+      {% for item in menu %}
+        <li>
+          <a class="header__menu-link{% if page.url == item.link %} header__menu-link--active{%endif%}" href="{{item.link}}">
+            {{ item.title }}
+          </a>
+        </li>
+      {% endfor %}
+		</ul>
+		<button id="mobileMenuBtn" class="mobile-menu-btn" rel="Відкрити меню">
+			<span></span>
+		</button>
+	</div>
+</header>

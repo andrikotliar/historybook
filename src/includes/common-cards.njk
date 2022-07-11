@@ -1,0 +1,13 @@
+<div class="cards">
+  {% for article in articleslist %}
+	<a href="{{ article.url | url }}" class="card card--fd card--link">
+		<h4 class="card__title">
+			{{ article.data.title }}
+		</h4>
+		<p class="card__description">
+			{{ article.data.description }}
+		</p>
+    <time class="card__date" datetime="{{ article.data.date | isoDate }}"> {{ article.data.date | articleDate }} </time>
+	</a>
+  {% endfor %}
+</div>

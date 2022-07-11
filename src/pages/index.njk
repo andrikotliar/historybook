@@ -1,0 +1,46 @@
+---
+title: HistoryBook – конспекти цікавих уроків історії
+description: Конспекти цікавих уроків історії, головні новини та зміни в освіті України, копірайти текстів з високою унікальністю.
+layout: page.njk
+permalink: index.html
+---
+
+<main class="content content--index">
+    <div class="container">
+        <section class="section">
+            <h2 class="section-title">Цікаві уроки історії</h2>
+            {% set articleslist = collections.lessons | head(-7) | reverse %}
+            {% include "lesson-cards.njk" %}
+            <div class="section__bottom">
+              <a href="/lessons/" class="link link-more">Всі уроки</a>
+            </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Історичні постаті на уроках історії</h2>
+          {% set articleslist = collections.figures | head(-8) | reverse %}
+          {% include "figures-cards.njk" %}
+          <div class="section__bottom">
+            <a href="/figures/" class="link link-more">Всі постаті</a>
+          </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Новини</h2>
+            {% set articleslist = collections.news | head(-5) | reverse %}
+            {% include "news-cards.njk" %}
+            <div class="section__bottom">
+              <a href="/news/" class="link link-more">Всі новини</a>
+            </div>
+        </section>
+        
+        <div class="section">
+            <h2 class="section-title">Розповіді</h2>
+            {% set articleslist = collections.stories | head(-3) | reverse %}
+            {% include "common-cards.njk" %}
+            <div class="section__bottom">
+              <a href="/stories/" class="link link-more">Всі розповіді</a>
+            </div>
+        </div>
+    </div>
+</main>

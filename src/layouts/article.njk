@@ -1,0 +1,25 @@
+---
+layout: page.njk
+---
+<main class="content">
+  <div class="container">
+    <article class="article" itemscope itemtype="http://schema.org/Article">
+      <header class="article__header">
+        <h1 class="article__title" itemprop="headline name"> {{title}} </h1>
+        <time class="article__date" datetime="{{ date | isoDate }}" itemprop="datePublished">{{date | articleDate}}</time>
+        <meta itemprop="image" content="/images/page/social-image.jpg">
+        <meta itemprop="author" content="Ирина Радченко">
+      </header>
+      <section class="article__body" itemprop="articleBody">
+        {{ content | safe }}
+      </section>
+      <button class="article__print">
+        <span class="article__print-icon">
+          <img src="/images/icons/sheet.svg" alt="">
+        </span>
+        Друк сторінки
+      </button>
+    </article>
+  </div>
+</main>
+{% include 'relative.njk' %}

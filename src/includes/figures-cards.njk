@@ -1,0 +1,9 @@
+<div class="figures">
+  {% for article in articleslist %}
+    {% if article.data.type != "special" %}
+      <a href="{{ article.url | url }}" class="figure">
+        {{ article.data.title }}
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>

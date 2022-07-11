@@ -1,0 +1,31 @@
+{%
+  set tags = [
+    {
+      title: 'Всі',
+      link: '/lessons/'
+    },
+    {
+      title: '5-й клас',
+      link: '/lessons/category/5th-class/'
+    },
+    {
+      title: '7-й клас',
+      link: '/lessons/category/7th-class/'
+    },
+    {
+      title: 'Ребуси',
+      link: '/lessons/category/rebuses/'
+    }
+  ]
+%}
+
+<div class="tags">
+  <h3 class="tags__title">
+    Уроки за категоріями
+  </h3>
+  <nav class="tags__navigation">
+    {% for tag in tags %}
+      <a href="{{tag.link}}" class="tags__link{%if page.url == tag.link%} tags__link--active{%endif%}">{{tag.title}}</a>
+    {% endfor %}
+  </nav>
+</div>

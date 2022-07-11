@@ -1,0 +1,24 @@
+---
+eleventyComputed:
+    title: "{% if pagination.pageNumber > 0 %}Актуальні новини освіти України: Сторінка {{ pagination.pageNumber + 1 }}{% else %}Актуальні новини освіти України{% endif %} – HistoryBook"
+description: Актуальні новини та події в освіті України.
+layout: page.njk
+permalink: "/news/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+pagination:
+  data: collections.news
+  size: 10
+  reverse: true
+---
+
+<div class="page-cover page-cover--news">
+	<div class="container">
+		<h2 class="cover-title">Актуальні події освіти</h2>
+	</div>
+</div>
+<main class="content">
+	<div class="container">
+		{% set articleslist = pagination.items %}
+		{% include "news-cards.njk" %}
+    {% include "pages.njk" %}
+	</div>
+</main>

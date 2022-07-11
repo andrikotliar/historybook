@@ -1,0 +1,20 @@
+<div class="cards news">
+  {% for article in articleslist %}
+	<div class="card news-item">
+		<time class="news-item__date" datetime="{{ article.data.date | isoDate }}"> {{ article.data.date | articleDate }} </time>
+		<div class="news-item__main">
+			<h3 class="news-item__title card__title">
+        <a href="{{ article.url | url }}">
+          {{ article.data.title }}
+        </a>
+      </h3>
+			<p class="news-item__description card__description">
+				{{ article.templateContent | truncate(400) | striptags(true) }}
+        {% if article.templateContent.length > 400 %}
+          <a href="{{ article.url | url }}" class="news-item__link">Читати повністю</a>
+        {% endif %}
+			</p>
+		</div>
+	</div>
+  {% endfor %}
+</div>

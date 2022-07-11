@@ -1,0 +1,25 @@
+---
+eleventyComputed:
+    title: "{% if pagination.pageNumber > 0 %}Цікаві уроки історії: Сторінка {{ pagination.pageNumber + 1 }}{% else %}Цікаві уроки історії{% endif %} – HistoryBook"
+description: Цікаві форми проведення уроків історії в школі
+layout: page.njk
+permalink: "/lessons/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+pagination:
+  data: collections.lessons
+  size: 10
+  reverse: true
+---
+
+<div class="page-cover page-cover--lessons">
+	<div class="container">
+		<h2 class="cover-title">Цікаві форми проведення<br> уроків історії в школі</h2>
+	</div>
+</div>
+<main class="content">
+	<div class="container">
+    {% include "tags.njk" %}
+    {% set articleslist = pagination.items %}
+    {% include "common-cards.njk" %}
+    {% include "pages.njk" %}
+	</div>
+</main>
