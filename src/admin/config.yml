@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "news"
+    label: "Новини"
+    folder: src/news
+    create: true
+    slug: {{slug}}
+    fields:
+      - {label: "Заголовок", name: "title", widget: "string"}
+      - {label: "Дата", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+      - {description: "Короткий опис новини", name: "description", widget: "string"}
+      - { label: "Текст новини", name: "body", widget: "markdown" }

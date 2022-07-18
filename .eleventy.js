@@ -10,6 +10,7 @@ module.exports = function(config) {
 	config.addPassthroughCopy("./src/fonts");
 	config.addPassthroughCopy("./src/_redirects");
 	config.addPassthroughCopy("./src/**/*.(jpg|png|svg)");
+	config.addPassthroughCopy("./src/admin/config.yml");
 
 	config.addFilter('articleDate', (date) => {
     let dd = date.getDate();
