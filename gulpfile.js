@@ -3,25 +3,25 @@ const del = require('del');
 const postcss = require('gulp-postcss');
 
 gulp.task('styles', () => {
-    return gulp.src('dist/styles/{styles,print}.css')
+    return gulp.src('_site/styles/{styles,print}.css')
         .pipe(postcss([
             require('postcss-import'),
             require('autoprefixer'),
             require('postcss-csso'),
         ]))
-        .pipe(gulp.dest('dist/styles'));
+        .pipe(gulp.dest('_site/styles'));
 });
 
-gulp.task('deleteDist', () => {
+gulp.task('delete_site', () => {
     return del([
-        'dist'
+        '_site'
     ]);
 });
 
 gulp.task('clean', () => {
     return del([
-        'dist/styles/**/*',
-        '!dist/styles/{styles,print}.css',
+        '_site/styles/**/*',
+        '!_site/styles/{styles,print}.css',
     ]);
 });
 

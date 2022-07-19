@@ -88,7 +88,7 @@ module.exports = function(config) {
   config.setBrowserSyncConfig({
     callbacks: {
      ready: function(err, browserSync) {
-      const content_404 = fs.readFileSync('dist/404.html');
+      const content_404 = fs.readFileSync('_site/404.html');
 
       browserSync.addMiddleware("*", (req, res) => {
        res.write(content_404);
@@ -105,8 +105,7 @@ module.exports = function(config) {
      input: "src",
      includes: "includes",
      layouts: "layouts",
-     data: "data",
-     output: "dist"
+     data: "data"
    },
    markdownTemplateEngine: false,
    htmlTemplateEngine: "njk",
