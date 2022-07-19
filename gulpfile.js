@@ -12,7 +12,7 @@ gulp.task('styles', () => {
         .pipe(gulp.dest('_site/styles'));
 });
 
-gulp.task('delete_site', () => {
+gulp.task('deletePreviousBuild', () => {
     return del([
         '_site'
     ]);

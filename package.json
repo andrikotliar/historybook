@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "gulp deleteDist && eleventy && gulp build",
+    "build": "gulp deletePreviousBuild && eleventy && gulp build",
     "start": "eleventy --serve --quiet"
   },
   "devDependencies": {
