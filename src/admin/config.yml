@@ -8,45 +8,41 @@ public_folder: "/images"
 collections:
   - name: "news"
     label: "Новини"
-    identifier_field: "custom_url"
     folder: "src/news"
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{second}}"
     create: true
     fields:
       - {label: "Заголовок", name: "title", widget: "string"}
-      - {label: "URL", name: "custom_url", widget: "string"}
       - {label: "Дата", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
       - {label: "Короткий опис новини", name: "description", widget: "string"}
       - {label: "Текст новини", name: "body", widget: "markdown"}
   - name: "lessons"
     label: "Уроки"
-    identifier_field: "custom_url"
     folder: "src/lessons"
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{second}}"
     create: true
     fields:
       - {label: "Заголовок", name: "title", widget: "string"}
-      - {label: "URL", name: "custom_url", widget: "string"}
       - {label: "Дата", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
       - {label: "Короткий опис уроку", name: "description", widget: "string"}
       - {label: "Текст уроку", name: "body", widget: "markdown"}
   - name: "stories"
     label: "Розповіді"
-    identifier_field: "custom_url"
     folder: "src/stories"
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{second}}"
     create: true
     fields:
       - {label: "Заголовок", name: "title", widget: "string"}
-      - {label: "URL", name: "custom_url", widget: "string"}
       - {label: "Дата", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
       - {label: "Короткий опис розповіді", name: "description", widget: "string"}
       - {label: "Текст розповіді", name: "body", widget: "markdown"}
   - name: "figures"
     label: "Історичні постаті"
-    identifier_field: "custom_url"
     folder: "src/figures"
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{second}}"
     create: true
     fields:
       - {label: "Заголовок", name: "title", widget: "string"}
-      - {label: "URL", name: "custom_url", widget: "string"}
       - {label: "Дата", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
       - {label: "Короткий опис статті", name: "description", widget: "string"}
       - {label: "Текст статті", name: "body", widget: "markdown"}
