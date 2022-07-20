@@ -5,6 +5,11 @@ backend:
 media_folder: "uploads"
 public_folder: "/images"
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
 collections:
   - name: "news"
     label: "Новини"
@@ -14,5 +19,35 @@ collections:
     fields:
       - {label: "Заголовок", name: "title", widget: "string"}
       - {label: "Дата", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
-      - {description: "Короткий опис новини", name: "description", widget: "string"}
-      - { label: "Текст новини", name: "body", widget: "markdown" }
+      - {label: "Короткий опис новини", name: "description", widget: "string"}
+      - {label: "Текст новини", name: "body", widget: "markdown"}
+  - name: "lessons"
+    label: "Уроки"
+    folder: "src/lessons"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Заголовок", name: "title", widget: "string"}
+      - {label: "Дата", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Короткий опис уроку", name: "description", widget: "string"}
+      - {label: "Текст уроку", name: "body", widget: "markdown"}
+  - name: "stories"
+    label: "Розповіді"
+    folder: "src/stories"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Заголовок", name: "title", widget: "string"}
+      - {label: "Дата", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Короткий опис розповіді", name: "description", widget: "string"}
+      - {label: "Текст розповіді", name: "body", widget: "markdown"}
+  - name: "figures"
+    label: "Історичні постаті"
+    folder: "src/figures"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Заголовок", name: "title", widget: "string"}
+      - {label: "Дата", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Короткий опис статті", name: "description", widget: "string"}
+      - {label: "Текст статті", name: "body", widget: "markdown"}
