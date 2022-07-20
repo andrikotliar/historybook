@@ -9,7 +9,7 @@ collections:
   - name: "news"
     label: "Новини"
     folder: "src/news"
-    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{second}}"
+    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}"
     create: true
     fields:
       - {label: "Заголовок", name: "title", widget: "string"}
@@ -19,7 +19,7 @@ collections:
   - name: "lessons"
     label: "Уроки"
     folder: "src/lessons"
-    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{second}}"
+    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}"
     create: true
     fields:
       - {label: "Заголовок", name: "title", widget: "string"}
@@ -29,7 +29,7 @@ collections:
   - name: "stories"
     label: "Розповіді"
     folder: "src/stories"
-    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{second}}"
+    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}"
     create: true
     fields:
       - {label: "Заголовок", name: "title", widget: "string"}
@@ -39,7 +39,7 @@ collections:
   - name: "figures"
     label: "Історичні постаті"
     folder: "src/figures"
-    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{second}}"
+    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}"
     create: true
     fields:
       - {label: "Заголовок", name: "title", widget: "string"}
