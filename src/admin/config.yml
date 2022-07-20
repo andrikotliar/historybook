@@ -5,17 +5,11 @@ backend:
 media_folder: "uploads"
 public_folder: "/images"
 
-slug:
-  encoding: "ascii"
-  clean_accents: true
-  sanitize_replacement: "_"
-
 collections:
   - name: "news"
     label: "Новини"
     folder: "src/news"
     create: true
-    slug: "{{slug}}"
     fields:
       - {label: "Заголовок", name: "title", widget: "string"}
       - {label: "Дата", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
@@ -25,7 +19,6 @@ collections:
     label: "Уроки"
     folder: "src/lessons"
     create: true
-    slug: "{{slug}}"
     fields:
       - {label: "Заголовок", name: "title", widget: "string"}
       - {label: "Дата", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
@@ -35,7 +28,6 @@ collections:
     label: "Розповіді"
     folder: "src/stories"
     create: true
-    slug: "{{slug}}"
     fields:
       - {label: "Заголовок", name: "title", widget: "string"}
       - {label: "Дата", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
@@ -45,7 +37,6 @@ collections:
     label: "Історичні постаті"
     folder: "src/figures"
     create: true
-    slug: "{{slug}}"
     fields:
       - {label: "Заголовок", name: "title", widget: "string"}
       - {label: "Дата", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
