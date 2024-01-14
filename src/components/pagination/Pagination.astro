@@ -1,0 +1,70 @@
+---
+import { PageId } from '@/common';
+import { countPages } from '@/helpers';
+
+type Props = {
+  articlesCount: number;
+  pageId: PageId;
+  currentPage: number;
+  rootPath: string;
+};
+
+const { articlesCount, currentPage, rootPath } = Astro.props;
+
+const pages = countPages(articlesCount);
+
+const generateLink = (index: number) => {
+  if (index > 0) {
+    return `${rootPath}/page/${index + 1}`;
+  }
+
+  return `${rootPath}/`;
+};
+---
+
+<div class="pagination">
+  {
+    Array.from({ length: pages }, (_, index) => (
+      <a
+        href={generateLink(index)}
+        class:list={[
+          'page-link',
+          { 'page-link-active': index + 1 === currentPage },
+        ]}
+      >
+        {index + 1}
+      </a>
+    ))
+  }
+</div>
+
+<style scoped>
+  .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #b8b8b8;
+    border-radius: 50px;
+  }
+  .page-link:hover {
+    color: #fff;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+  }
+  .page-link-active {
+    color: #fff;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    cursor: default;
+    pointer-events: none;
+  }
+</style>

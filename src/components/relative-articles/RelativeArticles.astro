@@ -1,0 +1,22 @@
+---
+import Grid from '@/components/grid/Grid.astro';
+import { PageId } from '@/common';
+import { ArticlesService } from '@/services';
+
+type Props = {
+  pageId: PageId;
+  currentSlug: string;
+};
+
+const { pageId, currentSlug } = Astro.props;
+
+const { articles } = await ArticlesService.findManyArticles(pageId, {
+  limit: 4,
+  filter: (a) => a.slug !== currentSlug,
+});
+---
+
+<div class="relative-articles">
+  <h6 class="title">Читайте також</h6>
+  <Grid articles={articles} pageId={pageId} />
+</div>

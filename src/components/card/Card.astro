@@ -1,0 +1,63 @@
+---
+import type { ArticleData, PageId } from '@/common';
+import { formatDate } from '@/helpers';
+
+type Props = {
+  pageId: PageId;
+} & ArticleData;
+
+const { pageId, data, slug } = Astro.props;
+const formattedDate = formatDate(data.date);
+const url = `/${pageId}/${slug}/`;
+---
+
+<a href={url} class="card">
+  <h3 class="title">{data.title}</h3>
+  <p class="description">{data.description}</p>
+  <div class="date">{formattedDate}</div>
+</a>
+
+<style scoped>
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: background-color 0.3s;
+    border: 1px solid #e1e1e1;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    transition: border-color 0.3s;
+  }
+  .card:hover {
+    border-color: var(--main-color);
+  }
+  .title {
+    color: var(--light-black);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    transition: color 0.3s;
+  }
+
+  .card:hover .title {
+    color: var(--main-color);
+  }
+
+  .description {
+    color: var(--dark-gray);
+    line-height: 24px;
+  }
+
+  .date {
+    color: var(--main-color);
+    font-size: 14px;
+    margin-top: auto;
+  }
+
+  @media (max-width: 580px) {
+    .description {
+      font-size: 14px;
+    }
+  }
+</style>

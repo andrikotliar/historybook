@@ -1,0 +1,29 @@
+---
+import type { ArticleData, PageId } from '@/common';
+import Card from '@/components/card/Card.astro';
+
+type Props = {
+  articles: ArticleData[];
+  pageId: PageId;
+};
+
+const { articles, pageId } = Astro.props;
+---
+
+<div class="grid">
+  {articles.map((article) => <Card {...article} pageId={pageId} />)}
+</div>
+
+<style scoped>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 580px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

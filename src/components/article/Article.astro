@@ -1,0 +1,48 @@
+---
+import type { ArticleData, PageId } from '@/common';
+import PrintButton from '@/components/article/PrintButton.astro';
+import RelativeArticles from '@/components/relative-articles/RelativeArticles.astro';
+import { metadata } from '@/configs';
+import { formatDate } from '@/helpers';
+
+type Settings = {
+  showHeader?: boolean;
+  showRelativeArticles?: boolean;
+  showPrintButton?: boolean;
+};
+
+type Props = {
+  article: ArticleData;
+  pageId?: PageId;
+} & Settings;
+
+const {
+  article,
+  showHeader = true,
+  showRelativeArticles = true,
+  showPrintButton = true,
+  pageId,
+} = Astro.props;
+
+const articleDate = formatDate(article.data.date);
+---
+
+<article itemscope itemtype="http://schema.org/Article">
+  {
+    showHeader && (
+      <div class="header">
+        <h1 class="title">{article.data.title}</h1>
+        <div class="date">{articleDate}</div>
+        <meta itemprop="image" content={metadata.socialMediaImage} />
+        <meta itemprop="author" content={metadata.author} />
+      </div>
+    )
+  }
+  <section class="body"><slot /></section>
+  {showPrintButton && <PrintButton />}
+  {
+    showRelativeArticles && pageId && (
+      <RelativeArticles pageId={pageId} currentSlug={article.slug} />
+    )
+  }
+</article>

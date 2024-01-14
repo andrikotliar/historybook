@@ -1,0 +1,43 @@
+---
+import LinkIcon from '@/assets/icons/LinkIcon.astro';
+import type { PageId } from '@/common';
+
+type Props = {
+  pageId: PageId;
+  title: string;
+};
+
+const { pageId, title } = Astro.props;
+const link = `/${pageId}/`;
+---
+
+<a href={link} class="link-more">
+  <span>Всі {title}</span>
+  <div class="icon">
+    <LinkIcon />
+  </div>
+</a>
+
+<style scoped>
+  .link-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+    color: var(--main-color);
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    padding: 10px 20px;
+  }
+
+  .link-more:hover {
+    color: #fff;
+    background-color: var(--main-color);
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+</style>

@@ -1,0 +1,66 @@
+---
+import type { PageId } from '@/common';
+import { pagesMapper } from '@/configs';
+
+type Props = {
+  pageId: PageId;
+};
+
+const url = Astro.url;
+const { pageId } = Astro.props;
+
+const rootLink = `/${pageId}/`;
+---
+
+{
+  pagesMapper[pageId].categories && (
+    <nav class="categories">
+      <a
+        href={rootLink}
+        class:list={['link', { active: !url.pathname.includes('category') }]}
+      >
+        Всі
+      </a>
+      {pagesMapper[pageId].categories?.map((category) => (
+        <a
+          href={`/${pageId}/category/${category.key}/`}
+          class:list={['link', { active: url.pathname.includes(category.key) }]}
+        >
+          {category.linkTitle}
+        </a>
+      ))}
+    </nav>
+  )
+}
+
+<style scoped>
+  .categories {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .link {
+    position: relative;
+    color: #777;
+    padding: 5px;
+    padding: 5px 20px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    flex-shrink: 0;
+  }
+
+  .link:hover,
+  .active {
+    color: #fff;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+  }
+
+  .active {
+    cursor: default;
+    pointer-events: none;
+  }
+</style>

@@ -1,0 +1,171 @@
+---
+import { headerMenu } from '@/configs';
+import Container from '@/components/container/Container.astro';
+import MenuIcon from '@/assets/icons/MenuIcon.astro';
+import Logo from '@/assets/Logo.astro';
+---
+
+<header class="header">
+  <Container className="header-container">
+    <button class="menu-button">
+      <MenuIcon />
+    </button>
+    <a href="/" class="logo">
+      <Logo />
+    </a>
+    <nav class="menu">
+      <div class="menu-overlay"></div>
+      <div class="navigation">
+        {
+          headerMenu.map((item) => (
+            <a href={item.link} class="navigation-link">
+              {item.title}
+            </a>
+          ))
+        }
+      </div>
+    </nav>
+  </Container>
+</header>
+
+<style is:global>
+  .header {
+    position: sticky;
+    top: 0;
+    background-color: var(--main-color);
+    z-index: 100;
+    height: var(--header-height);
+  }
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .logo {
+    width: 150px;
+    font-size: 0;
+  }
+  .navigation {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .navigation-link {
+    position: relative;
+    color: #fff;
+    font-size: 15px;
+  }
+  .navigation-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.3s;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .navigation-link:hover::after,
+  .navigation-link-active::after {
+    visibility: visible;
+    opacity: 0.8;
+  }
+  .menu-overlay {
+    display: none;
+  }
+  .menu-button {
+    width: 40px;
+    height: 40px;
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+  }
+  @media (max-width: 950px) {
+    .logo {
+      width: 150px;
+    }
+    .navigation-link {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 850px) {
+    .container {
+      justify-content: center;
+    }
+    .menu {
+      position: fixed;
+      top: var(--header-height);
+      left: 0;
+      width: 100%;
+      height: calc(100vh - var(--header-height));
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s;
+    }
+    .menu-overlay {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 50;
+    }
+    .menu-visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    .menu-visible .navigation {
+      transform: translateX(0);
+    }
+    .navigation {
+      position: absolute;
+      color: #000;
+      width: 40%;
+      height: 100%;
+      background-color: #fff;
+      padding: 20px;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      transition: 0.3s;
+      transform: translateX(-150%);
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+      z-index: 100;
+    }
+    .navigation-link {
+      color: #000;
+    }
+    .navigation-link-active {
+      color: var(--main-color);
+    }
+    .navigation-link-active::after {
+      background-color: var(--main-color);
+    }
+    .menuButton {
+      position: absolute;
+      left: 5%;
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  @media (max-width: 480px) {
+    .navigation {
+      width: 60%;
+    }
+  }
+
+  @media print {
+    .header {
+      display: none;
+    }
+  }
+</style>

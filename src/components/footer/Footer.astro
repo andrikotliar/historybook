@@ -1,0 +1,63 @@
+---
+import Container from '@/components/container/Container.astro';
+import UpButton from '@/components/footer/UpButton.astro';
+import { metadata } from '@/configs';
+
+const START_YEAR = 2020;
+const currentYear = new Date().getFullYear();
+---
+
+<div class="footer">
+  <Container className="footer-container">
+    <div class="footer-main">
+      <span class="footer-title">
+        {metadata.title}
+      </span>
+      <span class="footer-years">
+        {START_YEAR} - {currentYear}
+      </span>
+    </div>
+    <UpButton />
+  </Container>
+</div>
+
+<style is:global>
+  .footer {
+    color: var(--light-black);
+    padding: 20px 0;
+    margin-top: auto;
+    border-top: 1px solid #ddd;
+  }
+  .footer-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+  }
+  .footer-main {
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    text-align: center;
+  }
+  .footer-title {
+    color: var(--main-color);
+    font-weight: bold;
+  }
+  .footer-years {
+    font-size: 12px;
+  }
+  @media (max-width: 400px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  @media print {
+    .footer {
+      display: none;
+    }
+  }
+</style>

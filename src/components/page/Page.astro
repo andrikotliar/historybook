@@ -1,0 +1,32 @@
+---
+import Container from '@/components/container/Container.astro';
+import Cover from '@/components/page/Cover.astro';
+import type { PageData } from '@/configs';
+
+type Cover = Pick<PageData, 'title' | 'coverImage'>;
+type Props = {
+  cover?: Cover;
+};
+
+const { cover } = Astro.props;
+---
+
+{cover && <Cover {...cover} />}
+
+<div class="content">
+  <Container>
+    <slot />
+  </Container>
+</div>
+
+<style scoped>
+  .content {
+    padding: 40px 0;
+  }
+
+  @media print {
+    .content {
+      padding: 0;
+    }
+  }
+</style>

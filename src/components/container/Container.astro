@@ -1,0 +1,32 @@
+---
+type Props = {
+  className?: string;
+  adClass?: string;
+};
+
+const { className } = Astro.props;
+---
+
+<div class:list={['container', className]}>
+  <slot />
+</div>
+
+<style is:global>
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  @media (max-width: 580px) {
+    .container {
+      padding: 0 20px;
+    }
+  }
+
+  @media print {
+    .container {
+      max-width: 100%;
+    }
+  }
+</style>

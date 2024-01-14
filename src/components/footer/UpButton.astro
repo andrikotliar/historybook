@@ -1,0 +1,50 @@
+---
+import ArrowIcon from '@/assets/icons/ArrowIcon.astro';
+---
+
+<button class="up-button" id="upButton">
+  <div class="up-button-arrow">
+    <ArrowIcon />
+  </div>
+  <span>На гору</span>
+</button>
+
+<script>
+  const upButton = document.getElementById('upButton');
+
+  if (upButton) {
+    upButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    });
+  }
+</script>
+
+<style scoped>
+  .up-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--light-black);
+    cursor: pointer;
+    margin-left: auto;
+  }
+  .up-button-arrow {
+    width: 16px;
+    height: 16px;
+    transform: rotate(-90deg);
+  }
+  .up-button span {
+    flex-shrink: 0;
+  }
+  .up-button:hover {
+    color: var(--main-color);
+  }
+  @media (max-width: 400px) {
+    .up-button {
+      margin-left: 0;
+    }
+  }
+</style>
