@@ -1,0 +1,37 @@
+---
+import Article from '@/components/article/Article.astro';
+import Page from '@/components/page/Page.astro';
+import { pagesArray } from '@/configs';
+import Layout from '@/layouts/Layout.astro';
+import { ArticlesService } from '@/services';
+import { getEntry } from 'astro:content';
+
+export const getStaticPaths = async () => {
+  const promises = pagesArray.map(async (page) => {
+    const { articles } = await ArticlesService.findManyArticles(page.id);
+
+    return articles.map((article) => ({
+      params: {
+        pageId: page.id,
+        slug: article.slug,
+      },
+    }));
+  });
+
+  const params = await Promise.all(promises);
+
+  return params.flat();
+};
+
+const { pageId, slug } = Astro.params;
+
+const article = await getEntry(pageId, slug);
+---
+
+<Layout>
+  <Page>
+    <Article article={article} pageId={pageId}>
+      {article.render()}
+    </Article>
+  </Page>
+</Layout>

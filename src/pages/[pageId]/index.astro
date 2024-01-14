@@ -1,0 +1,31 @@
+---
+import { ARTICLES_PER_PAGE } from '@/common';
+import Page from '@/components/page/Page.astro';
+import Categories from '@/components/categories/Categories.astro';
+import { pagesArray, pagesMapper } from '@/configs';
+import { ArticlesService } from '@/services';
+import Layout from '@/layouts/Layout.astro';
+import Grid from '@/components/grid/Grid.astro';
+
+export const getStaticPaths = () => {
+  return pagesArray.map((page) => ({
+    params: {
+      pageId: page.id,
+    },
+  }));
+};
+
+const { pageId } = Astro.params;
+const config = pagesMapper[pageId];
+
+const { articles } = await ArticlesService.findManyArticles(pageId, {
+  limit: ARTICLES_PER_PAGE,
+});
+---
+
+<Layout title={config.title} description={config.description}>
+  <Page cover={{ title: config.title, coverImage: config.coverImage }}>
+    <Categories pageId={pageId} />
+    <Grid articles={articles} pageId={pageId} />
+  </Page>
+</Layout>
