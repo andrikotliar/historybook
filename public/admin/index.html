@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HistoryBook - Admin Panel</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script src="cyrillic-to-latin.js"></script>
+  <script>
+    CMS.registerEventListener({
+      name: 'preSave',
+      handler: ({ entry }) => {
+        const entryData = entry.get('data');
+        const parsedData = JSON.parse(JSON.stringify(entryData));
+
+        if(parsedData?.title) {
+          const convertedTitle = cyrillicToLatin(parsedData.title);
+          return entry.get('data').set('generatedSlug', convertedTitle);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
