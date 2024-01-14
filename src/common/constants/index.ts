@@ -1,0 +1,3 @@
+const ARTICLES_PER_PAGE = 10;
+
+export { ARTICLES_PER_PAGE };
