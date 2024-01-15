@@ -30,17 +30,23 @@ const { page } = Astro.props;
 const params = Astro.params;
 
 const pageMeta = pagesMapper[params.pageId];
-const pageTitle = `${pageMeta.title} - Сторінка ${page.currentPage}`;
+const titlePrefix =
+  page.currentPage > 1 ? `- Сторінка ${page.currentPage}` : '';
+const pageTitle = `${pageMeta.title} ${titlePrefix}`;
 ---
 
 <Layout title={pageTitle} description={pageMeta.description}>
   <Page cover={{ title: pageTitle, coverImage: pageMeta.coverImage }}>
     <Categories pageId={params.pageId} />
     <Grid pageId={params.pageId} articles={page.data} />
-    <Pagination
-      pageId={params.pageId}
-      currentPage={page.currentPage}
-      articlesCount={page.total}
-    />
+    {
+      page.total > ARTICLES_PER_PAGE && (
+        <Pagination
+          pageId={params.pageId}
+          currentPage={page.currentPage}
+          articlesCount={page.total}
+        />
+      )
+    }
   </Page>
 </Layout>
