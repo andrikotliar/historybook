@@ -6,19 +6,18 @@ type Props = {
   articlesCount: number;
   pageId: PageId;
   currentPage: number;
-  rootPath: string;
 };
 
-const { articlesCount, currentPage, rootPath } = Astro.props;
+const { articlesCount, currentPage, pageId } = Astro.props;
 
 const pages = countPages(articlesCount);
 
 const generateLink = (index: number) => {
   if (index > 0) {
-    return `${rootPath}/page/${index + 1}`;
+    return `/${pageId}/page/${index + 1}/`;
   }
 
-  return `${rootPath}/`;
+  return `/${pageId}/`;
 };
 ---
 

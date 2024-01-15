@@ -26,11 +26,17 @@ const stories = defineCollection({
   schema: articleSchema,
 });
 
+const pages = defineCollection({
+  type: 'content',
+  schema: articleSchema,
+});
+
 const collections = {
   [PageId.LESSONS]: lessons,
   [PageId.FIGURES]: figures,
   [PageId.NEWS]: news,
   [PageId.STORIES]: stories,
+  pages,
 };
 
 export { collections };

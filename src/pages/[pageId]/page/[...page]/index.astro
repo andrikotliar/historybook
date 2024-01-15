@@ -1,0 +1,46 @@
+---
+import { ARTICLES_PER_PAGE } from '@/common';
+import Categories from '@/components/categories/Categories.astro';
+import Grid from '@/components/grid/Grid.astro';
+import Page from '@/components/page/Page.astro';
+import Pagination from '@/components/pagination/Pagination.astro';
+import { pagesArray, pagesMapper } from '@/configs';
+import Layout from '@/layouts/Layout.astro';
+import { ArticlesService } from '@/services';
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const promises = pagesArray.map(async (page) => {
+    const { articles } = await ArticlesService.findManyArticles(page.id);
+
+    return paginate(articles, {
+      params: {
+        pageId: page.id,
+      },
+      pageSize: ARTICLES_PER_PAGE,
+    });
+  });
+
+  const paths = await Promise.all(promises);
+
+  return paths.flat();
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+const params = Astro.params;
+
+const pageMeta = pagesMapper[params.pageId];
+const pageTitle = `${pageMeta.title} - Сторінка ${page.currentPage}`;
+---
+
+<Layout title={pageTitle} description={pageMeta.description}>
+  <Page cover={{ title: pageTitle, coverImage: pageMeta.coverImage }}>
+    <Categories pageId={params.pageId} />
+    <Grid pageId={params.pageId} articles={page.data} />
+    <Pagination
+      pageId={params.pageId}
+      currentPage={page.currentPage}
+      articlesCount={page.total}
+    />
+  </Page>
+</Layout>

@@ -20,3 +20,21 @@ const { articles } = await ArticlesService.findManyArticles(pageId, {
   <h6 class="title">Читайте також</h6>
   <Grid articles={articles} pageId={pageId} />
 </div>
+
+<style scoped>
+  .relative-articles {
+    margin-top: 40px;
+  }
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: var(--main-color);
+    text-transform: uppercase;
+  }
+  @media print {
+    .relative-articles {
+      display: none;
+    }
+  }
+</style>

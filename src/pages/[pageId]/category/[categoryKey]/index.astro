@@ -1,0 +1,58 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { PageId } from '@/common';
+import { pagesArray, pagesMapper } from '@/configs';
+import { ArticlesService } from '@/services';
+import { filterCategories } from '@/helpers';
+import Layout from '@/layouts/Layout.astro';
+import Page from '@/components/page/Page.astro';
+import Categories from '@/components/categories/Categories.astro';
+import Grid from '@/components/grid/Grid.astro';
+
+type Params = {
+  params: {
+    pageId: PageId;
+    categoryKey: string;
+  };
+};
+
+export const getStaticPaths = (() => {
+  const params: Params[] = [];
+
+  pagesArray.forEach((page) => {
+    if (page.categories) {
+      const categories = page.categories.map((category) => ({
+        params: {
+          pageId: page.id,
+          categoryKey: category.key,
+        },
+      }));
+
+      params.push(...categories);
+    }
+  });
+
+  return params;
+}) satisfies GetStaticPaths;
+
+const { pageId, categoryKey } = Astro.params;
+
+const currentCategory = pagesMapper[pageId].categories?.find(
+  (category) => category.key === categoryKey,
+);
+
+const pageTitle = currentCategory?.pageTitle || '';
+
+const { articles } = await ArticlesService.findManyArticles(pageId, {
+  filter: filterCategories(currentCategory?.filter || ''),
+});
+---
+
+<Layout title={pageTitle}>
+  <Page
+    cover={{ title: pageTitle, coverImage: pagesMapper[pageId].coverImage }}
+  >
+    <Categories pageId={pageId} />
+    <Grid articles={articles} pageId={pageId} />
+  </Page>
+</Layout>

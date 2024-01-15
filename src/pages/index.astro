@@ -1,11 +1,13 @@
 ---
 import Page from '@/components/page/Page.astro';
 import Section from '@/components/section/Section.astro';
-import { pagesArray } from '@/configs';
+import { metadata, pagesArray } from '@/configs';
 import Layout from '@/layouts/Layout.astro';
+
+const pageTitle = `${metadata.title} - цікаві уроки історії, новини освіти, розповіді`;
 ---
 
-<Layout>
+<Layout title={pageTitle}>
   <Page>
     {pagesArray.map((page) => <Section {...page} />)}
   </Page>

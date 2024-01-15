@@ -1,0 +1,28 @@
+---
+import { metadata } from '@/configs';
+
+type Props = {
+  title?: string;
+  description?: string;
+};
+
+const url = Astro.url;
+const { title, description } = Astro.props;
+
+const siteUrl = metadata.url + url.pathname;
+const socialImage = metadata.url + '/images/social-image.jpg';
+
+const metaTitle = title ?? metadata.title;
+const metaDescription = description ?? metadata.description;
+---
+
+<meta property="og:url" content={siteUrl} />
+<meta property="og:title" content={metaTitle} />
+<meta property="og:description" content={metaDescription} />
+<meta property="og:image" content={socialImage} />
+
+<meta name="twitter:site" content={siteUrl} />
+<meta name="twitter:title" content={metaTitle} />
+<meta name="twitter:description" content={metaDescription} />
+<meta name="twitter:image" content={socialImage} />
+<meta name="twitter:card" content="summary_large_image" />

@@ -3,6 +3,8 @@ import { headerMenu } from '@/configs';
 import Container from '@/components/container/Container.astro';
 import MenuIcon from '@/assets/icons/MenuIcon.astro';
 import Logo from '@/assets/Logo.astro';
+
+const url = Astro.url;
 ---
 
 <header class="header">
@@ -18,7 +20,13 @@ import Logo from '@/assets/Logo.astro';
       <div class="navigation">
         {
           headerMenu.map((item) => (
-            <a href={item.link} class="navigation-link">
+            <a
+              href={item.link}
+              class:list={[
+                'navigation-link',
+                { 'navigation-link-active': url.pathname.includes(item.link) },
+              ]}
+            >
               {item.title}
             </a>
           ))

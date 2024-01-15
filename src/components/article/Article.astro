@@ -5,44 +5,182 @@ import RelativeArticles from '@/components/relative-articles/RelativeArticles.as
 import { metadata } from '@/configs';
 import { formatDate } from '@/helpers';
 
-type Settings = {
-  showHeader?: boolean;
-  showRelativeArticles?: boolean;
-  showPrintButton?: boolean;
-};
-
 type Props = {
   article: ArticleData;
   pageId?: PageId;
-} & Settings;
+};
 
-const {
-  article,
-  showHeader = true,
-  showRelativeArticles = true,
-  showPrintButton = true,
-  pageId,
-} = Astro.props;
+const { article, pageId } = Astro.props;
 
 const articleDate = formatDate(article.data.date);
 ---
 
 <article itemscope itemtype="http://schema.org/Article">
   {
-    showHeader && (
-      <div class="header">
-        <h1 class="title">{article.data.title}</h1>
-        <div class="date">{articleDate}</div>
+    pageId && (
+      <div class="article-header">
+        <h1 class="article-title">{article.data.title}</h1>
+        <div class="article-date">{articleDate}</div>
         <meta itemprop="image" content={metadata.socialMediaImage} />
         <meta itemprop="author" content={metadata.author} />
       </div>
     )
   }
-  <section class="body"><slot /></section>
-  {showPrintButton && <PrintButton />}
-  {
-    showRelativeArticles && pageId && (
-      <RelativeArticles pageId={pageId} currentSlug={article.slug} />
-    )
-  }
+  <section class="article-body"><slot /></section>
+  {pageId && <PrintButton />}
+  {pageId && <RelativeArticles pageId={pageId} currentSlug={article.slug} />}
 </article>
+
+<style is:global>
+  .article-header {
+    margin-bottom: 20px;
+  }
+  .article-title {
+    font-size: 35px;
+    line-height: 1.3;
+    font-weight: bold;
+  }
+  .article-date {
+    display: block;
+    margin-top: 10px;
+    line-height: 1;
+    color: var(--main-color);
+  }
+  .article-body {
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+  .article-body img {
+    display: block;
+    max-width: 100%;
+    min-height: 150px;
+    background-color: #f2f2f2;
+    margin: 20px 0;
+  }
+  .article-body p img {
+    margin: 0;
+  }
+  .article-body h1,
+  .article-body h2,
+  .article-body h3,
+  .article-body h4,
+  .article-body h5,
+  .article-body h6 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+  .article-body ul,
+  .article-body ol {
+    margin-bottom: 15px;
+  }
+  .article-body ul li {
+    list-style: inside disc;
+  }
+  .article-body ol li {
+    list-style: inside decimal;
+  }
+  .article-body ul li p,
+  .article-body ol li p {
+    display: inline;
+  }
+  .article-body p {
+    margin-bottom: 15px;
+  }
+  .article-body a {
+    color: var(--main-color);
+  }
+  .article-body a:hover {
+    text-decoration: underline;
+  }
+  .article-body table {
+    display: block;
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-bottom: 15px;
+    overflow-x: auto;
+    width: 100%;
+  }
+  .article-body table thead {
+    text-align: left;
+  }
+  .article-body table th,
+  .article-body table td {
+    border: 1px solid #000;
+    padding: 10px 15px;
+    vertical-align: top;
+  }
+  .article-body table th {
+    font-weight: normal;
+  }
+  .article-body table td img,
+  .article-body table th img {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+  .article-body table p {
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+  .article-body table p:last-child {
+    margin-bottom: 0;
+  }
+  .article-body figure {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .article-body figure:last-of-type {
+    margin-bottom: 0;
+  }
+  .article-body figcaption {
+    margin-top: 5px;
+  }
+  .crossing {
+    position: relative;
+  }
+  .crossing::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 3px;
+    width: calc(100% - 6px);
+    height: 1px;
+    background-color: #f00;
+    transform: rotate(9deg);
+  }
+  .crossing::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 3px;
+    width: calc(100% - 6px);
+    height: 1px;
+    background-color: #f00;
+    transform: rotate(-9deg);
+  }
+  @media (max-width: 700px) {
+    .article-body table {
+      width: 100%;
+    }
+  }
+  @media (max-width: 640px) {
+    .article-title {
+      font-size: 32px;
+    }
+  }
+  @media print {
+    .article-title {
+      font-size: 16px;
+    }
+    .article-date {
+      display: none;
+    }
+    .article-body {
+      font-size: 14px;
+    }
+    .article-body table {
+      overflow: initial;
+    }
+  }
+</style>

@@ -1,0 +1,19 @@
+---
+import Article from '@/components/article/Article.astro';
+import Page from '@/components/page/Page.astro';
+import Layout from '@/layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const pageTitle = 'Про сайт';
+
+const article = await getEntry('pages', 'about');
+const { Content } = await article.render();
+---
+
+<Layout title={pageTitle}>
+  <Page cover={{ title: pageTitle, coverImage: '/images/covers/about.jpg' }}>
+    <Article article={article}>
+      <Content />
+    </Article>
+  </Page>
+</Layout>

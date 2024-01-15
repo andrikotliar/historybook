@@ -6,6 +6,7 @@ import { pagesArray, pagesMapper } from '@/configs';
 import { ArticlesService } from '@/services';
 import Layout from '@/layouts/Layout.astro';
 import Grid from '@/components/grid/Grid.astro';
+import Pagination from '@/components/pagination/Pagination.astro';
 
 export const getStaticPaths = () => {
   return pagesArray.map((page) => ({
@@ -18,14 +19,26 @@ export const getStaticPaths = () => {
 const { pageId } = Astro.params;
 const config = pagesMapper[pageId];
 
-const { articles } = await ArticlesService.findManyArticles(pageId, {
-  limit: ARTICLES_PER_PAGE,
-});
+const { articles, fullLength } = await ArticlesService.findManyArticles(
+  pageId,
+  {
+    limit: ARTICLES_PER_PAGE,
+  },
+);
 ---
 
 <Layout title={config.title} description={config.description}>
   <Page cover={{ title: config.title, coverImage: config.coverImage }}>
     <Categories pageId={pageId} />
     <Grid articles={articles} pageId={pageId} />
+    {
+      fullLength > ARTICLES_PER_PAGE && (
+        <Pagination
+          articlesCount={fullLength}
+          pageId={pageId}
+          currentPage={1}
+        />
+      )
+    }
   </Page>
 </Layout>

@@ -26,12 +26,13 @@ export const getStaticPaths = async () => {
 const { pageId, slug } = Astro.params;
 
 const article = await getEntry(pageId, slug);
+const { Content } = await article.render();
 ---
 
 <Layout>
   <Page>
     <Article article={article} pageId={pageId}>
-      {article.render()}
+      <Content />
     </Article>
   </Page>
 </Layout>
