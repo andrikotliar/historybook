@@ -2,38 +2,61 @@
 import { headerMenu } from '@/configs';
 import Container from '@/components/container/Container.astro';
 import MenuIcon from '@/assets/icons/MenuIcon.astro';
+import CloseIcon from '@/assets/icons/CloseIcon.astro';
 
 const url = Astro.url;
 ---
 
 <header class="header">
   <Container className="header-container">
-    <button class="menu-button">
-      <MenuIcon />
-    </button>
     <a href="/" class="logo">
       <img src="/images/logo.svg" alt="HistoryBook" />
     </a>
-    <nav class="menu">
-      <div class="menu-overlay"></div>
-      <div class="navigation">
-        {
-          headerMenu.map((item) => (
-            <a
-              href={item.link}
-              class:list={[
-                'navigation-link',
-                { 'navigation-link-active': url.pathname.includes(item.link) },
-              ]}
-            >
-              {item.title}
-            </a>
-          ))
-        }
-      </div>
+    <button class="menu-button" id="menuButton">
+      <MenuIcon />
+    </button>
+    <nav class="navigation" id="navigation">
+      <button class="close-button" id="closeButton">
+        <CloseIcon />
+      </button>
+      {
+        headerMenu.map((item) => (
+          <a
+            href={item.link}
+            class:list={[
+              'navigation-link',
+              { 'navigation-link-active': url.pathname.includes(item.link) },
+            ]}
+          >
+            {item.title}
+          </a>
+        ))
+      }
     </nav>
   </Container>
 </header>
+
+<script>
+  const menuButton = document.getElementById('menuButton');
+  const closeButton = document.getElementById('closeButton');
+  const navigation = document.getElementById('navigation');
+
+  const isMenuAvailable = menuButton && closeButton && navigation;
+
+  const VISIBLE_CLASS_NAME = 'navigation-visible';
+
+  if (isMenuAvailable) {
+    menuButton.addEventListener('click', () => {
+      navigation.classList.add(VISIBLE_CLASS_NAME);
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeButton.addEventListener('click', () => {
+      navigation.classList.remove(VISIBLE_CLASS_NAME);
+      document.body.style.overflow = '';
+    });
+  }
+</script>
 
 <style is:global>
   .header {
@@ -81,9 +104,6 @@ const url = Astro.url;
     visibility: visible;
     opacity: 0.8;
   }
-  .menu-overlay {
-    display: none;
-  }
   .menu-button {
     width: 40px;
     height: 40px;
@@ -95,6 +115,9 @@ const url = Astro.url;
     position: relative;
     z-index: 5;
   }
+  .close-button {
+    display: none;
+  }
   @media (max-width: 950px) {
     .logo {
       width: 150px;
@@ -104,50 +127,31 @@ const url = Astro.url;
     }
   }
   @media (max-width: 850px) {
-    .container {
-      justify-content: center;
-    }
-    .menu {
+    .navigation {
       position: fixed;
-      top: var(--header-height);
+      top: 0;
       left: 0;
       width: 100%;
-      height: calc(100vh - var(--header-height));
-      visibility: hidden;
-      opacity: 0;
-      transition: 0.3s;
-    }
-    .menu-overlay {
-      display: block;
-      position: absolute;
-      width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      z-index: 50;
-    }
-    .menu-visible {
-      opacity: 1;
-      visibility: visible;
-    }
-    .menu-visible .navigation {
-      transform: translateX(0);
-    }
-    .navigation {
-      position: absolute;
       color: #000;
-      width: 40%;
-      height: 100%;
       background-color: #fff;
       padding: 20px;
       flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      transition: 0.3s;
+      justify-content: center;
+      align-items: center;
+      transition: 0.2s;
+      visibility: hidden;
+      opacity: 0;
       transform: translateX(-150%);
-      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
       z-index: 100;
     }
+    .navigation-visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
     .navigation-link {
+      font-size: 20px;
       color: #000;
     }
     .navigation-link-active {
@@ -156,20 +160,32 @@ const url = Astro.url;
     .navigation-link-active::after {
       background-color: var(--main-color);
     }
-    .menuButton {
-      position: absolute;
-      left: 5%;
+    .menu-button {
       display: block;
       width: 30px;
       height: 30px;
     }
-  }
-  @media (max-width: 480px) {
-    .navigation {
-      width: 60%;
+    .close-button {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+    }
+    .scrolled-button {
+      border: 1px solid #ddd;
+      width: 40px;
+      height: 40px;
+      padding: 5px;
+      border-radius: 6px;
+      z-index: 100;
+      background-color: rgb(255 255 255 / 80%);
+    }
+    .scrolled-button svg {
+      fill: #000;
     }
   }
-
   @media print {
     .header {
       display: none;
