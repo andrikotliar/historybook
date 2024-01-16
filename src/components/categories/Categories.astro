@@ -4,10 +4,11 @@ import { pagesMapper } from '@/configs';
 
 type Props = {
   pageId: PageId;
+  categoryKey?: string;
 };
 
 const url = Astro.url;
-const { pageId } = Astro.props;
+const { pageId, categoryKey } = Astro.props;
 
 const rootLink = `/${pageId}/`;
 ---
@@ -15,16 +16,13 @@ const rootLink = `/${pageId}/`;
 {
   pagesMapper[pageId].categories && (
     <nav class="categories">
-      <a
-        href={rootLink}
-        class:list={['link', { active: !url.pathname.includes('category') }]}
-      >
+      <a href={rootLink} class:list={['link', { active: !categoryKey }]}>
         Всі
       </a>
       {pagesMapper[pageId].categories?.map((category) => (
         <a
-          href={`/${pageId}/category/${category.key}/`}
-          class:list={['link', { active: url.pathname.includes(category.key) }]}
+          href={`/${pageId}/${category.key}/`}
+          class:list={['link', { active: categoryKey === category.key }]}
         >
           {category.linkTitle}
         </a>

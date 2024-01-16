@@ -23,6 +23,12 @@ const { cover } = Astro.props;
     padding: 40px 0;
   }
 
+  @media (max-width: 480px) {
+    .content {
+      padding: 20px 0;
+    }
+  }
+
   @media print {
     .content {
       padding: 0;

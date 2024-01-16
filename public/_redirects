@@ -137,5 +137,9 @@
 /sm.xml /sitemap.xml
 /sitemap-file.xml /sitemap.xml
 
-/lessons/category/5th-class/ /lessons/category/5-grade/
-/lessons/category/7th-class/ /lessons/category/7-grade/
+/lessons/category/5th-class/ /lessons/5-grade/
+/lessons/category/7th-class/ /lessons/7-grade/
+/lessons/category/8-grade/ /lessons/8-grade/
+/lessons/category/rebuses/ /lessons/rebuses/
+/stories/category/sun-over-river/ /stories/sun-over-river/
+/stories/category/survive/ /stories/survive/
