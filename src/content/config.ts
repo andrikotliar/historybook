@@ -36,7 +36,7 @@ const collections = {
   [PageId.FIGURES]: figures,
   [PageId.NEWS]: news,
   [PageId.STORIES]: stories,
-  pages,
+  [PageId.PAGES]: pages,
 };
 
 export { collections };

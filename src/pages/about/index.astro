@@ -1,4 +1,5 @@
 ---
+import { PageId } from '@/common';
 import Article from '@/components/article/Article.astro';
 import Page from '@/components/page/Page.astro';
 import Layout from '@/layouts/Layout.astro';
@@ -6,7 +7,7 @@ import { getEntry } from 'astro:content';
 
 const pageTitle = 'Про сайт';
 
-const article = await getEntry('pages', 'about');
+const article = await getEntry(PageId.PAGES, 'about');
 const { Content } = await article.render();
 ---
 

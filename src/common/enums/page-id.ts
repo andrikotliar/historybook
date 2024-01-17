@@ -3,6 +3,7 @@ enum PageId {
   FIGURES = 'figures',
   NEWS = 'news',
   STORIES = 'stories',
+  PAGES = 'pages',
 }
 
 export { PageId };
