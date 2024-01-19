@@ -35,7 +35,7 @@ Also you have to update files in the config directory:
     - `pageTitle` - appears in the `title` tag and page cover.
     - `linkTitle` - this title uses in the [list of categories](https://github.com/andrikotliar/historybook-astro/blob/main/src/components/categories/Categories.astro);
 
-  The file exports two variables `pagesMapper` and `pagesArray`. The first one uses to get a page config directly via a page id. The second one uses to loop over all page configs. For example the home pages loops over configs to show 8 latest articles of each section. Also the `pagesArray` uses to dynamically build [root pages](https://github.com/andrikotliar/historybook/blob/main/src/pages/%5BpageId%5D/%5B...page%5D/index.astro) of the website
+  The file exports two variables `pagesMapper` and `pagesArray`. The first one uses to get a page config directly via a page id. The second one uses to loop over all page configs. For example the home pages loops over configs to show 8 latest articles of each section. Also the `pagesArray` uses to [dynamically](https://docs.astro.build/en/core-concepts/routing/#dynamic-routes) build [root pages](https://github.com/andrikotliar/historybook/blob/main/src/pages/%5BpageId%5D/%5B...page%5D/index.astro) of the website
 - `header-menu.ts` - the header navigation;
 - `meta.ts` - default metadata used across the project:
   - default title;
