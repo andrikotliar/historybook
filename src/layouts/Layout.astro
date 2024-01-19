@@ -19,7 +19,7 @@ const pageTitle = title ? `${title} - ${metadata.title}` : metadata.title;
     <meta charset="UTF-8" />
     <meta name="description" content={description ?? metadata.description} />
     <meta name="viewport" content="width=device-width" />
-    <OpenGraph />
+    <OpenGraph title={title} description={description} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{pageTitle}</title>
   </head>
