@@ -46,5 +46,6 @@ Also you have to update files in the config directory:
 # Tech Stack
 
 - [Astro](https://github.com/withastro/astro)
+- TypeScript
 - Markdown
 
