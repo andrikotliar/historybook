@@ -4,4 +4,4 @@ The history teacher's blog in Ukrainian language. The teacher publishes developm
 
 ## Tech
 
-The blog is built with the `Astro` framework and markdown files as content. 
+The blog is built with the `Astro` framework and markdown files. 
