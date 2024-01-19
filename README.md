@@ -2,7 +2,7 @@
 
 The history teacher's blog in Ukrainian language. The teacher publishes developments of lessons, Ukrainian education news, and novels.
 
-# Development
+## Development
 
 To start the dev server run the command:
 
@@ -19,7 +19,7 @@ npm run build
 
 This command creates the `dist` folder in the root of the project and builds the static pages.
 
-# How it works
+## How it works
 
 All articles are plain markdown files in the `content`. The `config.ts` file in this directory define schemas for all collections. I use `PageId` enum to store my collection names.
 
@@ -45,7 +45,7 @@ There are several additional config files in the `config` directory:
   - author name;
   - default open graph image.
 
-# Tech Stack
+## Tech Stack
 
 - [Astro](https://github.com/withastro/astro)
 - TypeScript
