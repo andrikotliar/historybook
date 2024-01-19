@@ -5,7 +5,6 @@ type Category = {
   filter: string;
   pageTitle: string;
   linkTitle: string;
-  folder: string;
 };
 
 type PageData = {
@@ -35,28 +34,24 @@ const lessons = {
       filter: '5 клас',
       pageTitle: 'Уроки для 5-го класу',
       linkTitle: '5-й клас',
-      folder: 'lessons',
     },
     {
       key: '7-grade',
       filter: '7 клас',
       pageTitle: 'Уроки для 7-го класу',
       linkTitle: '7-й клас',
-      folder: 'lessons',
     },
     {
       key: '8-grade',
       filter: '8 клас',
       pageTitle: 'Уроки для 8-го класу',
       linkTitle: '8-й клас',
-      folder: 'lessons',
     },
     {
       key: 'rebuses',
       filter: 'ребус',
       pageTitle: 'Ребуси',
       linkTitle: 'Ребуси',
-      folder: 'lessons',
     },
   ],
 };
@@ -92,14 +87,12 @@ const stories = {
       filter: 'сонце над річкою',
       pageTitle: 'Сонце над річкою',
       linkTitle: 'Сонце над річкою',
-      folder: 'stories',
     },
     {
       key: 'survive',
       filter: 'завдання - вижити',
       pageTitle: 'Завдання - вижити',
       linkTitle: 'Завдання - вижити',
-      folder: 'stories',
     },
   ],
 };
