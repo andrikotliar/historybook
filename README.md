@@ -19,9 +19,11 @@ npm run build
 
 This command creates the `dist` folder in the root of the project and builds the static pages.
 
-If you'd like to use the repository as a starter template, you have to put your articles in the `content` folder and update the `config.ts` file. This file contains schemas of your collections. I use `PageId` enum to store my collection names.
+# How it works
 
-Also you have to update files in the config directory:
+All articles are plain markdown files in the `content`. The `config.ts` file in this directory define schemas for all collections. I use `PageId` enum to store my collection names.
+
+There are several additional config files in the `config` directory:
 
 - `pages.ts` - the file contains configuration of each page:
   - `id` - it helps search articles in a particular folder and appears in an individual article page URL;
