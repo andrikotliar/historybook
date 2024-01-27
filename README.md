@@ -21,13 +21,13 @@ This command creates the `dist` folder in the root of the project and builds the
 
 ## How it works
 
-All articles are plain markdown files in the `content`. The `config.ts` file in this directory define schemas for all collections. I use `PageId` enum to store my collection names.
+All articles are plain markdown files in the `content` folder. The `config.ts` file in this directory define schemas for all collections. I use `PageId` enum to store my collection names.
 
 There are several additional config files in the `config` directory:
 
 - `pages.ts` - the file contains configuration of each page:
-  - `id` - it helps search articles in a particular folder and appears in an individual article page URL;
-  - `title` and `description` - page metadata, appears in the `title` tag and `<meta content="description">` respectively. Also the title appears in the page header;
+  - `id` - it helps search articles in a particular folder and is present in an individual article page URL;
+  - `title` and `description` - page metadata, are present in the `title` tag and `<meta content="description">` respectively. Also the title appears in the page header;
   - `emoji` - page title prefix in the form of emoji, appears only in the title on the home page;
   - `shortTitle` - lowercased short description of page, appears in the "more" link on the home page;
   - `coverImage` - path to the image in the `public` folder, appears on an individual articles page at the top of a page;
