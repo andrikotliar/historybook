@@ -2,7 +2,6 @@
 import { headerMenu } from '@/configs';
 import Container from '@/components/container/Container.astro';
 import MenuIcon from '@/assets/icons/MenuIcon.astro';
-import CloseIcon from '@/assets/icons/CloseIcon.astro';
 
 const url = Astro.url;
 ---
@@ -15,45 +14,45 @@ const url = Astro.url;
     <button class="menu-button" id="menuButton" aria-label="Open menu">
       <MenuIcon />
     </button>
-    <nav class="navigation" id="navigation">
-      <button class="close-button" id="closeButton">
-        <CloseIcon />
-      </button>
-      {
-        headerMenu.map((item) => (
-          <a
-            href={item.link}
-            class:list={[
-              'navigation-link',
-              { 'navigation-link-active': url.pathname.includes(item.link) },
-            ]}
-          >
-            {item.title}
-          </a>
-        ))
-      }
-    </nav>
+    <div class="navigation-wrapper" id="navigationWrapper">
+      <nav class="navigation">
+        {
+          headerMenu.map((item) => (
+            <a
+              href={item.link}
+              class:list={[
+                'navigation-link',
+                { 'navigation-link-active': url.pathname.includes(item.link) },
+              ]}
+            >
+              {item.title}
+            </a>
+          ))
+        }
+      </nav>
+    </div>
   </Container>
 </header>
 
 <script>
   const menuButton = document.getElementById('menuButton');
-  const closeButton = document.getElementById('closeButton');
-  const navigation = document.getElementById('navigation');
+  const navigationWrapper = document.getElementById('navigationWrapper');
 
-  const isMenuAvailable = menuButton && closeButton && navigation;
+  const isMenuAvailable = menuButton && navigationWrapper;
 
-  const VISIBLE_CLASS_NAME = 'navigation-visible';
+  const VISIBLE_CLASS_NAME = 'navigation-wrapper-visible';
 
   if (isMenuAvailable) {
     menuButton.addEventListener('click', () => {
-      navigation.classList.add(VISIBLE_CLASS_NAME);
+      navigationWrapper.classList.toggle(VISIBLE_CLASS_NAME);
       document.body.style.overflow = 'hidden';
     });
 
-    closeButton.addEventListener('click', () => {
-      navigation.classList.remove(VISIBLE_CLASS_NAME);
-      document.body.style.overflow = '';
+    navigationWrapper.addEventListener('click', (event) => {
+      const target = event.target as Element;
+      if (target?.classList.contains(VISIBLE_CLASS_NAME)) {
+        navigationWrapper.classList.remove(VISIBLE_CLASS_NAME);
+      }
     });
   }
 </script>
@@ -115,9 +114,6 @@ const url = Astro.url;
     position: relative;
     z-index: 5;
   }
-  .close-button {
-    display: none;
-  }
   @media (max-width: 950px) {
     .logo {
       width: 150px;
@@ -127,27 +123,39 @@ const url = Astro.url;
     }
   }
   @media (max-width: 850px) {
-    .navigation {
+    .navigation-wrapper {
       position: fixed;
-      top: 0;
+      top: var(--header-height);
       left: 0;
       width: 100%;
+      height: calc(100% - var(--header-height));
+      overflow: hidden;
+      background-color: rgb(0 0 0 / 85%);
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s;
+    }
+    .navigation-wrapper-visible {
+      visibility: visible;
+      opacity: 1;
+    }
+    .navigation {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
       height: 100%;
       color: #000;
       background-color: #fff;
       padding: 20px;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      transition: 0.2s;
-      visibility: hidden;
-      opacity: 0;
-      transform: translateX(-150%);
+      gap: 15px;
+      transition: 0.4s;
+      transform: translateX(150%);
       z-index: 100;
     }
-    .navigation-visible {
-      opacity: 1;
-      visibility: visible;
+    .navigation-wrapper-visible .navigation {
       transform: translateX(0);
     }
     .navigation-link {
@@ -164,26 +172,6 @@ const url = Astro.url;
       display: block;
       width: 30px;
       height: 30px;
-    }
-    .close-button {
-      display: block;
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      width: 30px;
-      height: 30px;
-    }
-    .scrolled-button {
-      border: 1px solid #ddd;
-      width: 40px;
-      height: 40px;
-      padding: 5px;
-      border-radius: 6px;
-      z-index: 100;
-      background-color: rgb(255 255 255 / 80%);
-    }
-    .scrolled-button svg {
-      fill: #000;
     }
   }
   @media print {
