@@ -1,53 +1,50 @@
-const cyrillicToLatin = (sentence) => {
+const cyrillicToLatin = (title) => {
   const config = {
-    "а": "a",
-    "б": "b",
-    "в": "v",
-    "г": "g",
-    "д": "d",
-    "е": "e",
-    "є": "ye",
-    "ж": "zh",
-    "з": "z",
-    "и": "y",
-    "і": "i",
-    "ї": "yi",
-    "й": "j",
-    "к": "k",
-    "л": "l",
-    "м": "m",
-    "н": "n",
-    "о": "o",
-    "п": "p",
-    "р": "r",
-    "с": "s",
-    "т": "t",
-    "у": "u",
-    "ф": "f",
-    "х": "kh",
-    "ц": "ts",
-    "ч": "ch",
-    "ш": "sh",
-    "щ": "shch",
-    "ь": "",
-    "ю": "yu",
-    "я": "ya",
-    " ": "-"
+    а: 'a',
+    б: 'b',
+    в: 'v',
+    г: 'g',
+    д: 'd',
+    е: 'e',
+    є: 'ye',
+    ж: 'zh',
+    з: 'z',
+    и: 'y',
+    і: 'i',
+    ї: 'yi',
+    й: 'j',
+    к: 'k',
+    л: 'l',
+    м: 'm',
+    н: 'n',
+    о: 'o',
+    п: 'p',
+    р: 'r',
+    с: 's',
+    т: 't',
+    у: 'u',
+    ф: 'f',
+    х: 'kh',
+    ц: 'ts',
+    ч: 'ch',
+    ш: 'sh',
+    щ: 'shch',
+    ь: '',
+    ю: 'yu',
+    я: 'ya',
   };
 
-  const lcSentence = sentence.toLowerCase();
+  const lowercasedTitle = title.toLowerCase();
+  const sanitizedTitle = lowercasedTitle.replace(/[^a-zа-я0-9-]/g, '');
 
-  const lettersArray = Array.from(lcSentence).map(letter => {
-    if(config[letter]) {
-      return config[letter];
+  const transformedCharacters = Array.from(sanitizedTitle).map((character) => {
+    if (config[character]) {
+      return config[character];
     }
-    if(!isNaN(Number(letter))) {
-      return letter;
-    }
-    return '';
+    return character;
   });
 
-  const restoredSentence = lettersArray.join('').replace(/--/g, '-');
-  
-  return restoredSentence;
+  const slug = transformedCharacters.join('');
+
+  return slug;
 };
