@@ -1,3 +1,5 @@
+const regex = /[^a-zA-Z0-9\u0400-\u04FF]+/g;
+
 const cyrillicToLatin = (title) => {
   const config = {
     а: 'a',
@@ -29,13 +31,13 @@ const cyrillicToLatin = (title) => {
     ч: 'ch',
     ш: 'sh',
     щ: 'shch',
-    ь: '',
+    ь: '-',
     ю: 'yu',
     я: 'ya',
   };
 
   const lowercasedTitle = title.toLowerCase();
-  const sanitizedTitle = lowercasedTitle.replace(/[^a-zа-я0-9-]/g, '');
+  const sanitizedTitle = lowercasedTitle.replace(regex, '-');
 
   const transformedCharacters = Array.from(sanitizedTitle).map((character) => {
     if (config[character]) {
