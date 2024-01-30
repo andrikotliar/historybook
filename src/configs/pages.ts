@@ -71,8 +71,8 @@ const figures = {
   emoji: '📔',
   shortTitle: 'історичні постаті',
   navigationTitles: {
-    prev: 'Попередня історична постать',
-    next: 'Наступна історична постать',
+    prev: 'Попередня стаття',
+    next: 'Наступна стаття',
   },
   coverImage: '/images/covers/figures.jpg',
 };
