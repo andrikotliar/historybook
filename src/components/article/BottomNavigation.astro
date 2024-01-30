@@ -1,0 +1,59 @@
+---
+import type { PageId } from '@/common';
+import ArticleLink from '@/components/article/ArticleLink.astro';
+import LinkMore from '@/components/section/LinkMore.astro';
+import { pagesMapper } from '@/configs';
+import { ArticlesService } from '@/services';
+
+type Props = {
+  pageId: PageId;
+  currentSlug: string;
+};
+
+const { pageId, currentSlug } = Astro.props;
+
+const { articles } = await ArticlesService.findManyArticles(pageId);
+const currentIndex = articles.findIndex(
+  (article) => article.slug === currentSlug,
+);
+
+const prevArticle = articles[currentIndex - 1];
+const nextArticle = articles[currentIndex + 1];
+---
+
+<div>
+  <div class="row">
+    {
+      prevArticle && (
+        <ArticleLink
+          link={`/${pageId}/${prevArticle.slug}`}
+          direction="prev"
+          title={prevArticle.data.title}
+          description={prevArticle.data.description}
+          pageId={pageId}
+        />
+      )
+    }
+    {
+      nextArticle && (
+        <ArticleLink
+          link={`/${pageId}/${nextArticle.slug}`}
+          direction="next"
+          title={nextArticle.data.title}
+          description={nextArticle.data.description}
+          pageId={pageId}
+        />
+      )
+    }
+  </div>
+  <LinkMore pageId={pageId} title={pagesMapper[pageId].shortTitle} />
+</div>
+
+<style scoped>
+  .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 50px 0 20px;
+  }
+</style>

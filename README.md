@@ -30,6 +30,7 @@ There are several additional config files in the `config` directory:
   - `title` and `description` - page metadata, are present in the `title` tag and `<meta content="description">` respectively. Also the title appears in the page header;
   - `emoji` - page title prefix in the form of emoji, appears only in the title on the home page;
   - `shortTitle` - lowercased short description of page, appears in the "more" link on the home page;
+  - `navigationTitles` - titles display in prev/next links at the bottom of each article. It has two options `prev` and `next` titles.
   - `coverImage` - path to the image in the `public` folder, appears on an individual articles page at the top of a page;
   - `categories` - optional, describes page categories:
     - `key` - the same as `id` for a page;

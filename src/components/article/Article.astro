@@ -1,7 +1,7 @@
 ---
 import type { ArticleData, PageId } from '@/common';
+import BottomNavigation from '@/components/article/BottomNavigation.astro';
 import PrintButton from '@/components/article/PrintButton.astro';
-import RelativeArticles from '@/components/relative-articles/RelativeArticles.astro';
 import { metadata } from '@/configs';
 import { formatDate } from '@/helpers';
 
@@ -28,7 +28,7 @@ const articleDate = formatDate(article.data.date);
   }
   <section class="article-body"><slot /></section>
   {pageId && <PrintButton />}
-  {pageId && <RelativeArticles pageId={pageId} currentSlug={article.slug} />}
+  {pageId && <BottomNavigation pageId={pageId} currentSlug={article.slug} />}
 </article>
 
 <style is:global>

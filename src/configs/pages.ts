@@ -13,6 +13,10 @@ type PageData = {
   description: string;
   emoji: string;
   shortTitle: string;
+  navigationTitles: {
+    prev: string;
+    next: string;
+  };
   coverImage: string;
   categories?: Category[];
 };
@@ -27,6 +31,10 @@ const lessons = {
   description: 'Цікаві форми проведення уроків історії в школі',
   emoji: '📚',
   shortTitle: 'уроки',
+  navigationTitles: {
+    prev: 'Попередній урок',
+    next: 'Наступний урок',
+  },
   coverImage: '/images/covers/lessons.jpg',
   categories: [
     {
@@ -62,6 +70,10 @@ const figures = {
   description: 'Історичні постаті на уроках історії',
   emoji: '📔',
   shortTitle: 'історичні постаті',
+  navigationTitles: {
+    prev: 'Попередня історична постать',
+    next: 'Наступна історична постать',
+  },
   coverImage: '/images/covers/figures.jpg',
 };
 
@@ -71,6 +83,10 @@ const news = {
   description: 'Актуальні новини та події в освіті України',
   emoji: '📰',
   shortTitle: 'новини',
+  navigationTitles: {
+    prev: 'Попередня новина',
+    next: 'Наступна новина',
+  },
   coverImage: '/images/covers/news.jpg',
 };
 
@@ -80,6 +96,10 @@ const stories = {
   description: 'Повісті власного авторства',
   emoji: '📖',
   shortTitle: 'розповіді',
+  navigationTitles: {
+    prev: 'Попередня розповідь',
+    next: 'Наступна розповідь',
+  },
   coverImage: '/images/covers/stories.jpg',
   categories: [
     {

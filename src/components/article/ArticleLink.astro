@@ -1,0 +1,79 @@
+---
+import type { PageId } from '@/common';
+import { pagesMapper } from '@/configs';
+import Icon from '@/components/icon/Icon.astro';
+
+type Props = {
+  link: string;
+  title: string;
+  description: string;
+  direction: 'prev' | 'next';
+  pageId: PageId;
+};
+
+const { link, title, description, direction, pageId } = Astro.props;
+---
+
+<a href={link} class="article-link">
+  <div class:list={['direction', `direction-${direction}`]}>
+    <span>{pagesMapper[pageId].navigationTitles[direction]}</span>
+    <div class="icon">
+      <Icon name="arrow" />
+    </div>
+  </div>
+  <h6 class="title">{title}</h6>
+  <p class="description">{description}</p>
+</a>
+
+<style scoped>
+  .article-link {
+    padding: 15px;
+    border-radius: 6px;
+    border: var(--default-border);
+    transition: border-color 300ms;
+    flex-grow: 1;
+  }
+
+  .article-link:hover {
+    border-color: var(--main-color);
+  }
+
+  .direction {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    color: var(--dark-gray);
+  }
+
+  .article-link:hover .direction {
+    color: var(--main-color);
+  }
+
+  .direction .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .direction-prev {
+    flex-direction: row-reverse;
+  }
+
+  .direction-prev .icon {
+    transform: rotate(180deg);
+  }
+
+  .title {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 10px 0;
+    font-weight: 500;
+  }
+
+  .description {
+    color: var(--dark-gray);
+    font-size: 14px;
+    line-height: 18px;
+  }
+</style>
