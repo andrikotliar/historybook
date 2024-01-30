@@ -1,7 +1,7 @@
 ---
 import { headerMenu } from '@/configs';
 import Container from '@/components/container/Container.astro';
-import MenuIcon from '@/assets/icons/MenuIcon.astro';
+import Icon from '@/components/icon/Icon.astro';
 
 const url = Astro.url;
 ---
@@ -12,7 +12,7 @@ const url = Astro.url;
       <img src="/images/logo.svg" alt="HistoryBook" />
     </a>
     <button class="menu-button" id="menuButton" aria-label="Open menu">
-      <MenuIcon />
+      <Icon name="menu" />
     </button>
     <div class="navigation-wrapper" id="navigationWrapper">
       <nav class="navigation">

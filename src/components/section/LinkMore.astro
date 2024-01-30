@@ -1,5 +1,5 @@
 ---
-import LinkIcon from '@/assets/icons/LinkIcon.astro';
+import Icon from '@/components/icon/Icon.astro';
 import type { PageId } from '@/common';
 
 type Props = {
@@ -14,7 +14,7 @@ const link = `/${pageId}/`;
 <a href={link} class="link-more">
   <span>Всі {title}</span>
   <div class="icon">
-    <LinkIcon />
+    <Icon name="link" />
   </div>
 </a>
 

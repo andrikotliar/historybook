@@ -1,0 +1,23 @@
+---
+import ArrowIcon from './icons/ArrowIcon.astro';
+import LinkIcon from './icons/LinkIcon.astro';
+import MenuIcon from './icons/MenuIcon.astro';
+import PdfIcon from './icons/PdfIcon.astro';
+
+const iconsMap = {
+  arrow: ArrowIcon,
+  link: LinkIcon,
+  menu: MenuIcon,
+  pdf: PdfIcon,
+};
+
+type Props = {
+  name: keyof typeof iconsMap;
+};
+
+const { name } = Astro.props;
+
+const IconComponent = iconsMap[name];
+---
+
+<IconComponent />
