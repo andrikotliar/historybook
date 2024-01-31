@@ -11,7 +11,15 @@ const { Content } = await article.render();
 ---
 
 <Layout title={pageTitle}>
-  <Page cover={{ title: pageTitle, coverImage: '/images/covers/about.jpg' }}>
+  <Page
+    cover={{
+      title: pageTitle,
+      coverImage: {
+        jpg: '/images/covers/about.jpg',
+        webp: '/images/covers/about.webp',
+      },
+    }}
+  >
     <Article article={article}>
       <Content />
     </Article>
