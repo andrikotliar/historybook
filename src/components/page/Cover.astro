@@ -25,21 +25,15 @@ const { title, coverImage } = Astro.props;
 <style scoped>
   .cover {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 250px;
     background-color: #c4c4c4;
     overflow: hidden;
   }
-  .image-wrapper {
-    width: 100%;
-    height: 100%;
+  .image-wrapper picture {
+    display: block;
   }
   .image-wrapper img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
   .cover::after {
     content: '';
