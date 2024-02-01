@@ -17,10 +17,7 @@ type PageData = {
     prev: string;
     next: string;
   };
-  coverImage: {
-    webp: string;
-    jpg: string;
-  };
+  coverImage: string;
   categories?: Category[];
 };
 
@@ -38,10 +35,7 @@ const lessons: PageData = {
     prev: 'Попередній урок',
     next: 'Наступний урок',
   },
-  coverImage: {
-    jpg: '/images/covers/lessons.jpg',
-    webp: '/images/covers/lessons.webp',
-  },
+  coverImage: '/images/covers/lessons.webp',
   categories: [
     {
       key: '5-grade',
@@ -80,10 +74,7 @@ const figures: PageData = {
     prev: 'Попередня стаття',
     next: 'Наступна стаття',
   },
-  coverImage: {
-    jpg: '/images/covers/figures.jpg',
-    webp: '/images/covers/figures.webp',
-  },
+  coverImage: '/images/covers/figures.webp',
 };
 
 const news: PageData = {
@@ -96,10 +87,7 @@ const news: PageData = {
     prev: 'Попередня новина',
     next: 'Наступна новина',
   },
-  coverImage: {
-    jpg: '/images/covers/news.jpg',
-    webp: '/images/covers/news.webp',
-  },
+  coverImage: '/images/covers/news.webp',
 };
 
 const stories: PageData = {
@@ -112,10 +100,7 @@ const stories: PageData = {
     prev: 'Попередня розповідь',
     next: 'Наступна розповідь',
   },
-  coverImage: {
-    jpg: '/images/covers/stories.jpg',
-    webp: '/images/covers/stories.webp',
-  },
+  coverImage: '/images/covers/stories.webp',
   categories: [
     {
       key: 'sun-over-river',

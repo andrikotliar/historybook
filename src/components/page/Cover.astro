@@ -7,33 +7,23 @@ type Props = Pick<PageData, 'title' | 'coverImage'>;
 const { title, coverImage } = Astro.props;
 ---
 
-<div class="cover">
-  <div class="image-wrapper">
-    <picture>
-      <source srcset={coverImage.webp} type="image/webp" />
-      <source srcset={coverImage.jpg} type="image/jpeg" />
-      <img src={coverImage.jpg} alt={`Обкладинка сторінки ${title}`} />
-    </picture>
-  </div>
-  <div class="title-wrapper">
-    <Container>
-      <h2 class="title">{title}</h2>
-    </Container>
-  </div>
+<div class="cover" style={{ backgroundImage: `url(${coverImage})` }}>
+  <Container>
+    <h2 class="title">{title}</h2>
+  </Container>
 </div>
 
 <style scoped>
   .cover {
     position: relative;
-    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
     background-color: #c4c4c4;
-    overflow: hidden;
-  }
-  .image-wrapper picture {
-    display: block;
-  }
-  .image-wrapper img {
-    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   .cover::after {
     content: '';
@@ -43,16 +33,6 @@ const { title, coverImage } = Astro.props;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
-  }
-  .title-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   .title {
     font-size: 35px;
@@ -64,7 +44,7 @@ const { title, coverImage } = Astro.props;
   }
   @media (max-width: 700px) {
     .cover {
-      height: 200px;
+      min-height: 200px;
     }
     .title {
       font-size: 28px;
