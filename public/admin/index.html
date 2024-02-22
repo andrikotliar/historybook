@@ -9,7 +9,36 @@
 <body>
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   <script src="cyrillic-to-latin.js"></script>
+  <script src="editable-block.js"></script>
   <script>
+    CMS.registerWidget('editable-block', EditableBlock);
+
+    const TableInterpreter = {
+      id: 'table-interpreter',
+      label: 'Table Interpreter',
+      fields: [
+        {
+          name: 'contents',
+          label: 'Table Container',
+          widget: 'editable-block',
+        },
+      ],
+      pattern: /^<table>$\s*?(.*?)\n^<\/table>$/ms,
+      fromBlock: (match) => {
+        return {
+          contents: match[0],
+        };
+      },
+      toBlock: (data) => {
+        return `<div></div>`;
+      },
+      toPreview: (data) => {
+        return `<div></div>`;
+      },
+    };
+
+    CMS.registerEditorComponent(TableInterpreter);
+
     CMS.registerEventListener({
       name: 'preSave',
       handler: ({ entry }) => {
