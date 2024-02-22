@@ -23,17 +23,17 @@
           widget: 'editable-block',
         },
       ],
-      pattern: /^<table>$\s*?(.*?)\n^<\/table>$/ms,
+      pattern: /^<div class="table-wrapper">$\s*?(.*?)\n^<\/table>$/ms,
       fromBlock: (match) => {
         return {
           contents: match[0],
         };
       },
       toBlock: (data) => {
-        return `<div></div>`;
+        return data.contents;
       },
       toPreview: (data) => {
-        return `<div></div>`;
+        return data.contents;
       },
     };
 
