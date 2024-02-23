@@ -1,13 +1,12 @@
 class Interpreter {
-  constructor(wrapperId, updateState) {
-    this.wrapperId = wrapperId;
-    this.updateState = updateState;
+  constructor(onChange) {
+    this.onChange = onChange;
 
     this.attrsToKeep = ['rowspan', 'colspan'];
 
     this.modalWrapperElement = null;
     this.editableElement = null;
-    this.tableElement = null;
+    this.tableHtml = null;
   }
 
   removeAttrs(element) {
@@ -20,14 +19,14 @@ class Interpreter {
     });
   }
 
-  removeAttrsFromChildren(element) {
+  sanitizeTableElements(element) {
     this.removeAttrs(element);
 
     const children = Array.from(element.children);
 
     if (children.length) {
       children.forEach((child) => {
-        this.removeAttrsFromChildren(child);
+        this.sanitizeTableElements(child);
       });
     }
   }
@@ -42,21 +41,18 @@ class Interpreter {
 
       const parsedHTML = parser.parseFromString(rawHtml, 'text/html');
 
-      const tableBody = parsedHTML.querySelector('tbody');
+      const table = parsedHTML.querySelector('table');
 
-      if (!tableBody) {
-        return rawHtml;
+      if (!table) {
+        alert('Table not found.');
+        return;
       }
 
-      const table = document.createElement('table');
-
-      this.removeAttrsFromChildren(tableBody);
-
-      table.append(tableBody);
+      this.sanitizeTableElements(table);
 
       this.editableElement.append(table);
 
-      this.tableElement = table;
+      this.tableHtml = table.outerHTML;
     });
   }
 
@@ -65,7 +61,7 @@ class Interpreter {
 
     modalWindow.setAttribute(
       'style',
-      'width: 100%; height: 100%; position: fixed; top: 0; left: 0;display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.8); z-index: 9999;',
+      'width: 100%; height: 100%; position: fixed; top: 0; left: 0; display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.8); z-index: 9999;',
     );
 
     this.modalWrapperElement = modalWindow;
@@ -99,27 +95,20 @@ class Interpreter {
   }
 
   saveTable() {
-    const wrapper = document.getElementById(this.wrapperId);
-
-    if (!wrapper) {
-      console.error(`Wrapper with id ${this.wrapperId} not found!`);
-      this.cancel();
-
-      return;
-    }
-
-    const tableWrapper = wrapper.querySelector('.table-wrapper');
-
-    if (!this.tableElement) {
+    if (!this.tableHtml) {
       alert(
         'Table element does not exist. Paste table into the editable area!',
       );
       return;
     }
 
-    tableWrapper.append(this.tableElement);
+    if (!this.onChange) {
+      alert('onChange prop is not present');
+      this.cancel();
+      return;
+    }
 
-    this.updateState && this.updateState();
+    this.onChange(this.tableHtml);
 
     this.cancel();
   }
@@ -164,23 +153,14 @@ class Interpreter {
 }
 
 const EditableBlock = createClass({
-  getInitialState: function () {
-    return {
-      isTableAdded: false,
-    };
-  },
-
-  updateTableState: function () {
-    this.setState({ isTableAdded: true });
-  },
-
   triggerInterpreter: function () {
-    const modal = new Interpreter(
-      this.props.forID,
-      this.updateTableState.bind(this),
-    );
+    const modal = new Interpreter(this.handleChange.bind(this));
 
     modal.init();
+  },
+
+  handleChange: function (markup) {
+    this.props.onChange(markup);
   },
 
   render: function () {
@@ -191,19 +171,17 @@ const EditableBlock = createClass({
         className: this.props.classNameWrapper,
       },
       h(
-        'div',
+        'button',
         {
-          className: 'buttons-wrapper',
-          style: { display: 'flex', gap: 10 },
+          onClick: this.triggerInterpreter,
+          style: { marginBottom: 10, display: 'inline-block' },
         },
-        !this.state.isTableAdded
-          ? h('button', { onClick: this.triggerInterpreter }, 'Add table')
-          : null,
-        this.state.isTableAdded
-          ? h('button', { onClick: this.triggerInterpreter }, 'Remove table')
-          : '',
+        'Add table',
       ),
-      h('div', { className: 'table-wrapper' }),
+      h('input', {
+        className: this.props.classNameWrapper,
+        value: this.props.value,
+      }),
     );
   },
 });
