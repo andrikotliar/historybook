@@ -5,8 +5,6 @@ backend:
 media_folder: 'public/uploads'
 public_folder: '/uploads'
 
-# local development
-# run npx netlify-cms-proxy-server
 local_backend: true
 
 collections:

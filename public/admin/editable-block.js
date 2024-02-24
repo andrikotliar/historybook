@@ -138,6 +138,12 @@ class Interpreter {
     return toolbar;
   }
 
+  registerLinkChangeListener() {
+    window.addEventListener('hashchange', (event) => {
+      this.cancel();
+    });
+  }
+
   init() {
     const modalWindow = this.createModalWindow();
     const contentWrapper = this.createContentWrapper();
@@ -149,6 +155,7 @@ class Interpreter {
     document.body.append(modalWindow);
 
     this.registerEditorPasteListener();
+    this.registerLinkChangeListener();
   }
 }
 
