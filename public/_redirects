@@ -134,8 +134,6 @@
 /articles/vazhnyie-i-nuzhnyie-kantstovary/ /about/
 /articles/ /about/
 /articles/5%20-klas-mista-i-sela/ /lessons/5-klas-mista-i-sela/
-/sm.xml /sitemap.xml
-/sitemap-file.xml /sitemap.xml
 
 /lessons/category/5th-class/ /lessons/5-grade/
 /lessons/category/7th-class/ /lessons/7-grade/
@@ -168,5 +166,3 @@
 /stories/page/3/ /stories/3/
 
 /lessons/kiiwska-derzawa(rus-ukraina)-sa-perhih-knaziw/ /lessons/kiiwska-derzawa-rus-ukraina-sa-perhih-knaziw/
-
-/sitemap.xml /sitemap-index.xml
