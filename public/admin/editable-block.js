@@ -61,7 +61,7 @@ class Interpreter {
 
     modalWindow.setAttribute(
       'style',
-      'width: 100%; height: 100%; position: fixed; top: 0; left: 0; display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.8); z-index: 9999;',
+      'width: 100%; height: 100%; position: fixed; top: 0; left: 0; display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; padding: 40px;',
     );
 
     this.modalWrapperElement = modalWindow;
@@ -74,7 +74,7 @@ class Interpreter {
 
     contentWrapper.setAttribute(
       'style',
-      'min-width: 700px; min-height: 300px; background-color: #fff; border-radius: 5px; padding: 10px;',
+      'min-width: 700px; min-height: 300px; max-height: 90%; background-color: #fff; border-radius: 5px; overflow: auto;',
     );
 
     return contentWrapper;
@@ -86,7 +86,7 @@ class Interpreter {
     editableBlock.contentEditable = true;
     editableBlock.setAttribute(
       'style',
-      'border: 2px solid #000; color: #000; border-radius: 5px; min-height: 280px; padding: 10px;',
+      'border: 2px solid #000; color: #000; border-radius: 5px; min-height: 280px; padding: 10px; margin: 20px; overflow: auto;',
     );
 
     this.editableElement = editableBlock;
@@ -130,7 +130,7 @@ class Interpreter {
 
     toolbar.setAttribute(
       'style',
-      'display: flex; gap: 10px; margin-top: 20px;',
+      'display: flex; gap: 10px; padding: 0 20px 20px; position: sticky; bottom: 0; background: #fff;',
     );
 
     toolbar.append(saveButton, cancelButton);
