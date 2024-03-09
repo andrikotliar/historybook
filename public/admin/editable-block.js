@@ -59,10 +59,7 @@ class Interpreter {
   createModalWindow() {
     const modalWindow = document.createElement('div');
 
-    modalWindow.setAttribute(
-      'style',
-      'width: 100%; height: 100%; position: fixed; top: 0; left: 0; display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; padding: 40px;',
-    );
+    modalWindow.className = 'interpreter-modal-window';
 
     this.modalWrapperElement = modalWindow;
 
@@ -72,10 +69,7 @@ class Interpreter {
   createContentWrapper() {
     const contentWrapper = document.createElement('div');
 
-    contentWrapper.setAttribute(
-      'style',
-      'min-width: 700px; min-height: 300px; max-height: 90%; background-color: #fff; border-radius: 5px; overflow: auto;',
-    );
+    contentWrapper.className = 'interpreter-content-wrapper';
 
     return contentWrapper;
   }
@@ -84,10 +78,7 @@ class Interpreter {
     const editableBlock = document.createElement('div');
 
     editableBlock.contentEditable = true;
-    editableBlock.setAttribute(
-      'style',
-      'border: 2px solid #000; color: #000; border-radius: 5px; min-height: 280px; padding: 10px; margin: 20px; overflow: auto;',
-    );
+    editableBlock.className = 'interpreter-editable-block';
 
     this.editableElement = editableBlock;
 
@@ -128,10 +119,7 @@ class Interpreter {
     saveButton.textContent = 'Save';
     cancelButton.textContent = 'Cancel';
 
-    toolbar.setAttribute(
-      'style',
-      'display: flex; gap: 10px; padding: 0 20px 20px; position: sticky; bottom: 0; background: #fff;',
-    );
+    toolbar.className = 'interpreter-toolbar';
 
     toolbar.append(saveButton, cancelButton);
 
@@ -139,9 +127,7 @@ class Interpreter {
   }
 
   registerLinkChangeListener() {
-    window.addEventListener('hashchange', (event) => {
-      this.cancel();
-    });
+    window.addEventListener('hashchange', this.cancel);
   }
 
   init() {
