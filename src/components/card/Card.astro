@@ -1,5 +1,6 @@
 ---
 import type { ArticleData, PageId } from '@/common';
+import { pagesMapper } from '@/configs';
 import { formatDate } from '@/helpers';
 
 type Props = {
@@ -7,14 +8,15 @@ type Props = {
 } & ArticleData;
 
 const { pageId, data, slug } = Astro.props;
-const formattedDate = formatDate(data.date);
+const shouldShowDate = Boolean(pagesMapper[pageId].showDate);
+const formattedDate = shouldShowDate ? formatDate(data.date) : null;
 const url = `/${pageId}/${slug}/`;
 ---
 
 <a href={url} class="card">
   <h3 class="title">{data.title}</h3>
   <p class="description">{data.description}</p>
-  <div class="date">{formattedDate}</div>
+  {formattedDate && <div class="date">{formattedDate}</div>}
 </a>
 
 <style scoped>

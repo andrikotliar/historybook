@@ -13,6 +13,7 @@ type PageData = {
   description: string;
   emoji: string;
   shortTitle: string;
+  showDate?: boolean;
   navigationTitles: {
     prev: string;
     next: string;
@@ -83,6 +84,7 @@ const news: PageData = {
   description: 'Актуальні новини та події в освіті України',
   emoji: '📰',
   shortTitle: 'новини',
+  showDate: true,
   navigationTitles: {
     prev: 'Попередня новина',
     next: 'Наступна новина',

@@ -2,7 +2,7 @@
 import type { ArticleData, PageId } from '@/common';
 import BottomNavigation from '@/components/article/BottomNavigation.astro';
 import PrintButton from '@/components/article/PrintButton.astro';
-import { metadata } from '@/configs';
+import { metadata, pagesMapper } from '@/configs';
 import { formatDate } from '@/helpers';
 
 type Props = {
@@ -12,7 +12,8 @@ type Props = {
 
 const { article, pageId } = Astro.props;
 
-const articleDate = formatDate(article.data.date);
+const shouldShowDate = pageId ? Boolean(pagesMapper[pageId].showDate) : false;
+const articleDate = shouldShowDate ? formatDate(article.data.date) : null;
 ---
 
 <article itemscope itemtype="http://schema.org/Article">
@@ -20,7 +21,7 @@ const articleDate = formatDate(article.data.date);
     pageId && (
       <div class="article-header">
         <h1 class="article-title">{article.data.title}</h1>
-        <div class="article-date">{articleDate}</div>
+        {articleDate && <div class="article-date">{articleDate}</div>}
         <meta itemprop="image" content={metadata.socialMediaImage} />
         <meta itemprop="author" content={metadata.author} />
       </div>
