@@ -12,9 +12,12 @@ type Props = {
 
 const { title, description } = Astro.props;
 
-const pageTitle = title
-  ? `${title} - ${metadataConfig.title}`
-  : metadataConfig.title;
+const currentPath = Astro.url.pathname;
+
+const basePageTitle = title ?? metadataConfig.title;
+const prefixedTitle = `${title} - ${metadataConfig.title}`;
+
+const pageTitle = currentPath === '/' ? basePageTitle : prefixedTitle;
 const pageDescription = description ?? metadataConfig.description;
 ---
 
