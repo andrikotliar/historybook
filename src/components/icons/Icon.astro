@@ -1,0 +1,23 @@
+---
+import ArrowRightIcon from './ArrowRightIcon.astro';
+import ArrowUpIcon from './ArrowUpIcon.astro';
+import MenuIcon from './MenuIcon.astro';
+import PrintIcon from './PrintIcon.astro';
+
+const IconMap = {
+  menu: MenuIcon,
+  arrowUp: ArrowUpIcon,
+  arrowRight: ArrowRightIcon,
+  print: PrintIcon,
+};
+
+type Props = {
+  name: keyof typeof IconMap;
+};
+
+const { name } = Astro.props;
+
+const IconComponent = IconMap[name];
+---
+
+<IconComponent />
