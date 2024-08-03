@@ -1,0 +1,44 @@
+---
+import type { RootId } from '../common/types/root-id';
+import Icon from './icons/Icon.astro';
+
+type Props = {
+  rootId: RootId;
+  title: string;
+};
+
+const { rootId, title } = Astro.props;
+
+const url = `/${rootId}/`;
+---
+
+<a href={url} class="link-more">
+  <span>Всі {title}</span>
+  <div class="link-more-icon">
+    <Icon name="arrowRight" />
+  </div>
+</a>
+
+<style>
+  .link-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+    color: var(--red-base);
+    border-radius: 10px;
+    border: 1px solid var(--red-base);
+    padding: 10px 20px;
+  }
+
+  .link-more:hover {
+    color: #fff;
+    background-color: var(--red-base);
+  }
+
+  .link-more-icon {
+    width: 20px;
+    height: 20px;
+  }
+</style>

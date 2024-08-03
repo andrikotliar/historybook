@@ -1,0 +1,20 @@
+---
+import HomePageSection from '../components/HomePageSection.astro';
+import RootLayout from '../components/RootLayout.astro';
+import { pagesList } from '../configs/pages';
+---
+
+<RootLayout
+  title="HistoryBook - цікаві уроки історії, новини освіти, розповіді"
+>
+  {
+    pagesList.map((page) => (
+      <HomePageSection
+        title={page.title}
+        emoji={page.emoji}
+        id={page.id}
+        shortTitle={page.shortTitle}
+      />
+    ))
+  }
+</RootLayout>
