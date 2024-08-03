@@ -1,5 +1,5 @@
 import type { CategoryKey } from '../enums/category-key';
-import { PageId } from '../enums/page-id';
+import type { RootId } from './root-id';
 
 type PageCategory = {
   key: (typeof CategoryKey)[keyof typeof CategoryKey];
@@ -9,7 +9,7 @@ type PageCategory = {
 };
 
 type PageConfig = {
-  id: (typeof PageId)[keyof typeof PageId];
+  id: RootId;
   title: string;
   description: string;
   emoji: string;
