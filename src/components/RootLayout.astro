@@ -3,7 +3,9 @@ import { metadataConfig } from '../configs/metadata';
 import Container from './Container.astro';
 import ContentWrapper from './ContentWrapper.astro';
 import OpenGraph from './OpenGraph.astro';
+import Header from './Header.astro';
 import Body from './Body.astro';
+import Footer from './Footer.astro';
 
 type Props = {
   title?: string;
@@ -35,11 +37,13 @@ const pageDescription = description ?? metadataConfig.description;
     <title>{pageTitle}</title>
   </head>
   <Body>
+    <Header />
     <ContentWrapper>
       <Container>
         <slot />
       </Container>
     </ContentWrapper>
+    <Footer />
   </Body>
 </html>
 
