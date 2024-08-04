@@ -24,7 +24,9 @@ const currentPath = Astro.url.pathname;
               class:list={[
                 'header-navigation-link',
                 {
-                  'header-navigation-link-active': currentPath === route.link,
+                  'header-navigation-link-active': currentPath.includes(
+                    route.link,
+                  ),
                 },
               ]}
             >
