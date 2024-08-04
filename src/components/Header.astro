@@ -157,6 +157,12 @@ const currentPath = Astro.url.pathname;
       height: 30px;
     }
   }
+
+  @media print {
+    .header {
+      display: none;
+    }
+  }
 </style>
 
 <script>

@@ -1,0 +1,45 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { pagesList } from '../../configs/pages';
+import { getArticles } from '../../utils/get-articles';
+import ArticleLayout from '../../components/layouts/ArticleLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+import type { RootId } from '../../common/types/root-id';
+import type { PageConfig } from '../../common/types/page-config';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const pages = pagesList.map(async (page) => {
+    const articles = await getArticles({ id: page.id });
+
+    return articles.map((article) => ({
+      params: {
+        rootId: page.id,
+        slug: article.slug,
+      },
+      props: { article, pageConfig: page },
+    }));
+  });
+
+  const data = await Promise.all(pages);
+
+  return data.flat();
+};
+
+type Props = {
+  article: CollectionEntry<RootId>;
+  pageConfig: PageConfig;
+};
+
+const { article, pageConfig } = Astro.props;
+
+const { Content } = await article.render();
+---
+
+<ArticleLayout
+  title={article.data.title}
+  description={article.data.description}
+  date={article.data.date}
+  shouldShowDate={pageConfig.shouldShowDate}
+>
+  <Content />
+</ArticleLayout>
