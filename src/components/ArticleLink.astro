@@ -1,0 +1,81 @@
+---
+import type { RootId } from '../common/types/root-id';
+import { pagesMap } from '../configs/pages';
+import Icon from './icons/Icon.astro';
+
+type Props = {
+  rootId: RootId;
+  direction: 'prev' | 'next';
+  slug: string;
+  title: string;
+  description: string;
+};
+
+const { rootId, direction, slug, title, description } = Astro.props;
+
+const url = `/${rootId}/${slug}/`;
+---
+
+<a href={url} class="article-link">
+  <div class={`article-link-direction article-link-direction-${direction}`}>
+    <span>{pagesMap[rootId].navigationTitles[direction]}</span>
+    <div class="article-link-direction-icon">
+      <Icon name="arrowRight" />
+    </div>
+  </div>
+  <h6 class="article-link-title">{title}</h6>
+  <p class="article-link-description">{description}</p>
+</a>
+
+<style>
+  .article-link {
+    padding: 15px;
+    border-radius: 6px;
+    border: var(--default-border);
+    transition: border-color 300ms;
+    flex-grow: 1;
+  }
+
+  .article-link:hover {
+    border-color: var(--red-base);
+  }
+
+  .article-link-direction {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    color: var(--gray-dark);
+  }
+
+  .article-link-direction-prev {
+    flex-direction: row-reverse;
+  }
+
+  .article-link:hover .article-link-direction {
+    color: var(--red-base);
+  }
+
+  .article-link-direction-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .article-link-direction-prev .article-link-direction-icon {
+    transform: rotate(180deg);
+  }
+
+  .article-link-title {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 10px 0;
+    font-weight: 500;
+  }
+
+  .article-link-description {
+    color: var(--gray-dark);
+    font-size: 14px;
+    line-height: 18px;
+  }
+</style>

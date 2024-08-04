@@ -6,13 +6,15 @@ import OpenGraph from './OpenGraph.astro';
 import Header from './Header.astro';
 import Body from './Body.astro';
 import Footer from './Footer.astro';
+import Cover from './Cover.astro';
 
 type Props = {
   title?: string;
   description?: string;
+  coverImage?: string;
 };
 
-const { title, description } = Astro.props;
+const { title, description, coverImage } = Astro.props;
 
 const currentPath = Astro.url.pathname;
 
@@ -38,6 +40,7 @@ const pageDescription = description ?? metadataConfig.description;
   </head>
   <Body>
     <Header />
+    {coverImage && <Cover imagePath={coverImage} title={basePageTitle} />}
     <ContentWrapper>
       <Container>
         <slot />

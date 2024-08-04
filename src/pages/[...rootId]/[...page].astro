@@ -1,0 +1,54 @@
+---
+import type { GetStaticPaths, Page } from 'astro';
+import { ARTICLES_PAGE_LIMIT } from '../../common/constants';
+import Card from '../../components/Card.astro';
+import Grid from '../../components/Grid.astro';
+import RootLayout from '../../components/RootLayout.astro';
+import { pagesList } from '../../configs/pages';
+import { getArticles } from '../../utils/get-articles';
+import type { PageConfig } from '../../common/types/page-config';
+import Pagination from '../../components/Pagination.astro';
+
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
+  const pages = pagesList.map(async (page) => {
+    const articles = await getArticles({ id: page.id });
+
+    return paginate(articles, {
+      params: {
+        rootId: page.id,
+      },
+      props: {
+        config: page,
+      },
+      pageSize: ARTICLES_PAGE_LIMIT,
+    });
+  });
+
+  const data = await Promise.all(pages);
+
+  return data.flat();
+};
+
+type Props = {
+  config: PageConfig;
+  page: Page;
+};
+
+const { config, page } = Astro.props;
+const { title, description, coverImage, id } = config;
+---
+
+<RootLayout title={title} description={description} coverImage={coverImage}>
+  <Grid>
+    {
+      page.data.map((article) => (
+        <Card rootId={id} slug={article.slug} {...article.data} />
+      ))
+    }
+  </Grid>
+  <Pagination
+    currentPage={page.currentPage}
+    pagesCount={page.lastPage}
+    rootId={id}
+  />
+</RootLayout>
