@@ -2,7 +2,7 @@
 import type { RootId } from '../common/types/root-id';
 import Grid from './Grid.astro';
 import { getArticles } from '../utils/get-articles';
-import { DEFAULT_ARTICLES_LIMIT } from '../common/constants';
+import { INDEX_PAGE_ARTICLES_LIMIT } from '../common/constants';
 import Card from './Card.astro';
 import LinkMore from './LinkMore.astro';
 
@@ -16,7 +16,7 @@ type Props = {
 const { title, emoji, id, shortTitle } = Astro.props;
 const articles = await getArticles({
   id,
-  limit: DEFAULT_ARTICLES_LIMIT,
+  limit: INDEX_PAGE_ARTICLES_LIMIT,
 });
 ---
 

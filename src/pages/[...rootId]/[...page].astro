@@ -1,6 +1,6 @@
 ---
 import type { GetStaticPaths, Page } from 'astro';
-import { ARTICLES_PAGE_LIMIT } from '../../common/constants';
+import { ROOT_PAGES_ARTICLES_LIMIT } from '../../common/constants';
 import Card from '../../components/Card.astro';
 import Grid from '../../components/Grid.astro';
 import RootLayout from '../../components/RootLayout.astro';
@@ -20,7 +20,7 @@ export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
       props: {
         config: page,
       },
-      pageSize: ARTICLES_PAGE_LIMIT,
+      pageSize: ROOT_PAGES_ARTICLES_LIMIT,
     });
   });
 
