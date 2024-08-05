@@ -1,7 +1,11 @@
 ---
+import type { PageConfig } from '../../common/types/page-config';
+import type { PrevNextArticleData } from '../../common/types/prev-next-article-data';
+import type { RootId } from '../../common/types/root-id';
 import { metadataConfig } from '../../configs/metadata';
 import { getFormattedDate } from '../../helpers/get-formatted-date';
 import ArticleBody from '../ArticleBody.astro';
+import BottomNavigation from '../BottomNavigation.astro';
 import PrintButton from '../PrintButton.astro';
 import RootLayout from './RootLayout.astro';
 
@@ -9,10 +13,13 @@ type Props = {
   title: string;
   description: string;
   date?: string;
-  shouldShowDate?: boolean;
+  pageConfig: PageConfig;
+  prevArticle: PrevNextArticleData | null;
+  nextArticle: PrevNextArticleData | null;
 };
 
-const { title, date, description, shouldShowDate } = Astro.props;
+const { title, date, description, pageConfig, ...prevNextArticles } =
+  Astro.props;
 ---
 
 <RootLayout title={title} description={description}>
@@ -20,7 +27,7 @@ const { title, date, description, shouldShowDate } = Astro.props;
     <div class="article-header">
       <h1 class="article-title">{title}</h1>
       {
-        shouldShowDate && date && (
+        pageConfig.shouldShowDate && date && (
           <div class="article-date">{getFormattedDate(date)}</div>
         )
       }
@@ -31,6 +38,12 @@ const { title, date, description, shouldShowDate } = Astro.props;
       <slot />
     </ArticleBody>
     <PrintButton />
+    <BottomNavigation
+      rootId={pageConfig.id}
+      labels={pageConfig.navigationTitles}
+      shortPageTitle={pageConfig.shortTitle}
+      {...prevNextArticles}
+    />
   </article>
 </RootLayout>
 

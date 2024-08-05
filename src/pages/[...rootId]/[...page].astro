@@ -46,9 +46,13 @@ const { title, description, coverImage, id } = config;
       ))
     }
   </Grid>
-  <Pagination
-    currentPage={page.currentPage}
-    pagesCount={page.lastPage}
-    rootId={id}
-  />
+  {
+    page.lastPage > 1 && (
+      <Pagination
+        currentPage={page.currentPage}
+        pagesCount={page.lastPage}
+        rootId={id}
+      />
+    )
+  }
 </RootLayout>

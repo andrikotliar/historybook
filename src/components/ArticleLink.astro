@@ -1,24 +1,20 @@
 ---
-import type { RootId } from '../common/types/root-id';
-import { pagesMap } from '../configs/pages';
 import Icon from './icons/Icon.astro';
 
 type Props = {
-  rootId: RootId;
   direction: 'prev' | 'next';
-  slug: string;
+  url: string;
   title: string;
   description: string;
+  label: string;
 };
 
-const { rootId, direction, slug, title, description } = Astro.props;
-
-const url = `/${rootId}/${slug}/`;
+const { direction, url, title, description, label } = Astro.props;
 ---
 
 <a href={url} class="article-link">
   <div class={`article-link-direction article-link-direction-${direction}`}>
-    <span>{pagesMap[rootId].navigationTitles[direction]}</span>
+    <span>{label}</span>
     <div class="article-link-direction-icon">
       <Icon name="arrowRight" />
     </div>

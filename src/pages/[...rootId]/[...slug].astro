@@ -6,18 +6,32 @@ import ArticleLayout from '../../components/layouts/ArticleLayout.astro';
 import type { CollectionEntry } from 'astro:content';
 import type { RootId } from '../../common/types/root-id';
 import type { PageConfig } from '../../common/types/page-config';
+import { getPrevNextArticles } from '../../helpers/get-prev-next-articles';
+import type { PrevNextArticleData } from '../../common/types/prev-next-article-data';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const pages = pagesList.map(async (page) => {
     const articles = await getArticles({ id: page.id });
 
-    return articles.map((article) => ({
-      params: {
+    return articles.map((article, index) => {
+      const prevNextArticles = getPrevNextArticles({
         rootId: page.id,
-        slug: article.slug,
-      },
-      props: { article, pageConfig: page },
-    }));
+        articles,
+        index,
+      });
+
+      return {
+        params: {
+          rootId: page.id,
+          slug: article.slug,
+        },
+        props: {
+          ...prevNextArticles,
+          article,
+          pageConfig: page,
+        },
+      };
+    });
   });
 
   const data = await Promise.all(pages);
@@ -27,10 +41,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 type Props = {
   article: CollectionEntry<RootId>;
+  nextArticle: PrevNextArticleData;
+  prevArticle: PrevNextArticleData;
   pageConfig: PageConfig;
 };
 
-const { article, pageConfig } = Astro.props;
+const { article, pageConfig, nextArticle, prevArticle } = Astro.props;
 
 const { Content } = await article.render();
 ---
@@ -39,7 +55,9 @@ const { Content } = await article.render();
   title={article.data.title}
   description={article.data.description}
   date={article.data.date}
-  shouldShowDate={pageConfig.shouldShowDate}
+  pageConfig={pageConfig}
+  prevArticle={prevArticle}
+  nextArticle={nextArticle}
 >
   <Content />
 </ArticleLayout>
