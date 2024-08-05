@@ -1,4 +1,5 @@
 import { PageId } from '../common/enums/page-id';
+import type { CategoryData } from '../common/types/category-data';
 import type { PageConfig } from '../common/types/page-config';
 
 const lessons: PageConfig = {
@@ -105,4 +106,20 @@ const pagesMap = {
 
 const pagesList = Object.values(pagesMap);
 
-export { pagesList, pagesMap };
+const pageCategories = pagesList.reduce<CategoryData[]>(
+  (categories, currentPage) => {
+    if (currentPage.categories) {
+      const mappedCategories = currentPage.categories.map((category) => ({
+        ...category,
+        rootId: currentPage.id,
+      }));
+
+      return [...categories, ...mappedCategories];
+    }
+
+    return categories;
+  },
+  [],
+);
+
+export { pagesList, pagesMap, pageCategories };

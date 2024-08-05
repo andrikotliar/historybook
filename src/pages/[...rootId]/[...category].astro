@@ -1,0 +1,70 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { pageCategories, pagesMap } from '../../configs/pages';
+import { getArticles } from '../../utils/get-articles';
+import type { PageCategory, PageConfig } from '../../common/types/page-config';
+import type { CollectionEntry } from 'astro:content';
+import type { RootId } from '../../common/types/root-id';
+import RootLayout from '../../components/layouts/RootLayout.astro';
+import CategoriesList from '../../components/CategoriesList.astro';
+import Grid from '../../components/Grid.astro';
+import Card from '../../components/Card.astro';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const pages = pageCategories.map(async (category) => {
+    const articles = await getArticles({
+      id: category.rootId,
+      filter: (entry) => {
+        return entry.data.title.toLowerCase().includes(category.filter);
+      },
+    });
+
+    return {
+      params: {
+        rootId: category.rootId,
+        category: category.key,
+      },
+      props: {
+        config: pagesMap[category.rootId],
+        articles,
+        currentCategory: category,
+      },
+    };
+  });
+
+  const data = await Promise.all(pages);
+
+  return data;
+};
+
+type Props = {
+  config: PageConfig;
+  articles: CollectionEntry<RootId>[];
+  currentCategory: PageCategory;
+};
+
+const { config, articles, currentCategory } = Astro.props;
+---
+
+<RootLayout
+  title={currentCategory.pageTitle}
+  description={config.description}
+  coverImage={config.coverImage}
+>
+  {
+    config.categories.length !== 0 && (
+      <CategoriesList
+        rootId={config.id}
+        categories={config.categories}
+        shortTitle={config.shortTitle}
+      />
+    )
+  }
+  <Grid>
+    {
+      articles.map((article) => (
+        <Card rootId={config.id} slug={article.slug} {...article.data} />
+      ))
+    }
+  </Grid>
+</RootLayout>

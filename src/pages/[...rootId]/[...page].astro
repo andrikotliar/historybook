@@ -8,6 +8,7 @@ import { pagesList } from '../../configs/pages';
 import { getArticles } from '../../utils/get-articles';
 import type { PageConfig } from '../../common/types/page-config';
 import Pagination from '../../components/Pagination.astro';
+import CategoriesList from '../../components/CategoriesList.astro';
 
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
   const pages = pagesList.map(async (page) => {
@@ -39,6 +40,16 @@ const { title, description, coverImage, id } = config;
 ---
 
 <RootLayout title={title} description={description} coverImage={coverImage}>
+  {
+    config.categories.length !== 0 && (
+      <CategoriesList
+        rootId={id}
+        isIndex
+        categories={config.categories}
+        shortTitle={config.shortTitle}
+      />
+    )
+  }
   <Grid>
     {
       page.data.map((article) => (

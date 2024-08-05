@@ -3,7 +3,7 @@ import type { RootId } from '../common/types/root-id';
 
 type Options = {
   id: RootId;
-  filter?: (entry: CollectionEntry<RootId>) => CollectionEntry<RootId>;
+  filter?: (entry: CollectionEntry<RootId>) => boolean;
   limit?: number;
 };
 

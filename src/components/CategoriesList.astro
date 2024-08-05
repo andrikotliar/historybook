@@ -1,0 +1,74 @@
+---
+import type { PageCategory } from '../common/types/page-config';
+import type { RootId } from '../common/types/root-id';
+
+type Props = {
+  shortTitle: string;
+  rootId: RootId;
+  categories: PageCategory[];
+  isIndex?: boolean;
+};
+
+const pathname = Astro.url.pathname;
+const { shortTitle, rootId, categories, isIndex = false } = Astro.props;
+---
+
+<nav class="categories">
+  <a
+    href={`/${rootId}/`}
+    class:list={[
+      'categories-link',
+      {
+        'categories-link-active': isIndex,
+      },
+    ]}
+  >
+    Всі {shortTitle}
+  </a>
+  {
+    categories.map((category) => (
+      <a
+        href={`/${rootId}/${category.key}/`}
+        class:list={[
+          'categories-link',
+          {
+            'categories-link-active': pathname.includes(category.key),
+          },
+        ]}
+      >
+        {category.linkTitle}
+      </a>
+    ))
+  }
+</nav>
+
+<style>
+  .categories {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .categories-link {
+    position: relative;
+    color: var(--gray-dark);
+    padding: 5px;
+    padding: 5px 20px;
+    border: 1px solid var(--gray-light);
+    border-radius: 50px;
+    flex-shrink: 0;
+  }
+  .categories-link-active {
+    color: #fff;
+    background-color: var(--red-base);
+    border-color: var(--red-base);
+    cursor: default;
+    pointer-events: none;
+  }
+  .categories-link:hover {
+    color: #fff;
+    background-color: var(--red-base);
+    border-color: var(--red-base);
+  }
+</style>
