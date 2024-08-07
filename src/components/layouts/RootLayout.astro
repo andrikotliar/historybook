@@ -38,6 +38,12 @@ const pageDescription = description ?? metadataConfig.description;
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <title>{pageTitle}</title>
+
+    {
+      currentPath === '/' && (
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
+      )
+    }
   </head>
   <Body>
     <Header />
