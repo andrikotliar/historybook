@@ -37,9 +37,17 @@ type Props = {
 
 const { config, page } = Astro.props;
 const { title, description, coverImage, id } = config;
+
+const subTitle = page.currentPage > 1 ? ` - Сторінка ${page.currentPage}` : '';
+const pageTitle = `${title}${subTitle}`;
+const pageDescription = `${description}${subTitle}`;
 ---
 
-<RootLayout title={title} description={description} coverImage={coverImage}>
+<RootLayout
+  title={pageTitle}
+  description={pageDescription}
+  coverImage={coverImage}
+>
   {
     config.categories.length !== 0 && (
       <CategoriesList

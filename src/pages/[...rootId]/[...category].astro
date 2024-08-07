@@ -44,11 +44,13 @@ type Props = {
 };
 
 const { config, articles, currentCategory } = Astro.props;
+
+const pageDescription = `${config.description} в категорії "${currentCategory.pageTitle}"`;
 ---
 
 <RootLayout
   title={currentCategory.pageTitle}
-  description={config.description}
+  description={pageDescription}
   coverImage={config.coverImage}
 >
   {
