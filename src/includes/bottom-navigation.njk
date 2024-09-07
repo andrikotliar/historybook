@@ -1,0 +1,31 @@
+<div class="bottom-navigation-wrapper">
+  <div class="bottom-navigation">
+    {% if prevArticle %}
+      <a href="{{prevArticle.url}}" class="article-link">
+        <div class="article-link-direction article-link-direction-prev">
+          <span>{{pages.pagesMap[rootId].navigationTitles.prev}}</span>
+          <div class="article-link-direction-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M4 12h16M14 6l6 6-6 6"></path></svg>
+          </div>
+        </div>
+        <h6 class="article-link-title">{{prevArticle.data.title}}</h6>
+        <p class="article-link-description">{{prevArticle.data.description}}</p>
+      </a>
+    {% endif %}
+    {% if nextArticle %}
+      <a href="{{nextArticle.url}}" class="article-link">
+        <div class="article-link-direction article-link-direction-next">
+          <span>{{pages.pagesMap[rootId].navigationTitles.next}}</span>
+          <div class="article-link-direction-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M4 12h16M14 6l6 6-6 6"></path></svg>
+          </div>
+        </div>
+        <h6 class="article-link-title">{{nextArticle.data.title}}</h6>
+        <p class="article-link-description">{{nextArticle.data.description}}</p>
+      </a>
+    {% endif %}
+  </div>
+  {% set pageUrl = '/' + rootId + '/' %}
+  {% set shortTitle = pages.pagesMap[rootId].shortTitle %}
+  {% include "link-more.njk" %}
+</div>

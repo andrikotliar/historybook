@@ -1,4 +1,5 @@
 {
   "permalink": "/stories/{{page.fileSlug}}/index.html",
-  "layout": "article.njk"
+  "layout": "article.njk",
+  "rootId": "stories"
 }

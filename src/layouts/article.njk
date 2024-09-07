@@ -22,5 +22,10 @@ layout: root.njk
       </span>
       Завантажити PDF-версію
     </button>
+
+    {% set prevArticle = collections[rootId] | reverse | getPreviousCollectionItem %}
+    {% set nextArticle = collections[rootId] | reverse | getNextCollectionItem %}
+
+    {% include "bottom-navigation.njk" %}
   {% endif %}
 </article>
