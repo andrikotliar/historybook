@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="{{description or metadata.description}}" />
+    <meta name="viewport" content="width=device-width" />
+
+    <meta property="og:url" content="{{metadata.url}}{{page.url}}" />
+    <meta property="og:title" content="{{title or metadata.title}}" />
+    <meta property="og:description" content="{{description or metadata.description}}" />
+    <meta property="og:image" content="{{metadata.url}}{{metadata.socialMediaImage}}" />
+
+    <meta name="twitter:site" content="{{metadata.url}}{{page.url}}" />
+    <meta name="twitter:title" content="{{title or metadata.title}}" />
+    <meta name="twitter:description" content="{{description or metadata.description}}" />
+    <meta name="twitter:image" content="{{metadata.url}}{{metadata.socialMediaImage}}" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="sitemap" href="/sitemap.xml" />
+
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/print.css" media="print">
+
+    <title>{{title or metadata.title}}</title>
+  </head>
+  <body>
+    {% include "header.njk" %}
+    {% if pageId %}
+      {% include "cover.njk" %}
+    {% endif %}
+    <div class="content">
+      <div class="container">
+        {{ content | safe }}
+      </div>
+    </div>
+    {% include "footer.njk" %}
+  </body>
+  <script src="/scripts/scripts.js" defer></script>
+</html>
