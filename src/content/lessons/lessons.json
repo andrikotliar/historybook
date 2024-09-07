@@ -1,0 +1,4 @@
+{
+  "permalink": "/lessons/{{page.fileSlug}}/index.html",
+  "layout": "article.njk"
+}

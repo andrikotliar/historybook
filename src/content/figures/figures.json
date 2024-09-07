@@ -1,0 +1,4 @@
+{
+  "permalink": "/figures/{{page.fileSlug}}/index.html",
+  "layout": "article.njk"
+}
