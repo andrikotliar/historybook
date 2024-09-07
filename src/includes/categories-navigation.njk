@@ -1,0 +1,8 @@
+<div class="categories">
+  <a href="/{{pageId}}/" class="categories-link{% if 'category' not in page.url %} categories-link-active{% endif %}">
+    Всі {{shortTitle}}
+  </a>
+  {% for categoryPath in categoriesNavigation %}
+    <a href="/{{pageId}}/{{categoryPath.key}}/" class="categories-link{% if categoryPath.key in page.url %}categories-link-active{% endif %}">{{categoryPath.linkTitle}}</a>
+  {% endfor %}
+</div>

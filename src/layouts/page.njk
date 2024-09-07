@@ -5,6 +5,13 @@ eleventyComputed:
   description: "{{pages.pagesMap[pageId].description}}{% if pagination.pageNumber > 0 %} - Сторінка {{pagination.pageNumber + 1}}{% endif %}"
 ---
 
+{% if pages.pagesMap[pageId].categories.length %}
+  {% set shortTitle = pages.pagesMap[pageId].shortTitle %}
+  {% set categoriesNavigation = pages.pagesMap[pageId].categories %}
+
+  {% include "categories-navigation.njk" %}
+{% endif %}
+
 <div class="grid">
   {% for article in articles %}
     {% set shouldShowDate = pages.pagesMap[pageId].shouldShowDate %}
