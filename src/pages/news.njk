@@ -1,0 +1,11 @@
+---
+pageId: news
+layout: page.njk
+pagination:
+  data: collections.news
+  size: 10
+  reverse: true
+  alias: articles
+  addAllPagesToCollections: true
+permalink: /news/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html
+---

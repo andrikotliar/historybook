@@ -3,16 +3,14 @@ layout: root.njk
 ---
 
 <article itemscope itemtype="http://schema.org/Article">
-  {% if not isInfoArticle %}
-    <div class="article-header">
-      <h1 class="article-title">{{title}}</h1>
-      {% if shouldShowDate %}
-        <div class="article-date">{{date | formattedDate}}</div>
-      {% endif %}
-      <meta itemprop="image" content="{{metadata.url}}{{metadata.socialMediaImage}}" />
-      <meta itemprop="author" content="{{metadata.author}}" />
-    </div>
-  {% endif %}
+  <div class="article-header">
+    <h1 class="article-title">{{title}}</h1>
+    {% if shouldShowDate %}
+      <div class="article-date">{{date | formattedDate}}</div>
+    {% endif %}
+    <meta itemprop="image" content="{{metadata.url}}{{metadata.socialMediaImage}}" />
+    <meta itemprop="author" content="{{metadata.author}}" />
+  </div>
 
   <div class="article-body">
     {{ content | safe }}

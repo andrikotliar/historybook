@@ -1,0 +1,17 @@
+---
+layout: root.njk
+eleventyComputed:
+  title: "{{pages.pagesMap[pageId].title}}{% if pagination.pageNumber > 0 %} - Сторінка {{pagination.pageNumber + 1}}{% endif %}"
+  description: "{{pages.pagesMap[pageId].description}}{% if pagination.pageNumber > 0 %} - Сторінка {{pagination.pageNumber + 1}}{% endif %}"
+---
+
+<div class="grid">
+  {% for article in articles %}
+    {% set shouldShowDate = pages.pagesMap[pageId].shouldShowDate %}
+    {% include "card.njk" %}
+  {% endfor %}
+</div>
+
+{% if pagination.hrefs.length > 1 %}
+  {% include "pagination.njk" %}
+{% endif %}

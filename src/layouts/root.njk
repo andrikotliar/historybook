@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width" />
 
     <meta property="og:url" content="{{metadata.url}}{{page.url}}" />
-    <meta property="og:title" content="{{title or metadata.title}}" />
+    <meta property="og:title" content="{{title}}" />
     <meta property="og:description" content="{{description or metadata.description}}" />
     <meta property="og:image" content="{{metadata.url}}{{metadata.socialMediaImage}}" />
 
     <meta name="twitter:site" content="{{metadata.url}}{{page.url}}" />
-    <meta name="twitter:title" content="{{title or metadata.title}}" />
+    <meta name="twitter:title" content="{{title}}" />
     <meta name="twitter:description" content="{{description or metadata.description}}" />
     <meta name="twitter:image" content="{{metadata.url}}{{metadata.socialMediaImage}}" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="/styles/print.css" media="print">
 
-    <title>{{title or metadata.title}}</title>
+    <title>{{title}}{% if page.url != '/'%} - {{metadata.title}}{% endif %}</title>
   </head>
   <body>
     {% include "header.njk" %}

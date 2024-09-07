@@ -1,0 +1,11 @@
+---
+pageId: stories
+layout: page.njk
+pagination:
+  data: collections.stories
+  size: 10
+  reverse: true
+  alias: articles
+  addAllPagesToCollections: true
+permalink: /stories/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html
+---
