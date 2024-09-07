@@ -1,0 +1,5 @@
+<div class="pagination">
+  {% for link in pagination.hrefs %}
+    <a href="{{link}}" class="page-link{% if pagination.pageNumber + 1 == loop.index %} page-link-active{% endif %}">{{ loop.index }}</a>
+  {% endfor %}
+</div>
