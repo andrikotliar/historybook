@@ -1,0 +1,24 @@
+---
+permalink: /index.html
+layout: root.njk
+title: HistoryBook - цікаві уроки історії, новини освіти, розповіді
+description: Огляд подій в освіті України, розробки уроків історії в школах.
+---
+
+{% for section in pages.pagesList %}
+  <div class="section">
+    <h2 class="section-title">
+      <span>{{section.emoji}}</span>
+      <span>{{section.title}}</span>
+    </h2>
+    <div class="grid">
+      {% for article in collections[section.id] | reverse | head(8) %}
+        {% set shouldShowDate = section.shouldShowDate %}
+        {% include "card.njk" %}
+      {% endfor %}
+    </div>
+    {% set pageUrl = '/' + section.id + '/' %}
+    {% set shortTitle = section.shortTitle %}
+    {% include "link-more.njk" %}
+  </div>
+{% endfor %}

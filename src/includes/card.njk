@@ -1,0 +1,11 @@
+<a href="{{article.url}}" class="card">
+  <h3 class="card-title">
+    {{article.data.title}}
+  </h3>
+  <p class="card-description">
+    {{article.data.description}}
+  </p>
+  {% if shouldShowDate %}
+    <div class="card-date">{{article.data.date | formattedDate}}</div>
+  {% endif %}
+</a>
