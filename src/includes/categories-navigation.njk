@@ -3,6 +3,6 @@
     Всі {{shortTitle}}
   </a>
   {% for categoryPath in categoriesNavigation %}
-    <a href="/{{pageId}}/{{categoryPath.key}}/" class="categories-link{% if categoryPath.key in page.url %}categories-link-active{% endif %}">{{categoryPath.linkTitle}}</a>
+    <a href="/{{pageId}}/category/{{categoryPath.key}}/" class="categories-link{% if categoryPath.key in page.url %} categories-link-active{% endif %}">{{categoryPath.linkTitle}}</a>
   {% endfor %}
 </div>

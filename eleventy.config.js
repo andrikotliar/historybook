@@ -35,6 +35,21 @@ const eleventyConfig = (config) => {
     config.addCollection(page.id, (collectionApi) => {
       return collectionApi.getFilteredByGlob(`src/content/${page.id}/*.md`);
     });
+
+    if (page.categories.length) {
+      page.categories.forEach((category) => {
+        config.addCollection(category.key, (collectionApi) => {
+          const articles = collectionApi.getAllSorted().reverse();
+
+          return articles.filter((item) => {
+            const lowercasedTitle = item.data.title.toLowerCase();
+            const extension = item.inputPath.split('.').pop();
+            const isMarkdown = extension === 'md';
+            return lowercasedTitle.includes(category.filter) && isMarkdown;
+          });
+        });
+      });
+    }
   });
 
   config.addFilter('head', (array, n) => {

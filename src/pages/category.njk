@@ -1,0 +1,24 @@
+---
+layout: root.njk
+pagination:
+  data: pages.pageCategories
+  size: 1
+  alias: category
+  addAllPagesToCollections: true
+permalink: /{{category.rootId}}/category/{{category.key}}/index.html
+eleventyComputed:
+  pageId: "{{category.rootId}}"
+  title: "{{category.pageTitle}}"
+  description: "{{pages.pagesMap[category.rootId].title}} в категорії «{{category.pageTitle}}»"
+---
+
+{% set shortTitle = pages.pagesMap[pageId].shortTitle %}
+{% set categoriesNavigation = pages.pagesMap[pageId].categories %}
+{% include "categories-navigation.njk" %}
+
+<div class="grid">
+  {% for article in collections[category.key] %}
+    {% set shouldShowDate = pages.pagesMap[pageId].shouldShowDate %}
+    {% include "card.njk" %}
+  {% endfor %}
+</div>
