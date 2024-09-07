@@ -1,0 +1,17 @@
+{
+  "name": "historybook",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf dist",
+    "dev": "npm run clean && eleventy --serve --quiet",
+    "build": "npm run clean && eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "sass": "^1.78.0"
+  },
+  "keywords": [
+    "History",
+    "Education"
+  ]
+}
