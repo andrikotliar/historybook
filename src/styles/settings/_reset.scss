@@ -1,0 +1,43 @@
+@use 'variables' as var;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  background: transparent;
+  border: none;
+}
+
+::selection {
+  color: #fff;
+  background-color: var.$red-base;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: var.$red-base;
+}
+
+.container {
+  max-width: 100%;
+}

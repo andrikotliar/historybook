@@ -1,0 +1,52 @@
+@use '../settings/variables' as var;
+
+.article-link {
+  padding: 15px;
+  border-radius: 6px;
+  border: var.$default-border;
+  transition: border-color 300ms;
+  flex-grow: 1;
+}
+
+.article-link:hover {
+  border-color: var.$red-base;
+}
+
+.article-link-direction {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  color: var.$gray-dark;
+}
+
+.article-link-direction-prev {
+  flex-direction: row-reverse;
+}
+
+.article-link:hover .article-link-direction {
+  color: var.$red-base;
+}
+
+.article-link-direction-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.article-link-direction-prev .article-link-direction-icon {
+  transform: rotate(180deg);
+}
+
+.article-link-title {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.article-link-description {
+  color: var.$gray-dark;
+  font-size: 14px;
+  line-height: 18px;
+}
