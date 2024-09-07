@@ -42,7 +42,7 @@ const eleventyConfig = (config) => {
           const articles = collectionApi.getAllSorted().reverse();
 
           return articles.filter((item) => {
-            const lowercasedTitle = item.data.title.toLowerCase();
+            const lowercasedTitle = item.data.title?.toLowerCase();
             const extension = item.inputPath.split('.').pop();
             const isMarkdown = extension === 'md';
             return lowercasedTitle.includes(category.filter) && isMarkdown;

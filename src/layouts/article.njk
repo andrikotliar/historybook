@@ -5,7 +5,7 @@ layout: root.njk
 <article itemscope itemtype="http://schema.org/Article">
   <div class="article-header">
     <h1 class="article-title">{{title}}</h1>
-    {% if shouldShowDate %}
+    {% if pages.pagesMap[rootId].shouldShowDate %}
       <div class="article-date">{{date | formattedDate}}</div>
     {% endif %}
     <meta itemprop="image" content="{{metadata.url}}{{metadata.socialMediaImage}}" />
