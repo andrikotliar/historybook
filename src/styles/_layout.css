@@ -1,7 +1,5 @@
-@use '../settings/variables' as var;
-
 .header {
-  background-color: var.$red-base;
+  background-color: var(--red-base);
 }
 
 .header-container {
@@ -14,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: var.$header-height;
+  height: var(--header-height);
 }
 
 .header-logo {
@@ -70,6 +68,60 @@
   z-index: 5;
 }
 
+.footer {
+  color: var(--black-light);
+  padding: 20px 0;
+  margin-top: auto;
+  border-top: 1px solid var(--gray-light);
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+}
+
+.footer-main {
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+.footer-title {
+  color: var(--red-base);
+  font-weight: bold;
+}
+
+.footer-years {
+  font-size: 12px;
+}
+
+.footer-up-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--black-light);
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.footer-up-button span {
+  flex-shrink: 0;
+}
+
+.footer-up-button:hover {
+  color: var(--red-base);
+}
+
+.footer-up-button-arrow {
+  width: 16px;
+  height: 16px;
+  transform: rotate(-90deg);
+}
+
 @media (max-width: 950px) {
   .header-logo {
     width: 150px;
@@ -113,5 +165,17 @@
     display: block;
     width: 30px;
     height: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-up-button {
+    margin-left: 0;
   }
 }

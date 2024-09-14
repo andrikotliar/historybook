@@ -1,5 +1,5 @@
-const sass = require('sass');
 const path = require('path');
+const { bundle } = require('lightningcss');
 const { pagesList } = require('./src/data/pages.js');
 
 const eleventyConfig = (config) => {
@@ -8,25 +8,25 @@ const eleventyConfig = (config) => {
   });
   config.addPassthroughCopy('src/scripts');
 
-  config.addTemplateFormats('scss');
+  config.addTemplateFormats('css');
 
-  config.addExtension('scss', {
+  config.addExtension('css', {
     outputFileExtension: 'css',
 
-    compile: async function (content, inputPath) {
+    compile: async function (_, inputPath) {
       const parsed = path.parse(inputPath);
 
       if (parsed.name.startsWith('_')) {
         return;
       }
-
-      const result = sass.compileString(content, {
-        loadPaths: [parsed.dir || '.', this.config.dir.includes],
-        style: 'compressed',
-      });
-
       return async () => {
-        return result.css;
+        const { code } = await bundle({
+          filename: inputPath,
+          minify: true,
+          sourceMap: false,
+        });
+
+        return code;
       };
     },
   });

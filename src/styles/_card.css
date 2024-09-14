@@ -1,10 +1,8 @@
-@use '../settings/variables' as var;
-
 .card {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  border: var.$default-border;
+  border: var(--default-border);
   padding: 20px;
   width: 100%;
   border-radius: 10px;
@@ -12,11 +10,11 @@
 }
 
 .card:hover {
-  border-color: var.$red-base;
+  border-color: var(--red-base);
 }
 
 .card-title {
-  color: var.$black-light;
+  color: var(--black-light);
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
@@ -24,16 +22,16 @@
 }
 
 .card:hover .card-title {
-  color: var.$red-base;
+  color: var(--red-base);
 }
 
 .card-description {
-  color: var.$gray-dark;
+  color: var(--gray-dark);
   line-height: 24px;
 }
 
 .card-date {
-  color: var.$red-base;
+  color: var(--red-base);
   font-size: 14px;
   margin-top: auto;
 }

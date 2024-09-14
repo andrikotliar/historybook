@@ -1,0 +1,143 @@
+.cover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  background-color: #c4c4c4;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+.cover-title {
+  font-size: 35px;
+  position: relative;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  z-index: 20;
+}
+
+
+.categories {
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.categories-link {
+  position: relative;
+  color: var(--gray-dark);
+  padding: 5px;
+  padding: 5px 20px;
+  border: 1px solid var(--gray-light);
+  border-radius: 50px;
+  flex-shrink: 0;
+}
+
+.categories-link-active {
+  color: #fff;
+  background-color: var(--red-base);
+  border-color: var(--red-base);
+  cursor: default;
+  pointer-events: none;
+}
+
+.categories-link:hover {
+  color: #fff;
+  background-color: var(--red-base);
+  border-color: var(--red-base);
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.page-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--gray-dark);
+  width: 35px;
+  height: 35px;
+  border: 1px solid #b8b8b8;
+  border-radius: 50px;
+}
+
+.page-link:hover {
+  color: #fff;
+  background-color: var(--red-base);
+  border-color: var(--red-base);
+}
+
+.page-link-active {
+  color: #fff;
+  background-color: var(--red-base);
+  border-color: var(--red-base);
+  cursor: default;
+  pointer-events: none;
+}
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 300px);
+  text-align: center;
+}
+
+.error-page-number {
+  font-weight: bold;
+  font-size: 200px;
+}
+
+.error-page-actions {
+  margin-top: 40px;
+}
+
+.error-page-button {
+  color: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--red-base);
+  border: 2px solid var(--red-base);
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.error-page-button:hover {
+  color: var(--red-base);
+  background-color: #fff;
+}
+
+@media (max-width: 700px) {
+  .cover {
+    min-height: 200px;
+  }
+  .cover-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 500px) {
+  .error-page-number {
+    font-size: 80px;
+  }
+}

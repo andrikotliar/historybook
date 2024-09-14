@@ -7,8 +7,10 @@
     "build": "npm run clean && eleventy"
   },
   "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "sass": "^1.78.0"
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "devDependencies": {
+    "lightningcss": "^1.27.0"
   },
   "keywords": [
     "History",
