@@ -1,0 +1,10 @@
+<a href="{{article.url}}" class="article-link">
+  <div class="article-link-direction article-link-direction-{{linkDirection}}">
+    <span>{{pages.pagesMap[rootId].navigationTitles[linkDirection]}}</span>
+    <div class="article-link-direction-icon">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M4 12h16M14 6l6 6-6 6"></path></svg>
+    </div>
+  </div>
+  <h6 class="article-link-title">{{article.data.title}}</h6>
+  <p class="article-link-description">{{article.data.description}}</p>
+</a>
