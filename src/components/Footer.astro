@@ -1,0 +1,94 @@
+---
+import { metadataConfig } from '../configs/metadata';
+import Container from './Container.astro';
+import Icon from './Icon.astro';
+
+const currentYear = new Date().getFullYear();
+---
+
+<div class="footer">
+  <Container class="container footer-container">
+    <div class="footer-main">
+      <span class="footer-title">
+        {metadataConfig.title}
+      </span>
+      <span class="footer-years">
+        {metadataConfig.startYear} - {currentYear}
+      </span>
+    </div>
+    <button class="footer-up-button" id="upButton">
+      <div class="footer-up-button-arrow">
+        <Icon name="arrowUp" />
+      </div>
+      <span>На гору</span>
+    </button>
+  </Container>
+</div>
+
+<style>
+.footer {
+  color: var(--black-light);
+  padding: 20px 0;
+  margin-top: auto;
+  border-top: 1px solid var(--gray-light);
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+}
+
+.footer-main {
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+.footer-title {
+  color: var(--red-base);
+  font-weight: bold;
+}
+
+.footer-years {
+  font-size: 12px;
+}
+
+.footer-up-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--black-light);
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.footer-up-button span {
+  flex-shrink: 0;
+}
+
+.footer-up-button:hover {
+  color: var(--red-base);
+}
+
+.footer-up-button-arrow {
+  width: 16px;
+  height: 16px;
+  transform: rotate(-90deg);
+}
+
+@media (max-width: 400px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-up-button {
+    margin-left: 0;
+  }
+}
+</style>

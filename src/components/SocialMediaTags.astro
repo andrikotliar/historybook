@@ -1,0 +1,26 @@
+---
+import { metadataConfig } from '../configs/metadata';
+
+type Props = {
+  title: string;
+  description: string;
+}
+
+const currentPath = Astro.url.pathname;
+const pageUrl = currentPath === '/' ? metadataConfig.url : `${metadataConfig.url}${currentPath}`;
+const socialMediaImageUrl = `${metadataConfig.url}${metadataConfig.socialMediaImage}`
+
+const { title, description } = Astro.props;
+
+---
+
+<meta property="og:url" content={pageUrl} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={socialMediaImageUrl} />
+
+<meta name="twitter:site" content={pageUrl} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={socialMediaImageUrl} />
+<meta name="twitter:card" content="summary_large_image" />

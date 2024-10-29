@@ -1,0 +1,139 @@
+---
+import { metadataConfig } from '../configs/metadata';
+import Container from './Container.astro';
+import Content from './Content.astro';
+import Footer from './Footer.astro';
+import Header from './Header.astro';
+import SocialMediaTags from './SocialMediaTags.astro';
+
+type Props = {
+  title?: string;
+  description?: string;
+}
+
+const currentPath = Astro.url.pathname;
+const { title, description } = Astro.props;
+
+const pageTitle = title ?? metadataConfig.title;
+const pageDescription = description ?? metadataConfig.description;
+
+const titleWithPrefix = pageTitle === metadataConfig.title ? pageTitle : `${pageTitle} - ${metadataConfig.title}`;
+
+---
+
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={pageDescription} />
+    <meta name="viewport" content="width=device-width" />
+
+    <SocialMediaTags title={pageTitle} description={pageDescription} />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <title>{titleWithPrefix}</title>
+
+    {currentPath === '/' && (
+      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    )}
+  </head>
+  <body>
+    <Header />
+    <Content>
+      <Container>
+        <slot />
+      </Container>
+    </Content>
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+:root {
+  --red-base: #ff5353;
+  --red-bright: #f00;
+
+  --black-light: #202020;
+
+  --gray: #838383;
+  --gray-dark: #777;
+  --gray-invisible: #f2f2f2;
+  --gray-light: #ddd;
+  --gray-ultra-light: #e1e1e1;
+
+  --default-border: 1px solid var(--gray-ultra-light);
+  --header-height: 65px;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  background: transparent;
+  border: none;
+}
+
+::selection {
+  color: #fff;
+  background-color: var(--red-base);
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: var(--red-base);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+</style>

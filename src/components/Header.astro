@@ -1,0 +1,151 @@
+---
+import { navigationConfig } from '../configs/navigation';
+import Container from './Container.astro';
+import Icon from './Icon.astro';
+
+const currentPath = Astro.url.pathname;
+
+---
+
+<header class="header">
+  <Container class="header-container">
+    <div class="header-main">
+      <a href="/" class="header-logo">
+        <img src="/images/logo.svg" alt="HistoryBook" />
+      </a>
+      <button class="header-menu-button" id="menuButton" aria-label="Open menu">
+        <Icon name="menu" />
+      </button>
+    </div>
+    <div class="header-navigation-wrapper" id="navigationWrapper">
+      <nav class="header-navigation">
+        {navigationConfig.map(route => (
+          <a href={route.path} class:list={["header-navigation-link", {
+            "header-navigation-link-active": route.path === currentPath,
+          }]}>
+            {route.title}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </Container>
+</header>
+
+<style>
+.header {
+  background-color: var(--red-base);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+}
+
+.header-logo {
+  width: 150px;
+  font-size: 0;
+}
+
+.header-navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header-navigation-link {
+  position: relative;
+  color: #fff;
+  font-size: 15px;
+}
+
+.header-navigation-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.header-navigation-link-active {
+  font-weight: bold;
+}
+
+.header-navigation-link:hover::after,
+.header-navigation-link-active::after {
+  visibility: visible;
+  opacity: 0.8;
+}
+
+.header-menu-button {
+  width: 40px;
+  height: 40px;
+  display: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+}
+
+@media (max-width: 950px) {
+  .header-logo {
+    width: 150px;
+  }
+
+  .header-navigation-link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 850px) {
+  .header-container {
+    display: block;
+  }
+
+  .header-navigation-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 300ms, padding 300ms;
+  }
+
+  .header-navigation {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .header-navigation-wrapper-visible {
+    grid-template-rows: 1fr;
+    padding: 10px 0 20px;
+  }
+
+  .header-navigation-link {
+    font-size: 16px;
+    justify-self: start;
+  }
+
+  .header-menu-button {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+</style>
