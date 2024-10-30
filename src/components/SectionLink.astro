@@ -1,0 +1,41 @@
+---
+import Icon from './Icon.astro';
+
+type Props = {
+  path: string;
+}
+
+const { path } = Astro.props;
+
+---
+
+<a href={path} class="section-link">
+  <slot />
+  <div class="section-link-icon">
+    <Icon name="arrowUp" />
+  </div>
+</a>
+
+<style>
+.section-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 5px;
+  color: var(--red-base);
+  border-radius: 10px;
+  border: 1px solid var(--red-base);
+  padding: 10px 20px;
+}
+
+.section-link:hover {
+  color: #fff;
+  background-color: var(--red-base);
+}
+
+.section-link-icon {
+  width: 20px;
+  height: 20px;
+}
+</style>
