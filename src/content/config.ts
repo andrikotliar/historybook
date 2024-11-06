@@ -5,7 +5,7 @@ import { CollectionId } from '../enums/collection-id';
 const articlesSchema = z.object({
   title: z.string(),
   description: z.string(),
-  date: z.string(),
+  date: z.any(),
 });
 
 const pageContentSchema = z.object({
