@@ -92,3 +92,16 @@ const currentYear = new Date().getFullYear();
   }
 }
 </style>
+
+<script>
+const upButton = document.getElementById('upButton');
+
+if (upButton) {
+  upButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
+}
+</script>

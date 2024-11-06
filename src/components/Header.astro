@@ -149,3 +149,16 @@ const currentPath = Astro.url.pathname;
 }
 
 </style>
+
+<script>
+const menuButton = document.getElementById('menuButton');
+const navigationWrapper = document.getElementById('navigationWrapper');
+
+const VISIBLE_CLASS_NAME = 'header-navigation-wrapper-visible';
+
+if (menuButton && navigationWrapper) {
+  menuButton.addEventListener('click', () => {
+    navigationWrapper.classList.toggle(VISIBLE_CLASS_NAME);
+  });
+}
+</script>
