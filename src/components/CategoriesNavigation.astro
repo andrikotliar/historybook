@@ -1,0 +1,63 @@
+---
+import type { PageCategoryConfig } from '../configs/pages'
+import type { PageId } from '../enums/page-id';
+import { constructUrl } from '../helpers/construct-url';
+
+type Props = {
+  links: PageCategoryConfig[];
+  rootTitle: string;
+  rootId: PageId;
+}
+
+const currentPath = Astro.url.pathname;
+const { links, rootTitle, rootId } = Astro.props;
+---
+
+<div class="categories">
+  <a href={constructUrl(rootId)} class:list={['categories-link', {
+    'categories-link-active': !currentPath.includes('category'),
+  }]}>
+    {rootTitle}
+  </a>
+  {links.map((path) => (
+    <a href={constructUrl(rootId, 'category', path.key)} class:list={['categories-link', {
+      'categories-link-active': currentPath.includes(path.key)
+    }]}>
+      {path.linkTitle}
+    </a>
+  ))}
+</div>
+
+<style>
+.categories {
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.categories-link {
+  position: relative;
+  color: var(--gray-dark);
+  padding: 5px;
+  padding: 5px 20px;
+  border: 1px solid var(--gray-light);
+  border-radius: 50px;
+  flex-shrink: 0;
+}
+
+.categories-link-active {
+  color: #fff;
+  background-color: var(--red-base);
+  border-color: var(--red-base);
+  cursor: default;
+  pointer-events: none;
+}
+
+.categories-link:hover {
+  color: #fff;
+  background-color: var(--red-base);
+  border-color: var(--red-base);
+}
+</style>

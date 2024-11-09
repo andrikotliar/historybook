@@ -9,7 +9,7 @@ type MetadataConfig = {
 
 export const metadataConfig: MetadataConfig = {
   title: 'HistoryBook',
-  url: import.meta.env.SITE_URL,
+  url: 'https://historybook.netlify.app',
   description:
     'Огляд подій в освіті України, розробки уроків історії в школах.',
   author: 'Ірина Радченко',

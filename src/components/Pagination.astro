@@ -1,0 +1,65 @@
+---
+import type { PageId } from '../enums/page-id';
+import { constructUrl } from '../helpers/construct-url';
+
+type Props = {
+  pagesCount: number;
+  rootId: PageId;
+  currentPageNumber: number;
+}
+
+const { pagesCount, rootId, currentPageNumber } = Astro.props;
+
+const getPageUrl = (rootId: PageId, index: number) => {
+  if(index === 0) {
+    return constructUrl(rootId);
+  }
+
+  return constructUrl(rootId, index + 1);
+}
+
+---
+
+<div class="pagination">
+  {Array.from({ length: pagesCount }, (_, index) => (
+    <a href={getPageUrl(rootId, index)} class:list={['page-link', {
+      'page-link-active': index + 1 === currentPageNumber,
+    }]}>
+      {index + 1}
+    </a>
+  ))}
+</div>
+
+<style>
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.page-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--gray-dark);
+  width: 35px;
+  height: 35px;
+  border: 1px solid #b8b8b8;
+  border-radius: 50px;
+}
+
+.page-link:hover {
+  color: #fff;
+  background-color: var(--red-base);
+  border-color: var(--red-base);
+}
+
+.page-link-active {
+  color: #fff;
+  background-color: var(--red-base);
+  border-color: var(--red-base);
+  cursor: default;
+  pointer-events: none;
+}
+</style>

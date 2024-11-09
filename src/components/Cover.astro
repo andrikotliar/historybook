@@ -1,0 +1,65 @@
+---
+import Container from './Container.astro';
+
+type Props = {
+  title: string;
+  image: string;
+}
+
+const { title, image } = Astro.props;
+---
+
+<div
+  class="cover"
+  style={{
+    backgroundImage: `url(${image})`
+  }}
+>
+  <Container>
+    <h2 class="cover-title">
+      {title}
+    </h2>
+  </Container>
+</div>
+
+<style>
+.cover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  background-color: #c4c4c4;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+.cover-title {
+  font-size: 35px;
+  position: relative;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  z-index: 20;
+}
+
+@media (max-width: 700px) {
+  .cover {
+    min-height: 200px;
+  }
+  .cover-title {
+    font-size: 28px;
+  }
+}
+</style>

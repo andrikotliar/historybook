@@ -1,23 +1,27 @@
 ---
 import { metadataConfig } from '../configs/metadata';
+import { insertSuffixIntoText } from '../helpers/insert-suffix-into-text';
 import Container from './Container.astro';
 import Content from './Content.astro';
+import Cover from './Cover.astro';
 import Footer from './Footer.astro';
 import Header from './Header.astro';
 import SocialMediaTags from './SocialMediaTags.astro';
 
 type Props = {
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
+  coverImage?: string;
 }
 
 const currentPath = Astro.url.pathname;
-const { title, description } = Astro.props;
+const { title, description, coverImage } = Astro.props;
 
-const pageTitle = title ?? metadataConfig.title;
-const pageDescription = description ?? metadataConfig.description;
-
-const titleWithPrefix = pageTitle === metadataConfig.title ? pageTitle : `${pageTitle} - ${metadataConfig.title}`;
+const pageTitle = insertSuffixIntoText({
+  text: title,
+  suffix: metadataConfig.title,
+  insertCondition: currentPath !== '/',
+});
 
 ---
 
@@ -25,14 +29,14 @@ const titleWithPrefix = pageTitle === metadataConfig.title ? pageTitle : `${page
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={pageDescription} />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
 
-    <SocialMediaTags title={pageTitle} description={pageDescription} />
+    <SocialMediaTags title={title} description={description} />
 
     <link rel="icon" type="image/png" href="/favicon.png" />
 
-    <title>{titleWithPrefix}</title>
+    <title>{pageTitle}</title>
 
     {currentPath === '/' && (
       <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -40,6 +44,9 @@ const titleWithPrefix = pageTitle === metadataConfig.title ? pageTitle : `${page
   </head>
   <body>
     <Header />
+    {coverImage && (
+      <Cover title={title} image={coverImage} />
+    )}
     <Content>
       <Container>
         <slot />

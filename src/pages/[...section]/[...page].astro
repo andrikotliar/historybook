@@ -1,0 +1,72 @@
+---
+import type { GetStaticPaths, Page } from 'astro';
+import Grid from '../../components/Grid.astro';
+import Layout from '../../components/Layout.astro';
+import { pagesList, type PageConfig } from '../../configs/pages';
+import { getArticles } from '../../helpers/get-articles';
+import type { CollectionEntry } from 'astro:content';
+import type { PageId } from '../../enums/page-id';
+import Card from '../../components/Card.astro';
+import { constructUrl } from '../../helpers/construct-url';
+import Pagination from '../../components/Pagination.astro';
+import { insertSuffixIntoText } from '../../helpers/insert-suffix-into-text';
+import CategoriesNavigation from '../../components/CategoriesNavigation.astro';
+
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
+  const promises = pagesList.map(async (page) => {
+    const articles = await getArticles({
+      collectionName: page.id,
+    });
+
+    const paginatedArticles = paginate(articles, {
+      pageSize: 10,
+      params: {
+        section: page.id,
+      },
+      props: {
+        config: page,
+      }
+    });
+
+    return paginatedArticles;
+  });
+
+  const pages = await Promise.all(promises);
+
+  return pages.flat();
+};
+
+type Props = {
+  config: PageConfig;
+  page: Page<CollectionEntry<PageId>>;
+}
+
+const { page, config } = Astro.props;
+
+const pageTitle = insertSuffixIntoText({
+  text: config.title,
+  suffix: `Сторінка ${page.currentPage}`,
+  insertCondition: page.currentPage > 1,
+});
+
+const pageDescription = insertSuffixIntoText({
+  text: config.description,
+  suffix: `Сторінка - ${page.currentPage}`,
+  insertCondition: page.currentPage > 1,
+});
+
+---
+
+<Layout title={pageTitle} description={pageDescription} coverImage={config.coverImage}>
+  {config.categories.length !== 0 && (
+    <CategoriesNavigation rootId={config.id} links={config.categories} rootTitle={`Всі ${config.shortTitle}`} />
+  )}
+  <Grid>
+    {page.data.map((article) => (
+      <Card url={constructUrl(config.id, article.slug)} title={article.data.title} description={article.data.description} date={article.data.date} shouldShowDate={config.shouldShowDate} />
+    ))}
+  </Grid>
+  {page.lastPage > 1 && (
+    <Pagination currentPageNumber={page.currentPage} pagesCount={page.lastPage} rootId={config.id} />
+  )}
+</Layout>

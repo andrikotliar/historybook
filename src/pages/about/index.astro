@@ -1,0 +1,10 @@
+---
+import { getEntry } from 'astro:content'
+import Layout from '../../components/Layout.astro';
+
+const article = await getEntry('pages', 'about');
+---
+
+<Layout title={article.data.title} description={article.data.description}>
+  <h1>{article.data.title}</h1>
+</Layout>
