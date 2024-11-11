@@ -1,0 +1,54 @@
+---
+import Layout from '../components/Layout.astro';
+---
+
+<Layout title="Сторінка не знайдена" description="Сторінка не існує або знаходиться в розробці">
+  <div class="error-page">
+    <div class="error-page-number">404</div>
+    <p>Сторінка не існує або знаходиться в розробці</p>
+    <div class="error-page-actions">
+      <a href="/" class="error-page-button">На головну</a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 300px);
+  text-align: center;
+}
+
+.error-page-number {
+  font-weight: bold;
+  font-size: 200px;
+}
+
+.error-page-actions {
+  margin-top: 40px;
+}
+
+.error-page-button {
+  color: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--red-base);
+  border: 2px solid var(--red-base);
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.error-page-button:hover {
+  color: var(--red-base);
+  background-color: #fff;
+}
+
+@media (max-width: 500px) {
+  .error-page-number {
+    font-size: 80px;
+  }
+}
+</style>
