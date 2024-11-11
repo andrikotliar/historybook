@@ -1,0 +1,55 @@
+---
+import { metadataConfig } from '../configs/metadata';
+import { getFormattedDate } from '../helpers/get-formatted-date';
+import ArticleBody from './ArticleBody.astro';
+import type { PageId } from '../enums/page-id';
+
+type Props = {
+  rootId?: PageId;
+  title: string;
+  date?: string;
+  shouldShowDate?: boolean;
+}
+
+const { title, date, shouldShowDate = false } = Astro.props;
+
+---
+
+<article itemscope itemtype="http://schema.org/Article">
+  <div class="article-header">
+    <h1 class="article-title">{title}</h1>
+    {shouldShowDate && date && (
+      <div class="article-date">{getFormattedDate(date)}</div>
+    )}
+    <meta itemprop="image" content={`${metadataConfig.url}${metadataConfig.socialMediaImage}`} />
+    <meta itemprop="author" content={metadataConfig.author} />
+  </div>
+  <ArticleBody>
+    <slot />
+  </ArticleBody>
+</article>
+
+<style>
+.article-header {
+  margin-bottom: 20px;
+}
+
+.article-title {
+  font-size: 35px;
+  line-height: 1.3;
+  font-weight: bold;
+}
+
+.article-date {
+  display: block;
+  margin-top: 10px;
+  line-height: 1;
+  color: var(--red-base);
+}
+
+@media (max-width: 640px) {
+  .article-title {
+    font-size: 32px;
+  }
+}
+</style>

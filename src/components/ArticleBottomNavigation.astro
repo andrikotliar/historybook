@@ -1,0 +1,52 @@
+---
+import type { PageId } from '../enums/page-id'
+import SectionLink from './SectionLink.astro';
+import { constructUrl } from '../helpers/construct-url';
+import BottomNavigationLink from './BottomNavigationLink.astro';
+import type { CollectionEntry } from 'astro:content';
+import { pagesMap } from '../configs/pages';
+
+type Props = {
+  rootId: PageId;
+  prevArticle?: CollectionEntry<PageId>;
+  nextArticle?: CollectionEntry<PageId>;
+}
+
+const { rootId, prevArticle, nextArticle } = Astro.props;
+
+---
+
+<div class="bottom-navigation-wrapper">
+  <div class="bottom-navigation">
+    {prevArticle && (
+      <BottomNavigationLink
+        direction="prev"
+        path={constructUrl(rootId, prevArticle.slug)}
+        title={prevArticle.data.title}
+        description={prevArticle.data.description}
+        directionTitle={pagesMap[rootId].navigationTitles.prev}
+      />
+    )}
+    {nextArticle && (
+      <BottomNavigationLink
+        direction="next"
+        path={constructUrl(rootId, nextArticle.slug)}
+        title={nextArticle.data.title}
+        description={nextArticle.data.description}
+        directionTitle={pagesMap[rootId].navigationTitles.next}
+      />
+    )}
+  </div>
+  <SectionLink path={constructUrl(rootId)}>
+    Всі {pagesMap[rootId].shortTitle}
+  </SectionLink>
+</div>
+
+<style>
+.bottom-navigation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 50px 0 20px;
+}
+</style>

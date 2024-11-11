@@ -1,0 +1,78 @@
+---
+import Icon from './Icon.astro';
+
+type Props = {
+  path: string;
+  title: string;
+  description: string;
+  direction: 'prev' | 'next';
+  directionTitle: string;
+}
+
+const { path, title, description, direction, directionTitle } = Astro.props;
+
+---
+
+<a href={path} class="bottom-nav-link">
+  <div class={`bottom-nav-link-direction bottom-nav-link-direction-${direction}`}>
+    <span>{directionTitle}</span>
+    <div class="bottom-nav-link-direction-icon">
+      <Icon name="arrowRight" />
+    </div>
+  </div>
+  <h6 class="bottom-nav-link-title">{title}</h6>
+  <p class="bottom-nav-link-description">{description}</p>
+</a>
+
+<style>
+.bottom-nav-link {
+  padding: 15px;
+  border-radius: 6px;
+  border: var(--default-border);
+  transition: border-color 300ms;
+  flex-grow: 1;
+}
+
+.bottom-nav-link:hover {
+  border-color: var(--red-base);
+}
+
+.bottom-nav-link-direction {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  color: var(--gray-dark);
+}
+
+.bottom-nav-link-direction-prev {
+  flex-direction: row-reverse;
+}
+
+.bottom-nav-link:hover .bottom-nav-link-direction {
+  color: var(--red-base);
+}
+
+.bottom-nav-link-direction-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.bottom-nav-link-direction-prev .bottom-nav-link-direction-icon {
+  transform: rotate(180deg);
+}
+
+.bottom-nav-link-title {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.bottom-nav-link-description {
+  color: var(--gray-dark);
+  font-size: 14px;
+  line-height: 18px;
+}
+</style>

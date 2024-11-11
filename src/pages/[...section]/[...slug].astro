@@ -1,0 +1,60 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { pagesList, type PageConfig } from '../../configs/pages';
+import { getArticles } from '../../helpers/get-articles';
+import type { CollectionEntry } from 'astro:content';
+import type { PageId } from '../../enums/page-id';
+import Layout from '../../components/Layout.astro';
+import ArticleLayout from '../../components/ArticleLayout.astro';
+import PrintButton from '../../components/PrintButton.astro';
+import ArticleBottomNavigation from '../../components/ArticleBottomNavigation.astro';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const promises = pagesList.map(async (page) => {
+    const articles = await getArticles({ collectionName: page.id });
+
+    return articles.map((article, index) => {
+      return {
+        params: {
+          slug: article.slug,
+          section: page.id,
+        },
+        props: {
+          article,
+          config: page,
+          prevArticle: index === 0 ? null : articles[index - 1],
+          nextArticle: index + 1 === articles.length ? null : articles[index + 1],
+        }
+      };
+    });
+  });
+
+  const articles = await Promise.all(promises);
+
+  return articles.flat();
+}
+
+type Props = {
+  article: CollectionEntry<PageId>;
+  config: PageConfig;
+  prevArticle: CollectionEntry<PageId>;
+  nextArticle: CollectionEntry<PageId>;
+}
+
+const { article, config, prevArticle, nextArticle } = Astro.props;
+
+const { Content } = await article.render();
+
+---
+
+<Layout title={article.data.title} description={article.data.description}>
+  <ArticleLayout
+    title={article.data.title}
+    date={article.data.date}
+    shouldShowDate={config.shouldShowDate}
+  >
+    <Content />
+  </ArticleLayout>
+  <PrintButton />
+  <ArticleBottomNavigation rootId={config.id} prevArticle={prevArticle} nextArticle={nextArticle} />
+</Layout>

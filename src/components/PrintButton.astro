@@ -1,0 +1,34 @@
+---
+import Icon from './Icon.astro';
+---
+
+<button class="print-button" onclick="window.print()">
+  <span class="print-button-icon">
+    <Icon name="pdf" />
+  </span>
+  <span>Завантажити PDF-версію</span>
+</button>
+
+<style>
+.print-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 25px;
+  background-color: var(--gray-invisible);
+  border: 2px solid var(--gray-invisible);
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  border-radius: 10px;
+  width: 100%;
+}
+.print-button:hover {
+  border-color: var(--red-base);
+}
+
+.print-button-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+</style>
