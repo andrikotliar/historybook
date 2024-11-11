@@ -52,4 +52,14 @@ const { title, date, shouldShowDate = false } = Astro.props;
     font-size: 32px;
   }
 }
+
+@media print {
+  .article-title {
+    font-size: 30px;
+  }
+
+  .article-date {
+    display: none;
+  }
+}
 </style>

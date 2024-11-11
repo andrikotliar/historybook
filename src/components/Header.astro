@@ -148,6 +148,11 @@ const currentPath = Astro.url.pathname;
   }
 }
 
+@media print {
+  .header {
+    display: none;
+  }
+}
 </style>
 
 <script>
