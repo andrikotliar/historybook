@@ -29,7 +29,7 @@ const { url, title, description, shouldShowDate = false, date } = Astro.props;
 .card {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 5px;
   border: var(--default-border);
   padding: 20px;
   width: 100%;
@@ -43,9 +43,9 @@ const { url, title, description, shouldShowDate = false, date } = Astro.props;
 
 .card-title {
   color: var(--black-light);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 30px;
+  line-height: 24px;
   transition: color 0.3s;
 }
 
@@ -54,8 +54,9 @@ const { url, title, description, shouldShowDate = false, date } = Astro.props;
 }
 
 .card-description {
+  font-size: 14px;
   color: var(--gray-dark);
-  line-height: 24px;
+  line-height: 20px;
 }
 
 .card-date {

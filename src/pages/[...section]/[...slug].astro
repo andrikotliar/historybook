@@ -11,7 +11,7 @@ import ArticleBottomNavigation from '../../components/ArticleBottomNavigation.as
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const promises = pagesList.map(async (page) => {
-    const articles = await getArticles({ collectionName: page.id });
+    const { articles } = await getArticles({ collectionName: page.id });
 
     return articles.map((article, index) => {
       return {

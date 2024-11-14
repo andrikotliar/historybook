@@ -1,6 +1,5 @@
 ---
-import { pagesMap } from '../configs/pages';
-import type { PageId } from '../enums/page-id';
+import { type PageConfig } from '../configs/pages';
 import { constructUrl } from '../helpers/construct-url';
 import { getArticles } from '../helpers/get-articles';
 import Card from './Card.astro';
@@ -8,14 +7,12 @@ import Grid from './Grid.astro';
 import SectionLink from './SectionLink.astro';
 
 type Props = {
-  rootId: PageId;
+  config: PageConfig;
 }
 
-const { rootId } = Astro.props;
+const { config } = Astro.props;
 
-const config = pagesMap[rootId];
-
-const articles = await getArticles({ collectionName: rootId, limit: 8 });
+const { articles, total } = await getArticles({ collectionName: config.id, limit: config.defaultLimit });
 
 ---
 
@@ -30,7 +27,7 @@ const articles = await getArticles({ collectionName: rootId, limit: 8 });
     ))}
   </Grid>
   <SectionLink path={constructUrl(config.id)}>
-    Всі {config.shortTitle}
+    Всі {config.shortTitle} ({total})
   </SectionLink>
 </div>
 
@@ -48,20 +45,20 @@ const articles = await getArticles({ collectionName: rootId, limit: 8 });
 
 .section-title {
   display: flex;
-  gap: 5px;
-  font-size: 35px;
+  gap: 10px;
+  font-size: 28px;
 }
 
 @media (max-width: 700px) {
   .section-title {
+    align-items: center;
     font-size: 28px;
   }
 }
 
 @media (max-width: 580px) {
   .section-title {
-    flex-direction: column;
-    text-align: center;
+    font-size: 20px;
   }
 }
 </style>

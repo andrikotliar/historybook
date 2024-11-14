@@ -12,7 +12,7 @@ import { constructUrl } from '../../../helpers/construct-url';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const promises = pageCategories.map(async (category) => {
-    const articles = await getArticles({
+    const { articles } = await getArticles({
       collectionName: category.rootId,
       filter: (article) => article.data.title.toLowerCase().includes(category.filter)
     });

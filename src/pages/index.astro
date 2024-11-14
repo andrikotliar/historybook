@@ -6,6 +6,6 @@ import { pagesList } from '../configs/pages';
 
 <Layout title="HistoryBook - цікаві уроки історії, новини освіти, розповіді" description="Огляд подій в освіті України, розробки уроків історії в школах.">
 	{pagesList.map(section => (
-		<ArticlesSection rootId={section.id} />
+		<ArticlesSection config={section} />
 	))}
 </Layout>

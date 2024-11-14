@@ -24,13 +24,14 @@ export type PageConfig = {
   coverImage: string;
   categories: PageCategoryConfig[];
   shouldShowDate?: boolean;
+  defaultLimit: number;
 };
 
 type PagesConfigMap = {
   [key in PageId]: PageConfig;
 };
 
-const lessons = {
+const lessons: PageConfig = {
   id: PageId.LESSONS,
   title: 'Цікаві форми проведення уроків історії в школі',
   description: 'Цікаві форми проведення уроків історії в школі',
@@ -67,9 +68,10 @@ const lessons = {
       linkTitle: 'Ребуси',
     },
   ],
+  defaultLimit: 14,
 };
 
-const figures = {
+const figures: PageConfig = {
   id: PageId.FIGURES,
   title: 'Історичні постаті на уроках історії',
   description: 'Історичні постаті на уроках історії',
@@ -81,9 +83,10 @@ const figures = {
   },
   coverImage: '/images/covers/figures.webp',
   categories: [],
+  defaultLimit: 8,
 };
 
-const news = {
+const news: PageConfig = {
   id: PageId.NEWS,
   title: 'Актуальні події освіти',
   description: 'Актуальні новини та події в освіті України',
@@ -96,9 +99,10 @@ const news = {
   coverImage: '/images/covers/news.webp',
   shouldShowDate: true,
   categories: [],
+  defaultLimit: 4,
 };
 
-const stories = {
+const stories: PageConfig = {
   id: PageId.STORIES,
   title: 'Розповіді',
   description: 'Повісті власного авторства',
@@ -123,13 +127,14 @@ const stories = {
       linkTitle: 'Завдання - вижити',
     },
   ],
+  defaultLimit: 10,
 };
 
 export const pagesMap: PagesConfigMap = {
   lessons,
   figures,
-  news,
   stories,
+  news,
 };
 
 export const pagesList = Object.values(pagesMap);

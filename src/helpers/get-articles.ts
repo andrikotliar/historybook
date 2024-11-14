@@ -17,10 +17,16 @@ const getArticles = async ({ collectionName, filter, limit }: Options) => {
   );
 
   if (limit) {
-    return sortedArticles.slice(0, limit);
+    return {
+      articles: sortedArticles.slice(0, limit),
+      total: entries.length,
+    };
   }
 
-  return sortedArticles;
+  return {
+    articles: sortedArticles,
+    total: entries.length,
+  };
 };
 
 export { getArticles };
