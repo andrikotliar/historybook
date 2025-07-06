@@ -3,4 +3,10 @@
 /articles/copywrite/ /about/
 /articles/lessons/ /lessons/
 /copywrite/ /about/
-/articles/* /lessons/*
+/articles/* /lessons/
+
+/lessons/category/5th-class /lessons/category/5-grade/
+/lessons/category/5th-class/ /lessons/category/5-grade/
+/lessons/5-grade/ /lessons/category/5-grade/
+/lessons/rebuses/ /lessons/category/rebuses/
+/lessons/category/rebuses /lessons/category/rebuses/
