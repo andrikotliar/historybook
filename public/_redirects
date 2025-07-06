@@ -3,3 +3,4 @@
 /articles/copywrite/ /about/
 /articles/lessons/ /lessons/
 /copywrite/ /about/
+/articles/* /lessons/*
