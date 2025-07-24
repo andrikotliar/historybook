@@ -23,3 +23,7 @@ pnpm-debug.log*
 # editor setting folders
 .idea/
 .vscode/
+
+node_modules
+
+public/admin
