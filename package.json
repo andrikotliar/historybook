@@ -6,16 +6,22 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build:dev": "astro check && astro build",
-    "build": "astro build"
+    "build": "tinacms build && astro build",
+    "dev:admin": "npx tinacms dev -c \"astro dev\""
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/sitemap": "^3.2.1",
     "astro": "^4.16.7",
+    "tinacms": "^2.8.1",
     "typescript": "^5.6.3"
   },
   "keywords": [
     "History",
     "Education"
-  ]
+  ],
+  "devDependencies": {
+    "@tinacms/cli": "^1.10.1",
+    "@types/node": "^24.1.0"
+  }
 }
