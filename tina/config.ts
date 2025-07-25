@@ -3,6 +3,7 @@ import { PageId } from '../src/enums/page-id';
 
 const SLUG_FILTER_REGEX = /[^a-zA-Z0-9\u0400-\u04FF]+/g;
 const CLIENT_ID = process.env.TINA_CLIENT_ID;
+const TINA_TOKEN = process.env.TINA_TOKEN;
 
 const genericFields: TinaField[] = [
   {
@@ -52,6 +53,7 @@ const uiConfig: Collection['ui'] = {
 export default defineConfig({
   branch: 'main',
   clientId: CLIENT_ID,
+  token: TINA_TOKEN,
   build: {
     outputFolder: 'admin',
     publicFolder: 'public',
