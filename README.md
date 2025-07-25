@@ -24,4 +24,4 @@ This command creates the `dist` folder in the project's root and builds the stat
 - [Astro](https://astro.build)
 - TypeScript
 - Markdown
-- Decap CMS
+- [Tina CMS](https://tina.io/)

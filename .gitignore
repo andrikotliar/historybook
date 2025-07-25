@@ -1,5 +1,6 @@
 # build output
 dist/
+__generated__
 # generated types
 .astro/
 
@@ -23,3 +24,7 @@ pnpm-debug.log*
 # editor setting folders
 .idea/
 .vscode/
+
+node_modules
+
+public/admin
