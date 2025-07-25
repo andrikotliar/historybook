@@ -3,7 +3,6 @@ title: 8 клас. Острозький Костянтин Іванович - Д
   Великого князівства Литовського
 date: 2025-07-25
 description: Основні факти життя політика, полководця, мецената
-generatedSlug: 8-klas-ostroz-kyj-kostyantyn-ivanovych-derzhavnyj-ta-politychnyj-diyach-velykogo-knyazivstva-lytovs-kogo
 ---
 
 

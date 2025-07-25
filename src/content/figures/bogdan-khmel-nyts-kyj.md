@@ -2,7 +2,6 @@
 title: Богдан Хмельницький
 date: 2024-11-17
 description: Історичний портрет Богдана Хмельницького
-generatedSlug: bogdan-khmel-nyts-kyj
 ---
 ![](/uploads/274px-bchmielnicki.jpg)
 
