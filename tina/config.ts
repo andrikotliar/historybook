@@ -1,7 +1,8 @@
 import { defineConfig, type Collection, type TinaField } from 'tinacms';
 import { PageId } from '../src/enums/page-id';
 
-const regex = /[^a-zA-Z0-9\u0400-\u04FF]+/g;
+const SLUG_FILTER_REGEX = /[^a-zA-Z0-9\u0400-\u04FF]+/g;
+const CLIENT_ID = process.env.TINA_CLIENT_ID;
 
 const genericFields: TinaField[] = [
   {
@@ -50,6 +51,7 @@ const uiConfig: Collection['ui'] = {
 
 export default defineConfig({
   branch: 'main',
+  clientId: CLIENT_ID,
   build: {
     outputFolder: 'admin',
     publicFolder: 'public',
@@ -135,7 +137,7 @@ function convertTitleIntoFileName(title: string) {
   }
 
   const lowercasedTitle = title.toLowerCase();
-  const sanitizedTitle = lowercasedTitle.replace(regex, '-');
+  const sanitizedTitle = lowercasedTitle.replace(SLUG_FILTER_REGEX, '-');
 
   const transformedCharacters = Array.from(sanitizedTitle).map((character) => {
     if (lettersConfig[character as keyof typeof lettersConfig]) {
