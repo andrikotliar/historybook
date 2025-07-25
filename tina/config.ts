@@ -49,6 +49,7 @@ const uiConfig: Collection['ui'] = {
 };
 
 export default defineConfig({
+  branch: 'main',
   build: {
     outputFolder: 'admin',
     publicFolder: 'public',
