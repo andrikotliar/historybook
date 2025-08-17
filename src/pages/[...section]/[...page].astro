@@ -64,7 +64,7 @@ const pageDescription = insertSuffixIntoText({
   )}
   <Grid>
     {page.data.map((article) => (
-      <Card url={constructUrl(config.id, article.slug)} title={article.data.title} description={article.data.description} date={article.data.date} shouldShowDate={config.shouldShowDate} />
+      <Card url={constructUrl(config.id, article.slug)} title={article.data.title} description={article.data.description} />
     ))}
   </Grid>
   {page.lastPage > 1 && (

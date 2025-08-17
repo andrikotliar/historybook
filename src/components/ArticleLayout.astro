@@ -1,26 +1,20 @@
 ---
 import { metadataConfig } from '../configs/metadata';
-import { getFormattedDate } from '../helpers/get-formatted-date';
 import ArticleBody from './ArticleBody.astro';
 import type { PageId } from '../enums/page-id';
 
 type Props = {
   rootId?: PageId;
   title: string;
-  date?: string;
-  shouldShowDate?: boolean;
 }
 
-const { title, date, shouldShowDate = false } = Astro.props;
+const { title } = Astro.props;
 
 ---
 
 <article itemscope itemtype="http://schema.org/Article">
   <div class="article-header">
     <h1 class="article-title">{title}</h1>
-    {shouldShowDate && date && (
-      <div class="article-date">{getFormattedDate(date)}</div>
-    )}
     <meta itemprop="image" content={`${metadataConfig.url}${metadataConfig.socialMediaImage}`} />
     <meta itemprop="author" content={metadataConfig.author} />
   </div>

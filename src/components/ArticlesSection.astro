@@ -23,7 +23,7 @@ const { articles, total } = await getArticles({ collectionName: config.id, limit
   </h2>
   <Grid>
     {articles.map(article => (
-      <Card url={constructUrl(config.id, article.slug)} shouldShowDate={config.shouldShowDate} title={article.data.title} description={article.data.description} date={article.data.date} />
+      <Card url={constructUrl(config.id, article.slug)} title={article.data.title} description={article.data.description} />
     ))}
   </Grid>
   <SectionLink path={constructUrl(config.id)}>

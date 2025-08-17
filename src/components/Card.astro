@@ -5,11 +5,9 @@ type Props = {
   url: string;
   title: string;
   description: string;
-  date?: string;
-  shouldShowDate?: boolean;
 }
 
-const { url, title, description, shouldShowDate = false, date } = Astro.props;
+const { url, title, description } = Astro.props;
 
 ---
 
@@ -20,9 +18,6 @@ const { url, title, description, shouldShowDate = false, date } = Astro.props;
   <p class="card-description">
     {description}
   </p>
-  {shouldShowDate && date && (
-    <div class="card-date">{getFormattedDate(date)}</div>
-  )}
 </a>
 
 <style>

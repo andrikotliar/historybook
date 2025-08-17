@@ -23,7 +23,6 @@ export type PageConfig = {
   };
   coverImage: string;
   categories: PageCategoryConfig[];
-  shouldShowDate?: boolean;
   defaultLimit: number;
 };
 

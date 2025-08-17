@@ -48,11 +48,7 @@ const { Content } = await article.render();
 ---
 
 <Layout title={article.data.title} description={article.data.description}>
-  <ArticleLayout
-    title={article.data.title}
-    date={article.data.date}
-    shouldShowDate={config.shouldShowDate}
-  >
+  <ArticleLayout title={article.data.title}>
     <Content />
   </ArticleLayout>
   <PrintButton />
