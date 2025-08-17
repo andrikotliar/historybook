@@ -87,13 +87,6 @@ export default defineConfig({
         ui: uiConfig,
         fields: genericFields,
       },
-      {
-        name: PageId.NEWS,
-        label: 'Новини',
-        path: 'src/content/news',
-        ui: uiConfig,
-        fields: genericFields,
-      },
     ],
   },
 });

@@ -13,10 +13,6 @@ export const navigationConfig = [
     path: '/figures/',
   },
   {
-    title: 'Новини',
-    path: '/news/',
-  },
-  {
     title: 'Розповіді',
     path: '/stories/',
   },

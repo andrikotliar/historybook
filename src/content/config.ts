@@ -23,11 +23,6 @@ const figuresCollection = defineCollection({
   schema: articlesSchema,
 });
 
-const newsCollection = defineCollection({
-  type: 'content',
-  schema: articlesSchema,
-});
-
 const storiesCollection = defineCollection({
   type: 'content',
   schema: articlesSchema,
@@ -37,6 +32,5 @@ export const collections = {
   [PageId.LESSONS]: lessonsCollection,
   [PageId.FIGURES]: figuresCollection,
   [PageId.STORIES]: storiesCollection,
-  [PageId.NEWS]: newsCollection,
   [CollectionId.PAGES]: pageContentSchema,
 };

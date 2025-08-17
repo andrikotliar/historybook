@@ -86,22 +86,6 @@ const figures: PageConfig = {
   defaultLimit: 8,
 };
 
-const news: PageConfig = {
-  id: PageId.NEWS,
-  title: 'Актуальні події освіти',
-  description: 'Актуальні новини та події в освіті України',
-  emoji: '📰',
-  shortTitle: 'новини',
-  navigationTitles: {
-    prev: 'Попередня новина',
-    next: 'Наступна новина',
-  },
-  coverImage: '/images/covers/news.webp',
-  shouldShowDate: true,
-  categories: [],
-  defaultLimit: 4,
-};
-
 const stories: PageConfig = {
   id: PageId.STORIES,
   title: 'Розповіді',
@@ -134,7 +118,6 @@ export const pagesMap: PagesConfigMap = {
   lessons,
   figures,
   stories,
-  news,
 };
 
 export const pagesList = Object.values(pagesMap);
