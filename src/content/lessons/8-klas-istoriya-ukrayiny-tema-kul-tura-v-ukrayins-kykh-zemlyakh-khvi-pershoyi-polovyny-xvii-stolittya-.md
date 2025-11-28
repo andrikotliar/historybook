@@ -84,15 +84,15 @@ _Завдання_
 
 В Україні XVI століття було зроблено переклад Святого Письма з церковнослов'янської на руську (староукраїнську) мову. Першим таким перекладом стало Пересонницьке Євангеліє 1556-1561 років.
 
-![Пересопницьке Євангеліє - святиня українського народу ...](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/6fe911d4-b66f-4022-aa55-6d50357592e2.jpg) ![Пересопницьке Євангеліє". Історія видавничого проекту часів ...](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/57b9647d-ee0d-4f8a-aa0b-8d43fb5db3f1.jpg)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/57b9647d-ee0d-4f8a-aa0b-8d43fb5db3f1.jpg)
 
-Першодрукарем українських землях вважають Івана Федоровича. ![Друкар у вигнанні: як Іван Федоров заснував першу українську ...](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/85e81023-0bf0-4ff4-b5df-eb05249515ce.jpg)
+Першодрукарем українських землях вважають Івана Федоровича. ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/85e81023-0bf0-4ff4-b5df-eb05249515ce.jpg)
 
-1574 року він видав у Львові друковану українську книгу «Апостол» ![Апостол (книга, 1564) — Википедия](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/51fe1390-e23e-4d4b-ab97-09efac1a7704.jpg)
+1574 року він видав у Львові друковану українську книгу «Апостол» ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/51fe1390-e23e-4d4b-ab97-09efac1a7704.jpg)
 
-Перший у Східній Європі підручник «Буквар». ![Буквар І. Федорова – перший друкований підручник в Україні ...](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/f720815f-a61e-4824-8997-1c64c82b2fdf.jpg)
+Перший у Східній Європі підручник «Буквар». ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/f720815f-a61e-4824-8997-1c64c82b2fdf.jpg)
 
-Згодом на кошти і прохання князя Василя Костянтина Острозького Іван Федорович організував друкарню в Острозі, де 1578 року вийшов друком ще один «Букваре («Азбука»), а в 1581 році - Острозька Біблія - шедевр стародруків. ![Острозькій Біблії – 440 років. У передмові Московської ...](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/1a286e43-3f47-47cf-bb4f-efe8d5a50e75.jpg)
+Згодом на кошти і прохання князя Василя Костянтина Острозького Іван Федорович організував друкарню в Острозі, де 1578 року вийшов друком ще один «Букваре («Азбука»), а в 1581 році - Острозька Біблія - шедевр стародруків. ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/1a286e43-3f47-47cf-bb4f-efe8d5a50e75.jpg)
 
 **Історична довідка**
 
@@ -152,31 +152,31 @@ _Завдання_
 
 Ренесансний стиль, або стиль Відродження, — це архітектурний та мистецький стиль, що виник в Італії в XV столітті та поширився в Європі до початку XVII століття. Він характеризується відродженням античних форм, використанням круглих арок, колон, симетрії, пропорційності та декоративних елементів, таких як різьблення та ліпнина, а також світлою кольоровою гамою. 
 
-Найвідоміші архітектурні пам'ятки Ренесансу в Україні це ансамбль Успенської церкви у Львові. ![Ансамбль Успенської церкви — Львівська міська рада](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/97cbeb5e-1c6e-4f4e-9886-a044ffb169b4.jpg)
+Найвідоміші архітектурні пам'ятки Ренесансу в Україні це ансамбль Успенської церкви у Львові. ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/97cbeb5e-1c6e-4f4e-9886-a044ffb169b4.jpg)
 
 \\
 
 Вежа Корнякта (архітектор Петро Барбон,
 
-1580 рік) ![Вежа Корнякта у Львові | Львівська область | Про Україну](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/02edb70d-ad7c-4d37-930c-46f4ca8fb4dd.jpg)
+1580 рік) ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/02edb70d-ad7c-4d37-930c-46f4ca8fb4dd.jpg)
 
-Каплиця Трьох Святителів біля підніжжя дзвіниці (Андрій Підлісний, 1591 рік) ![Каплиця Трьох Святителів — визначні місця Львова](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/73a47081-5b03-47dc-a496-d835a9e4aff4.jpg)
+Каплиця Трьох Святителів біля підніжжя дзвіниці (Андрій Підлісний, 1591 рік) ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/73a47081-5b03-47dc-a496-d835a9e4aff4.jpg)
 
-Для Києва характерним було будівництво православних монастирів як комплексів Михайлівський ![Михайлівський Золотоверхий собор, Київ — фото, опис, адреса](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/cb71d54d-fa89-4f70-b4d5-3417bcd40f3d.jpg)
+Для Києва характерним було будівництво православних монастирів як комплексів Михайлівський ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/cb71d54d-fa89-4f70-b4d5-3417bcd40f3d.jpg)
 
-Софійський ![➤ Софійський собор та монастир - Софія Київська Цікаві ...](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/735a93ab-e7ef-4453-94b9-e236b42ba630.jpg)
+Софійський ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/735a93ab-e7ef-4453-94b9-e236b42ba630.jpg)
 
-Києво-Печерська лавра ![➤ Києво-Печерська Лавра. ЮНЕСКО Цікаві місця • Пам'ятки ...](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/f1b25ccc-af0b-4d47-aad6-86e4f127c786.jpg)
+Києво-Печерська лавра ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/f1b25ccc-af0b-4d47-aad6-86e4f127c786.jpg)
 
-Міста часто обносили мурами та п'ятикутними вежами - бастіонами ![Бастіонна система — Вікіпедія](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/86da6a2e-f39b-4d26-9a52-78dffc266d44.jpg)
+Міста часто обносили мурами та п'ятикутними вежами - бастіонами ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/86da6a2e-f39b-4d26-9a52-78dffc266d44.jpg)
 
-Укріплені бастіонами замки-палаци, як-то замок палац у Підгірцях. ![Підгорецький замок — Вікіпедія](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/1a1a79c5-d61a-4841-84e3-fd6be6e51aa6.jpg)
+Укріплені бастіонами замки-палаци, як-то замок палац у Підгірцях. ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/1a1a79c5-d61a-4841-84e3-fd6be6e51aa6.jpg)
 
-Окремо від міста знаходилися фортеці правителів - замки, зокрема Високий замок у Львові ![Високий Замок, Львів: інформація, фото, відгуки](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/e0648ce4-4886-4e69-b080-4746f4e6eb76.jpg)
+Окремо від міста знаходилися фортеці правителів - замки, зокрема Високий замок у Львові ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/e0648ce4-4886-4e69-b080-4746f4e6eb76.jpg)
 
-Замок королеви Бони в Крем'янці ![Замок в Кременці - замок Бона Сфорца • Secret land](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/2c233a34-eb9d-488d-9811-5fc7e527d44b.jpg)
+Замок королеви Бони в Крем'янці ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/2c233a34-eb9d-488d-9811-5fc7e527d44b.jpg)
 
-Одним із відомих будівничих XVII століття був Гійом Левассер де Боплан ![Гійом Левассер де Боплан](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/d5b3d685-c11e-43a5-a90a-25a3b86b4309.jpg)
+Одним із відомих будівничих XVII століття був Гійом Левассер де Боплан ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/d5b3d685-c11e-43a5-a90a-25a3b86b4309.jpg)
 
 Театр.
 
@@ -190,7 +190,7 @@ _Завдання_
 
 Вертеп
 
-![Вертеп, український традиційний ляльковий театр та коляда ...](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/46e29dc6-3473-4db7-898a-ea2404535f94.jpg)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/46e29dc6-3473-4db7-898a-ea2404535f94.jpg)
 
 Скриня, розділена на верхній (Вифлеєм) та нижній (земний) поверхи. 
 
@@ -204,13 +204,13 @@ _Завдання_
 
 Скульптуру найчастіше отримували різьбленням по дереву або каменю, литтям з металів або ліпленням з глини. Розвиток скульптури був тісно пов'язаний а тогочасним будівництвом. Ренесанські споруди прикрашали рельефами (опуклими зображеннями на площині), а також скульптурами в повному об'ємі. Щедро прикрашали різьбленням дерев'яні іконостаси в православних та греко-католицьких церквах.
 
-Українські іконописці. На початку століття найпотужнішою була Перемишльська іконописна школа. Її найвідоміший майстер - Олексій Горошкович. З другої половини XVI століття центром іконопису і малярства став Львів, а знаним майстром - Микола Петрахнович. Відома його ікона «Христос перед Пілатом». ![Ікона «Христос перед Пілатом» М. Петрахновича з Успенської ...](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/b5ae6991-8ad0-4227-839f-2f408413173c.jpg)
+Українські іконописці. На початку століття найпотужнішою була Перемишльська іконописна школа. Її найвідоміший майстер - Олексій Горошкович. З другої половини XVI століття центром іконопису і малярства став Львів, а знаним майстром - Микола Петрахнович. Відома його ікона «Христос перед Пілатом». ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/b5ae6991-8ad0-4227-839f-2f408413173c.jpg)
 
 Водночас відроджуються іконописні традиції Києва. Кращий зразок київської школи іконопису це ікона «Святий Миколай» невідомого автора з церкви Святого Миколая Набережного.
 
-Світський портрет найактивніше розвивався у Львові. Відомо портрет Криштофа Збаразького. ![ЗНО 2023 | Тест на 50 запитань. Історія України](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/a857f2de-8ddf-45dd-bfdc-b0b46dd42889.jpg)
+Світський портрет найактивніше розвивався у Львові. Відомо портрет Криштофа Збаразького. ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/a857f2de-8ddf-45dd-bfdc-b0b46dd42889.jpg)
 
-Зображення в друкованих книгах називають гравюрами. Перші гравюри в Україні створено 1574 року на сторінках львівського «Апостола. Відомим гравером XVII століття був Ілля з Києва. Він виконав гравюри для «Требника» Петра Могили та «Печерського патерика». ![Презентаціяз мистецтва "Гравюра на дереві, міді. Українська парсуна.  Народний живопис: козак Мамай"](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/dfbb8bc6-af0d-40da-95f7-920c1f33056e.jpg)
+Зображення в друкованих книгах називають гравюрами. Перші гравюри в Україні створено 1574 року на сторінках львівського «Апостола. Відомим гравером XVII століття був Ілля з Києва. Він виконав гравюри для «Требника» Петра Могили та «Печерського патерика». ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/dfbb8bc6-af0d-40da-95f7-920c1f33056e.jpg)
 
 У ч и т е л ь. Розвиток літератури першої половини XVII ст. визначався наявністю великої кількості різноманітних жанрів і був зумовлений поширенням в Україні шкільної освіти і друкарства. Розвивалася також усна народна творчість.
 
@@ -222,21 +222,21 @@ _Жанр_ — тип літературних творів.
 
 Запитання Які пам’ятки зображено на фото
 
-![Національний університет «Острозька академія»](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/6c65ce30-78a7-4053-93d5-70a4801b176c.jpg)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/6c65ce30-78a7-4053-93d5-70a4801b176c.jpg)
 
-![Національний університет «Києво-Могилянська академія ...](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/fe02f12f-8e14-42ea-893c-1af7ccbdc111.jpg)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/fe02f12f-8e14-42ea-893c-1af7ccbdc111.jpg)
 
-![Пересопницьке Євангеліє - святиня українського народу ...](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/f17ba563-eef7-41b4-945c-5c185c89adb3.jpg)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/f17ba563-eef7-41b4-945c-5c185c89adb3.jpg)
 
-![Апостол (книга, 1564) — Википедия](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/0af4a65c-4f06-427d-9246-80d7c9294054.jpg)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/0af4a65c-4f06-427d-9246-80d7c9294054.jpg)
 
-![Острозькій Біблії – 440 років. У передмові Московської ...](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/6a01e662-492c-41f5-af1a-0c8791689f95.jpg)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/6a01e662-492c-41f5-af1a-0c8791689f95.jpg)
 
-![Ансамбль Успенської церкви — Львівська міська рада](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/bf30d896-3bfa-4aee-bd26-f7cc02c3f9fa.jpg)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/bf30d896-3bfa-4aee-bd26-f7cc02c3f9fa.jpg)
 
-![Михайлівський Золотоверхий собор, Київ — фото, опис, адреса](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/3d35ed93-bc01-4256-b7ae-6bf5a1d1f1e9.jpg)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/3d35ed93-bc01-4256-b7ae-6bf5a1d1f1e9.jpg)
 
-![Вертеп, український традиційний ляльковий театр та коляда ...](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/75732f13-459b-44be-9367-6f893f0b9321.jpg)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/75732f13-459b-44be-9367-6f893f0b9321.jpg)
 
 ![Зображення, що містить музика, музичний інструмент, струнний інструмент
 Вміст на основі ШІ може бути неправильним.](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/b9c6da87-708d-43b3-8b67-38d0484d5286.png)

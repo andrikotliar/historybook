@@ -34,9 +34,9 @@ date: 2021-12-04
 
 Подивіться на карту «Галицько -  Волинська держава в ХІІІ ст.» та виконайте завдання на картосхемі. (Учитель контролює час виконання)
 
-<img src="/uploads/7-karta-halizka.jpg" alt="Карта «Галицько -  Волинська держава в ХІІІ ст.»" width="60%" loading="lazy">
+<img src="/uploads/7-karta-halizka.jpg" alt="">
 
-<img src="/uploads/7-kartoshema-halizka.jpg" alt="Картосхема «Галицько -  Волинська держава в ХІІІ ст.»" width="60%" loading="lazy">
+<img src="/uploads/7-kartoshema-halizka.jpg" alt="">
 
 1. Надпишіть – Волинське, Галицьке князівство.
 2. Позначте – Володимир, Луцьк, Берестя, Дорогочин, Ярослав, Галич, Білгород.
@@ -97,7 +97,7 @@ V. Учитель: Зверніть увагу на таблицю та карт
       <div style="text-align:center;">
         <p><i>Ярослав Осмомисл</i></p>
         <p>
-          <img src="/uploads/jaroslav-osmomisl.jpg" alt="Портрет Ярослава Осмомисла" loading="lazy">
+          <img src="/uploads/jaroslav-osmomisl.jpg" alt="">
         </p>
       </div>
       <p>
@@ -169,7 +169,7 @@ V. Учитель: Зверніть увагу на таблицю та карт
         </p>
         <div>
           <p><i>Роман Мстиславич</i></p>
-          <p><img src="/uploads/roman-mstislavich.jpg" alt="Портрет Романа Мстиславича"></p>
+          <p><img src="/uploads/roman-mstislavich.jpg" alt=""></p>
         </div>
         <p>
           Роман Мстиславич ⇒ <span style="color: #ff0000;">страта бояр</span>.
@@ -262,7 +262,7 @@ V. Учитель: Зверніть увагу на таблицю та карт
         </p>
         <div>
           <p><i>Данило Галицький</i></p>
-          <p><img src="/uploads/danilo-galitskii.jpg" alt="Портрет Данила Галицького" loading="lazy"></p>
+          <p><img src="/uploads/danilo-galitskii.jpg" alt=""></p>
         </div>
         <div style="color:#ff0000">
           <p>1238 р. - битва біля Дорогочина, розбито військо Тевтонського ордену.</p>
@@ -309,7 +309,7 @@ V. Учитель: Зверніть увагу на таблицю та карт
       <div style="text-align:center;">
         <p>  __________  </p>
         <p>
-          <img src="/uploads/jaroslav-osmomisl.jpg" alt="Портрет Ярослава Осмомисла" loading="lazy">
+          <img src="/uploads/jaroslav-osmomisl.jpg" alt="">
         </p>
       </div>
       <p>
@@ -381,7 +381,7 @@ V. Учитель: Зверніть увагу на таблицю та карт
         </p>
         <div>
           <p><i>  __________  </i></p>
-          <p><img src="/uploads/roman-mstislavich.jpg" alt="Портрет Романа Мстиславича"></p>
+          <p><img src="/uploads/roman-mstislavich.jpg" alt=""></p>
         </div>
         <p>
           Роман Мстиславич ⇒ <span style="color: #ff0000;">страта бояр</span>.
@@ -474,7 +474,7 @@ V. Учитель: Зверніть увагу на таблицю та карт
         </p>
         <div>
           <p><i>  __________  </i></p>
-          <p><img src="/uploads/danilo-galitskii.jpg" alt="Портрет Данила Галицького" loading="lazy"></p>
+          <p><img src="/uploads/danilo-galitskii.jpg" alt=""></p>
         </div>
         <div style="color:#ff0000">
           <p>  __________  р. - битва біля Дорогочина, розбито військо Тевтонського ордену.</p>
@@ -502,12 +502,12 @@ VІ. Учні діляться на групи та виконують два з
 
 1. Ребус
 
-![Ребус](/uploads/5-8-klas-rebusi-23.png)
+![](/uploads/5-8-klas-rebusi-23.png)
 
 2. Головоломка. Знайти та закреслити імена, прізвища або прозвища історичних осіб, історичні назви.  Написи зроблено по горизонталі, вертикалі, діагоналі та без пропусків між іменами, прізвищами, прозвищами. Назви можуть перетинатися, букви можуть належати різним написам одночасно.
 
-![Головоломка 1](/uploads/7-halizina-holowolomka-1.png)
-![Головоломка 2](/uploads/7-halizina-holowolomka-2.png)
+![](/uploads/7-halizina-holowolomka-1.png)
+![](/uploads/7-halizina-holowolomka-2.png)
 
 Групи представляють результати своєї роботи
 

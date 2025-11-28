@@ -16,32 +16,31 @@ date: 2025-11-28
 
 Зверніть увагу на малюнки та фото. Потрібно здогадатися до якої церкви належать ці зображення.
 
-![Римо-Католицький одеський собор – історія віри, небайдужості та музики |  Новини Одеси](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/fa6d7d5c-59a6-4b87-989f-ad5875989a71.jpg) (Католицька)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/fa6d7d5c-59a6-4b87-989f-ad5875989a71.jpg) (Католицька)
 
-![Вівтар православна церква картинки, стокові Вівтар ...](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/6ae4304e-5ba0-4414-9752-b922341d1f52.jpg) (Православна)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/6ae4304e-5ba0-4414-9752-b922341d1f52.jpg) (Православна)
 
-![Українська Греко-Католицька Церква Святих Володимира і Ольги - Ukrainian  people](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/15791dc3-f32f-4278-af2e-c977ecfa5c65.jpg) (Греко – католицька)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/15791dc3-f32f-4278-af2e-c977ecfa5c65.jpg) (Греко – католицька)
 
 ![](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/e5de6c60-cab4-42c5-b82a-f85671f2588b.png) (Протестантська)
 
-![Гардероб Папи (33 фото) » Невсівдома](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/dbd69c5d-6d86-4adb-9164-3b571281b16b.jpg) (Католицька)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/dbd69c5d-6d86-4adb-9164-3b571281b16b.jpg) (Католицька)
 
-![Священник - православная энциклопедия «Азбука веры»](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/6253b2c6-d0a9-4e76-b7a9-3df8c7f38f97.jpg) (Православна)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/6253b2c6-d0a9-4e76-b7a9-3df8c7f38f97.jpg) (Православна)
 
-![Отець і Глава Української Греко-Католицької Церкви](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/cbb9f563-6329-4495-b192-c75d778a1372.jpg) (Греко – католицька)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/cbb9f563-6329-4495-b192-c75d778a1372.jpg) (Греко – католицька)
 
-![молодой уверенный в себе пастор евангельской церкви что-то объясняет женщине - пастор стоковые фото и изображения](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/dde89d64-3728-455d-b3b0-472ace4c2528.jpg) 9Протестантська)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/dde89d64-3728-455d-b3b0-472ace4c2528.jpg) 9Протестантська)
 
-![Хрест католицький з розп'яттям К13 36х15 см](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/b2654641-9717-4738-8441-4370db9b95da.jpg) (Католицька)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/b2654641-9717-4738-8441-4370db9b95da.jpg) (Католицька)
 
-![Хрест православний №3](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/de33eb8e-d7c8-416c-9025-e39f16e4ead2.jpg)9Православна і греко- католицька)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/de33eb8e-d7c8-416c-9025-e39f16e4ead2.jpg)9Православна і греко- католицька)
 
-![Чи знаєте ви, як хрестяться православні та католики ...](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/dd1a2b6a-7395-47a3-8581-515ea50ba5da.jpg) (Католицька)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/dd1a2b6a-7395-47a3-8581-515ea50ba5da.jpg) (Католицька)
 
-![Як правильно хреститися](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/961d98c7-4c77-433e-89f6-847c51b7e7cd.jpg) (Православна)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/961d98c7-4c77-433e-89f6-847c51b7e7cd.jpg) (Православна)
 
-![Зображення, що містить у приміщенні, Обличчя людини, малюк, особа
-Вміст на основі ШІ може бути неправильним.](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/093d34f7-567f-474f-b9da-f43529c3c0e9.jpg) (Православна)
+![](/uploads/8-klas-istoriya-ukrayiny-tema-uroku-tserkovne-zhyttya-na-ukrayins-kykh-terenakh-pershoyi-polovyny-xvii-stolittya-petro-mogyla-ta-jogo-reformy-/093d34f7-567f-474f-b9da-f43529c3c0e9.jpg) (Православна)
 
 2\. Назвіть роки уній
 

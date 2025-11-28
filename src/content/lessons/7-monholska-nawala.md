@@ -237,11 +237,11 @@ VІ. Учитель: У  середньовічній Європі продов�
     <tr>
       <td>
         <figure>
-            <img loading="lazy" src="/uploads/mongol-warrior.jpg" alt="Зображення монгольского воїна">
+            <img loading="lazy" src="/uploads/mongol-warrior.jpg" alt="">
             <figcaption>Монгольскій воїн</figcaption>
         </figure>
          <figure>
-            <img loading="lazy" src="/uploads/chingiskhan.jpg" alt="Зображення Чингізхана">
+            <img loading="lazy" src="/uploads/chingiskhan.jpg" alt="">
             <figcaption>Монгольскій воїн</figcaption>
         </figure>
       </td>
@@ -263,7 +263,7 @@ VІ. Учитель: У  середньовічній Європі продов�
     <tr>
       <td>
         <figure>
-            <img loading="lazy" src="/uploads/kalka-battle.jpg" alt="Схема битви на р.Калка">
+            <img loading="lazy" src="/uploads/kalka-battle.jpg" alt="">
             <figcaption>Схема битви на р.Калка</figcaption>
         </figure>
       </td>
@@ -286,7 +286,7 @@ VІ. Учитель: У  середньовічній Європі продов�
     <tr>
       <td>
         <figure>
-            <img loading="lazy" src="/uploads/kozelsk-defense.jpg" alt="Оборона Козельська">
+            <img loading="lazy" src="/uploads/kozelsk-defense.jpg" alt="">
             <figcaption>Оборона Козельська</figcaption>
         </figure>
       </td>
@@ -323,7 +323,7 @@ VІ. Учитель: У  середньовічній Європі продов�
     <tr>
       <td>
         <figure>
-            <img loading="lazy" src="/uploads/chernigiv-defense.jpg" alt="Оборона Чернігова">
+            <img loading="lazy" src="/uploads/chernigiv-defense.jpg" alt="">
             <figcaption>Оборона Чернігова від монголо-татар</figcaption>
         </figure>
       </td>
@@ -340,7 +340,7 @@ VІ. Учитель: У  середньовічній Європі продов�
     <tr>
       <td>
         <figure>
-            <img loading="lazy" src="/uploads/kyiv-defense.jpg" alt="Оборона Києва">
+            <img loading="lazy" src="/uploads/kyiv-defense.jpg" alt="">
             <figcaption>Штурм Києва монголо-татарами</figcaption>
         </figure>
       </td>
@@ -356,7 +356,7 @@ VІ. Учитель: У  середньовічній Європі продов�
     <tr>
       <td>
         <figure>
-            <img loading="lazy" src="/uploads/sarai-batu.jpg" alt="Сарай-Бату">
+            <img loading="lazy" src="/uploads/sarai-batu.jpg" alt="">
             <figcaption>Сарай-Бату</figcaption>
         </figure>
       </td>
