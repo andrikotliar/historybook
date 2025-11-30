@@ -1,6 +1,6 @@
 ---
-title: 8 клас. Історія України. Тема - Культура в українських землях ХVI – першої половини  XVII століття.
-description: Визначити умови і стан розвитку культури в Україні в другій половині XVI — першій половині XVII ст., а також охарактеризувати розвиток освіти, книгодрукування та літератури в даний період
+title: "8 клас. Історія України. Тема: Культура в українських землях ХVI – першої половини  XVII століття."
+description: "Визначити умови і стан розвитку культури в Україні в другій половині XVI — першій половині XVII ст., а також охарактеризувати розвиток освіти, книгодрукування та літератури в даний період"
 date: 2025-11-28
 ---
 
@@ -36,39 +36,27 @@ date: 2025-11-28
 
 Культура це-
 
-\- Освіта
-
-\-Книгодрукування
-
-\- Література
-
-\- Архітектура
-
-\- Образотворче мистецтво
-
-\-Музика
-
-\- Театр
+- Освіта
+- Книгодрукування
+- Література
+- Архітектура
+- Образотворче мистецтво
+- Музика
+- Театр
 
 Цей період став часом розквіту української національної культури, головними осередками якої були Львів, Острог і Київ. 
 
-<table><tbody><tr><td colspan="4"><p>ОСВІТА</p></td></tr><tr><td><p>Початкова</p></td><td colspan="3"><p>Середня та Вища</p></td></tr><tr><td><p><a id="_Hlk209354346"></a>парафіяльні (православні, католицькі, протестантські) школи при більших церквах і монастирях відповідних конфесій.</p></td><td><p>Острозька академія.</p><p>1576 році князь Василь Костянтин Острозький</p></td><td><p>Братські слов'яно-греко-латинські школи</p></td><td><p><a id="_Hlk209354379"></a>Києво- Могилянський колегіум</p><p>1632 р. Митрополит Петро Могила</p></td></tr><tr><td><p>Діти заможних шляхтичів навчалися переважно вдома.</p></td><td><p>першим ректором став відомий письменник і науковець Герасим Смотрицький</p></td><td><p>&nbsp;засновані при православних братствах, які навчали дітей різних станів, використовуючи сучасну класно-урочну систему,</p></td><td><p>Перші ректори - &nbsp;<a href="https://www.google.com/search?q=%D0%86%D0%B2%D0%B0%D0%BD+%D0%91%D0%BE%D1%80%D0%B5%D1%86%D1%8C%D0%BA%D0%B8%D0%B9&amp;oq=%D0%BA%D0%B5%D1%80%D1%96%D0%B2%D0%BD%D0%B8%D0%BA%D0%B8+%D0%BA%D0%B8%D1%94%D0%B2%D0%BE+%D0%BC%D0%BE%D0%B3%D0%B8%D0%BB%D1%8F%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE+%D0%BA%D0%BE%D0%BB%D0%B5%D0%B3%D1%96%D1%83%D0%BC%D1%83+%D0%B2+17+%D1%81%D1%82&amp;gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQIRgV0gEKMjQ4MTJqMGoxNagCCLACAfEFgRkRCDna08w&amp;sourceid=chrome&amp;ie=UTF-8&amp;mstk=AUtExfClAdza8HAOGA59A0-1JSDndUIalcJSlhCHkErIZG9eaMmXmf7iXuBxvqgs_-RiFB0t4XGTBbbHkIyeFy79cKkOKbBBxDwzchIDVxxY8oGRvAof6GcBjWJAJmbQiD30S4CpQuPmOpeKpNKkSXCmOnmnLj0VVrcj__F9RNWYCrOJ5hDos3flCzQdXO9bJg67e2IEbUwWZRia_lzV78I8tCmIKltVy8gfOSYz_Ud_L73kAbGi3uq5m2-ymEXrgTbnpzDTz3Chev3VLJa7H0ZS2FJSaaw4Ieytqkn6_mwxZxUoCIdLbDsBXOelE_N_OSli_G_v-T8RgqGUBPUSkKMccDWpPAUVBY2lbhRT6GWS0k9TNhMiIg8T93xXyihEmfM1hG8VePgApSds4u17y0LkrA&amp;csui=3&amp;ved=2ahUKEwjK2N62r-mPAxUpQVUIHV0ODgcQgK4QegQIARAB" target="_blank">Іван Борецький</a>&nbsp;<a href="https://www.google.com/search?q=%D0%9C%D0%B5%D0%BB%D0%B5%D1%82%D1%96%D0%B9+%D0%A1%D0%BC%D0%BE%D1%82%D1%80%D0%B8%D1%86%D1%8C%D0%BA%D0%B8%D0%B9&amp;oq=%D0%BA%D0%B5%D1%80%D1%96%D0%B2%D0%BD%D0%B8%D0%BA%D0%B8+%D0%BA%D0%B8%D1%94%D0%B2%D0%BE+%D0%BC%D0%BE%D0%B3%D0%B8%D0%BB%D1%8F%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE+%D0%BA%D0%BE%D0%BB%D0%B5%D0%B3%D1%96%D1%83%D0%BC%D1%83+%D0%B2+17+%D1%81%D1%82&amp;gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQIRgV0gEKMjQ4MTJqMGoxNagCCLACAfEFgRkRCDna08w&amp;sourceid=chrome&amp;ie=UTF-8&amp;mstk=AUtExfClAdza8HAOGA59A0-1JSDndUIalcJSlhCHkErIZG9eaMmXmf7iXuBxvqgs_-RiFB0t4XGTBbbHkIyeFy79cKkOKbBBxDwzchIDVxxY8oGRvAof6GcBjWJAJmbQiD30S4CpQuPmOpeKpNKkSXCmOnmnLj0VVrcj__F9RNWYCrOJ5hDos3flCzQdXO9bJg67e2IEbUwWZRia_lzV78I8tCmIKltVy8gfOSYz_Ud_L73kAbGi3uq5m2-ymEXrgTbnpzDTz3Chev3VLJa7H0ZS2FJSaaw4Ieytqkn6_mwxZxUoCIdLbDsBXOelE_N_OSli_G_v-T8RgqGUBPUSkKMccDWpPAUVBY2lbhRT6GWS0k9TNhMiIg8T93xXyihEmfM1hG8VePgApSds4u17y0LkrA&amp;csui=3&amp;ved=2ahUKEwjK2N62r-mPAxUpQVUIHV0ODgcQgK4QegQIARAC" target="_blank">Мелетій Смотрицький</a>,&nbsp;<a href="https://www.google.com/search?q=%D0%9A%D0%B0%D1%81%D1%96%D1%8F%D0%BD+%D0%A1%D0%B0%D0%BA%D0%BE%D0%B2%D0%B8%D1%87&amp;oq=%D0%BA%D0%B5%D1%80%D1%96%D0%B2%D0%BD%D0%B8%D0%BA%D0%B8+%D0%BA%D0%B8%D1%94%D0%B2%D0%BE+%D0%BC%D0%BE%D0%B3%D0%B8%D0%BB%D1%8F%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE+%D0%BA%D0%BE%D0%BB%D0%B5%D0%B3%D1%96%D1%83%D0%BC%D1%83+%D0%B2+17+%D1%81%D1%82&amp;gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQIRgV0gEKMjQ4MTJqMGoxNagCCLACAfEFgRkRCDna08w&amp;sourceid=chrome&amp;ie=UTF-8&amp;mstk=AUtExfClAdza8HAOGA59A0-1JSDndUIalcJSlhCHkErIZG9eaMmXmf7iXuBxvqgs_-RiFB0t4XGTBbbHkIyeFy79cKkOKbBBxDwzchIDVxxY8oGRvAof6GcBjWJAJmbQiD30S4CpQuPmOpeKpNKkSXCmOnmnLj0VVrcj__F9RNWYCrOJ5hDos3flCzQdXO9bJg67e2IEbUwWZRia_lzV78I8tCmIKltVy8gfOSYz_Ud_L73kAbGi3uq5m2-ymEXrgTbnpzDTz3Chev3VLJa7H0ZS2FJSaaw4Ieytqkn6_mwxZxUoCIdLbDsBXOelE_N_OSli_G_v-T8RgqGUBPUSkKMccDWpPAUVBY2lbhRT6GWS0k9TNhMiIg8T93xXyihEmfM1hG8VePgApSds4u17y0LkrA&amp;csui=3&amp;ved=2ahUKEwjK2N62r-mPAxUpQVUIHV0ODgcQgK4QegQIARAD&quot; \t &quot;_blank">Касіян Сакович</a>&nbsp;,&nbsp;<a href="https://www.google.com/search?q=%D0%A1%D0%BF%D0%B8%D1%80%D0%B8%D0%B4%D0%BE%D0%BD+%D0%A1%D0%BE%D0%B1%D0%BE%D0%BB%D1%8C&amp;oq=%D0%BA%D0%B5%D1%80%D1%96%D0%B2%D0%BD%D0%B8%D0%BA%D0%B8+%D0%BA%D0%B8%D1%94%D0%B2%D0%BE+%D0%BC%D0%BE%D0%B3%D0%B8%D0%BB%D1%8F%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE+%D0%BA%D0%BE%D0%BB%D0%B5%D0%B3%D1%96%D1%83%D0%BC%D1%83+%D0%B2+17+%D1%81%D1%82&amp;gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQIRgV0gEKMjQ4MTJqMGoxNagCCLACAfEFgRkRCDna08w&amp;sourceid=chrome&amp;ie=UTF-8&amp;mstk=AUtExfClAdza8HAOGA59A0-1JSDndUIalcJSlhCHkErIZG9eaMmXmf7iXuBxvqgs_-RiFB0t4XGTBbbHkIyeFy79cKkOKbBBxDwzchIDVxxY8oGRvAof6GcBjWJAJmbQiD30S4CpQuPmOpeKpNKkSXCmOnmnLj0VVrcj__F9RNWYCrOJ5hDos3flCzQdXO9bJg67e2IEbUwWZRia_lzV78I8tCmIKltVy8gfOSYz_Ud_L73kAbGi3uq5m2-ymEXrgTbnpzDTz3Chev3VLJa7H0ZS2FJSaaw4Ieytqkn6_mwxZxUoCIdLbDsBXOelE_N_OSli_G_v-T8RgqGUBPUSkKMccDWpPAUVBY2lbhRT6GWS0k9TNhMiIg8T93xXyihEmfM1hG8VePgApSds4u17y0LkrA&amp;csui=3&amp;ved=2ahUKEwjK2N62r-mPAxUpQVUIHV0ODgcQgK4QegQIARAE" target="_blank">Спиридон Соболь</a>,&nbsp;<a href="https://www.google.com/search?q=%D0%A5%D0%BE%D0%BC%D0%B0+%D0%86%D1%94%D0%B2%D0%BB%D0%B5%D0%B2%D0%B8%D1%87&amp;oq=%D0%BA%D0%B5%D1%80%D1%96%D0%B2%D0%BD%D0%B8%D0%BA%D0%B8+%D0%BA%D0%B8%D1%94%D0%B2%D0%BE+%D0%BC%D0%BE%D0%B3%D0%B8%D0%BB%D1%8F%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE+%D0%BA%D0%BE%D0%BB%D0%B5%D0%B3%D1%96%D1%83%D0%BC%D1%83+%D0%B2+17+%D1%81%D1%82&amp;gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQIRgV0gEKMjQ4MTJqMGoxNagCCLACAfEFgRkRCDna08w&amp;sourceid=chrome&amp;ie=UTF-8&amp;mstk=AUtExfClAdza8HAOGA59A0-1JSDndUIalcJSlhCHkErIZG9eaMmXmf7iXuBxvqgs_-RiFB0t4XGTBbbHkIyeFy79cKkOKbBBxDwzchIDVxxY8oGRvAof6GcBjWJAJmbQiD30S4CpQuPmOpeKpNKkSXCmOnmnLj0VVrcj__F9RNWYCrOJ5hDos3flCzQdXO9bJg67e2IEbUwWZRia_lzV78I8tCmIKltVy8gfOSYz_Ud_L73kAbGi3uq5m2-ymEXrgTbnpzDTz3Chev3VLJa7H0ZS2FJSaaw4Ieytqkn6_mwxZxUoCIdLbDsBXOelE_N_OSli_G_v-T8RgqGUBPUSkKMccDWpPAUVBY2lbhRT6GWS0k9TNhMiIg8T93xXyihEmfM1hG8VePgApSds4u17y0LkrA&amp;csui=3&amp;ved=2ahUKEwjK2N62r-mPAxUpQVUIHV0ODgcQgK4QegQIARAF" target="_blank">Хома Ієвлевич</a>&nbsp;</p></td></tr><tr><td></td><td><p>триступеневим навчальним закладом</p></td><td><p>викладаючи&nbsp;<strong>«сім вільних наук»</strong>, класичні мови (церковнослов'янську, грецьку, латину) та дисципліни, такі як риторика, діалектика, арифметика, геометрія та астрономія.</p></td><td><p>Навчання в академії було відкритим для всіх станів суспільства. Навчання триступеневе.</p></td></tr><tr><td></td><td><p>початкові знання - вчили церковнослов'янської азбуки</p></td><td><p>Здобували початкову та середню освіту</p></td><td><p>Процес навчання в Київській Академії тривав дванадцять років</p></td></tr><tr><td></td><td><p>Середня освіта. Вивчали церковнослов'янську мову, також вивчали ще й грецьку та латинську мови, та «сім вільних наук: граматику, арифметику, геометрію, астрономію, музику, риторику й діалектику.</p></td><td></td><td><p>Система включала сім класів, починаючи з підготовчих (Фара, Інфіма, Граматика) та просуваючись до більш високих: Синтаксима, Поетика, Риторика, Філософія та Богослов'я.&nbsp;</p></td></tr><tr><td></td><td><p>Кращі учні студіювали також філософію та богослов'я і так здобували вищу освіту.</p></td><td></td><td></td></tr></tbody></table>
+<table><tbody><tr><td colspan="4"><p>ОСВІТА</p></td></tr><tr><td><p>Початкова</p></td><td colspan="3"><p>Середня та Вища</p></td></tr><tr><td><p>парафіяльні (православні, католицькі, протестантські) школи при більших церквах і монастирях відповідних конфесій.</p></td><td><p>Острозька академія.</p><p>1576 році князь Василь Костянтин Острозький</p></td><td><p>Братські слов'яно-греко-латинські школи</p></td><td><p>Києво- Могилянський колегіум</p><p>1632 р. Митрополит Петро Могила</p></td></tr><tr><td><p>Діти заможних шляхтичів навчалися переважно вдома.</p></td><td><p>першим ректором став відомий письменник і науковець Герасим Смотрицький</p></td><td><p>&nbsp;засновані при православних братствах, які навчали дітей різних станів, використовуючи сучасну класно-урочну систему,</p></td><td><p>Перші ректори - Іван Борецький, Мелетій Смотрицький, Касіян Сакович, Спиридон Соболь, Хома Ієвлевич</p></td></tr><tr><td></td><td><p>триступеневим навчальним закладом</p></td><td><p>викладаючи&nbsp;<strong>«сім вільних наук»</strong>, класичні мови (церковнослов'янську, грецьку, латину) та дисципліни, такі як риторика, діалектика, арифметика, геометрія та астрономія.</p></td><td><p>Навчання в академії було відкритим для всіх станів суспільства. Навчання триступеневе.</p></td></tr><tr><td></td><td><p>початкові знання - вчили церковнослов'янської азбуки</p></td><td><p>Здобували початкову та середню освіту</p></td><td><p>Процес навчання в Київській Академії тривав дванадцять років</p></td></tr><tr><td></td><td><p>Середня освіта. Вивчали церковнослов'янську мову, також вивчали ще й грецьку та латинську мови, та «сім вільних наук: граматику, арифметику, геометрію, астрономію, музику, риторику й діалектику.</p></td><td></td><td><p>Система включала сім класів, починаючи з підготовчих (Фара, Інфіма, Граматика) та просуваючись до більш високих: Синтаксима, Поетика, Риторика, Філософія та Богослов'я.&nbsp;</p></td></tr><tr><td></td><td><p>Кращі учні студіювали також філософію та богослов'я і так здобували вищу освіту.</p></td><td></td><td></td></tr></tbody></table>
 
 Єзуїтські колегіуми.
 
-\-підтримувалися католицькими богословами
-
-\- православною українською шляхтою
-
-\- створено в містах Ярославі, Львові, Луцьку, Кам'янці, Острозі.
-
-\-головним предметом навчання була латинська мова, на той час мова міжнародного спілкування в Європі.
-
-\-вивчали «сім вільних наук».
-
-\- єзуїтські колегіуми надавали якісну і безкоштовну освіту.
-
-\- Колегіуми мали гуртожитки, бібліотеки, друкарні, аптеки.
+-підтримувалися католицькими богословами
+- православною українською шляхтою
+- створено в містах Ярославі, Львові, Луцьку, Кам'янці, Острозі.
+-головним предметом навчання була латинська мова, на той час мова міжнародного спілкування в Європі.
+-вивчали «сім вільних наук».
+- єзуїтські колегіуми надавали якісну і безкоштовну освіту.
+- Колегіуми мали гуртожитки, бібліотеки, друкарні, аптеки.
 
 Києво-Могилянська академія тривалий час була єдиним вищим навчальним закладом для всіх станів України. Її вихованці закладали школи, відкривали бібліотеки, сприяли розвиткові літератури, театру, музики, образотворчого мистецтва.
 
@@ -154,11 +142,7 @@ _Завдання_
 
 Найвідоміші архітектурні пам'ятки Ренесансу в Україні це ансамбль Успенської церкви у Львові. ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/97cbeb5e-1c6e-4f4e-9886-a044ffb169b4.jpg)
 
-\\
-
-Вежа Корнякта (архітектор Петро Барбон,
-
-1580 рік) ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/02edb70d-ad7c-4d37-930c-46f4ca8fb4dd.jpg)
+Вежа Корнякта (архітектор Петро Барбон, 1580 рік) ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/02edb70d-ad7c-4d37-930c-46f4ca8fb4dd.jpg)
 
 Каплиця Трьох Святителів біля підніжжя дзвіниці (Андрій Підлісний, 1591 рік) ![](/uploads/8-klas-istoriya-ukrayiny-tema-kul-tura-v-ukrayins-kykh-zemlyakh-khvi-pershoyi-polovyny-xvii-stolittya-/73a47081-5b03-47dc-a496-d835a9e4aff4.jpg)
 
