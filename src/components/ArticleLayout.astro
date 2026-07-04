@@ -34,13 +34,6 @@ const { title } = Astro.props;
   font-weight: bold;
 }
 
-.article-date {
-  display: block;
-  margin-top: 10px;
-  line-height: 1;
-  color: var(--red-base);
-}
-
 @media (max-width: 640px) {
   .article-title {
     font-size: 32px;
@@ -50,10 +43,6 @@ const { title } = Astro.props;
 @media print {
   .article-title {
     font-size: 30px;
-  }
-
-  .article-date {
-    display: none;
   }
 }
 </style>
