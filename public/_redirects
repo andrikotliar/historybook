@@ -1,3 +1,6 @@
+http://historybook.netlify.app/* https://historybk.com/:splat 301!
+https://historybook.netlify.app/* https://historybk.com/:splat 301!
+
 /articles/stories/ /stories/
 /articles/news/ /lessons/
 /articles/copywrite/ /about/
